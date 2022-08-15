@@ -1,0 +1,97 @@
+---
+title: "LSE DS202M - Data Science for Social Scientists"
+subtitle: "(2022/23 summer revision)"
+---
+
+# 📑 Course Content
+
+Data science and machine learning are exciting new areas that combine scientific inquiry, statistical knowledge, substantive expertise, and computer programming. One of the main challenges for businesses and policy makers when using big data is to find people with the appropriate skills. Good data science requires experts that combine substantive knowledge with data analytical skills, which makes it a prime area for social scientists with an interest in quantitative methods.
+
+This module extends the foundation of probability and statistics with an introduction to the most important concepts in data science and applied machine learning, with social science examples.
+
+It will cover the main analytical methods from this field with hands-on applications using example datasets, so that students gain experience with and confidence in using the methods we cover. At the end of this module, students will have a sound understanding of the field of data science, the ability to analyse data using some of its main methods, and a solid foundation for more advanced or more specialised study.
+
+The topics covered include:
+
+-   the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;
+-   a survey of the methods of statistical learning, and its link to more classical methods of probability and statistical inference;
+-   an introduction to machine learning, including common supervised and unsupervised methods;
+-   methods of evaluating and improving model performance;
+-   computer programming, including the hands-on use of programming through course exercises;
+-   applications to real data through hands-on exercises;
+-   how to integrate the insights from data analytics into knowledge generation and decision-making;
+-   an introduction to natural language processing and text analysis;
+-   data visualisation through a variety of graphs.
+
+The applications are drawn from social, political, economic, legal, and business and marketing fields.
+
+The final week of the module will cover several applications of data science for a specific discipline, designed to link the module to specific different groups of students.
+
+# ℹ️ Course Information
+
+## Teacher Responsible
+
+Dr. [Jonathan Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva) 
+
+## Availability
+This course is compulsory on the BSc in Psychological and Behavioural Science. This course is available as an outside option to students on other programmes where regulations permit and to General Course students.
+
+This course cannot be taken with ST201 Statistical Models and Data Analysis.
+
+## Pre-requisites
+
+A-level maths or equivalent. 
+
+## Course Administration
+If you have any administrative queries about this course please contact us at [dsi.admin@lse.ac.uk](http://dsi.admin@lse.ac.uk/).
+
+## Teaching
+
+16 hours and 40 minutes of lectures and 13 hours and 30 minutes of classes in the MT.
+
+Reading week in Week 6.
+
+## Lectures
+
+<mark class="todo"></mark>
+
+## Classes
+
+-   Classes run from Week 02 until Week 11, with the exception of reading week (Week 06).
+
+## Formative coursework
+
+Students will be expected to produce 10 problem sets in the MT.
+
+Students will work on weekly, structured problem sets in the staff-led class sessions. Example solutions will be provided at the end of each week.
+
+## Assessment
+
+**Exam** (40%, duration: 3 hours) in the January exam period.
+
+**Coursework** (60%, 2000 words) in the MT.
+
+Students will complete 3 problem sets:
+- One related to supervised learning (20%)
+- another related to unsupervised learning (20%), and 
+- a final one related to applications (20%). 
+
+##### Indicative reading
+
+James et al. (2013) [*An Introduction to Statistical Learning: With applications in R*.](https://www.statlearning.com/) Springer. 
+
+Garrett Grolemund and Hadley Wickham (2016) [*R for Data Science*](https://r4ds.had.co.nz/). O'Reilly Media. 
+
+Murrell, P. (2018). [*R graphics.*](https://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html) CRC Press.
+
+Benoit, Kenneth. (2020) [*"Text as Data: An Overview."*](https://methods.sagepub.com/book/research-methods-in-political-science-and-international-relations/i4365.xml) In Curini, Luigi and Robert Franzese, eds. *Handbook of Research Methods in Political Science and International Relations*. Thousand Oaks: Sage. pp461-497.
+
+
+## Feedback
+We want to hear from you!
+
+The DSI is always seeking to improve the student experience within courses. If you have comments, queries or issues, please let us know. You can send administrative related thoughts to [dsi.admin@lse.ac.uk](http://dsi.admin@lse.ac.uk/) and thoughts on teaching can be raised with your seminar leader.
+
+It is important that student concerns are addressed and students have a say in the running of their course, so you also have your course forum that can be used as a place to discuss the course with your fellow students and your home Department will hold [SSLCs](https://info.lse.ac.uk/current-students/Assets/Articles/student-voice) at least once per term. 
+
+Please pass on your thoughts about the course to your programme's Academic Representative so that they can raise these at SSLC meetings. Your Department will then be able to forward these to the DSI, enabling us to improve the course in future.
