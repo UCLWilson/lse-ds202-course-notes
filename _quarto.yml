@@ -35,6 +35,8 @@ website:
         contents:
          - href: weeks/week01.qmd
            text: Week 01
+         - href: slides/week01_slides.qmd
+           text: Slides | Week 01
         #  - href: weeks/week02.qmd
         #    text: Week 02
         #  - href: weeks/week03.qmd
@@ -73,12 +75,3 @@ margin-header: |
 
 body-header: |
   Experimenting
-# format:
-#   html:
-#     css: styles.css
-#     html-math-method: katex
-#   pdf:
-#     documentclass: report
-#     margin-left: 30mm
-#     margin-right: 30mm
-
