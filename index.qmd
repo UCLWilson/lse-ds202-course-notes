@@ -27,45 +27,42 @@ The applications are drawn from social, political, economic, legal, and business
 
 The final week of the module will cover several applications of data science for a specific discipline, designed to link the module to specific different groups of students.
 
-# ℹ️ Course Information
 
-## Teacher Responsible
+# 👨🏻‍🏫 Teacher Responsible
 
 Dr. [Jonathan Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva) 
 
-## Availability
+# 🔑 Availability
 This course is compulsory on the BSc in Psychological and Behavioural Science. This course is available as an outside option to students on other programmes where regulations permit and to General Course students.
 
 This course cannot be taken with ST201 Statistical Models and Data Analysis.
 
-## Pre-requisites
+# 📋 Pre-requisites
 
 A-level maths or equivalent. 
 
-## Course Administration
-If you have any administrative queries about this course please contact us at [dsi.admin@lse.ac.uk](http://dsi.admin@lse.ac.uk/).
 
-## Teaching
+# 👨🏻‍🏫 Teaching
 
 16 hours and 40 minutes of lectures and 13 hours and 30 minutes of classes in the MT.
 
 Reading week in Week 6.
 
-## Lectures
+# 🖼️ Lectures
 
 <mark class="todo"></mark>
 
-## Classes
+# 👩‍💻 Classes
 
 -   Classes run from Week 02 until Week 11, with the exception of reading week (Week 06).
 
-## Formative coursework
+# 📒 Formative coursework
 
 Students will be expected to produce 10 problem sets in the MT.
 
 Students will work on weekly, structured problem sets in the staff-led class sessions. Example solutions will be provided at the end of each week.
 
-## Assessment
+# 📔 Assessment
 
 **Exam** (40%, duration: 3 hours) in the January exam period.
 
@@ -76,7 +73,7 @@ Students will complete 3 problem sets:
 - another related to unsupervised learning (20%), and 
 - a final one related to applications (20%). 
 
-##### Indicative reading
+# 📚 Indicative reading
 
 James et al. (2013) [*An Introduction to Statistical Learning: With applications in R*.](https://www.statlearning.com/) Springer. 
 
@@ -87,7 +84,7 @@ Murrell, P. (2018). [*R graphics.*](https://www.stat.auckland.ac.nz/~paul/RGraph
 Benoit, Kenneth. (2020) [*"Text as Data: An Overview."*](https://methods.sagepub.com/book/research-methods-in-political-science-and-international-relations/i4365.xml) In Curini, Luigi and Robert Franzese, eds. *Handbook of Research Methods in Political Science and International Relations*. Thousand Oaks: Sage. pp461-497.
 
 
-## Feedback
+# 🗣️ Feedback
 We want to hear from you!
 
 The DSI is always seeking to improve the student experience within courses. If you have comments, queries or issues, please let us know. You can send administrative related thoughts to [dsi.admin@lse.ac.uk](http://dsi.admin@lse.ac.uk/) and thoughts on teaching can be raised with your seminar leader.
