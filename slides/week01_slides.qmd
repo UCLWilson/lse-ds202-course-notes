@@ -1,10 +1,18 @@
 ---
-title: "🗓️ **DS202 W01** <br/> Introduction, Context & Key Concepts"
+title: "**DS202 </br> Data Science for Social Scientists**"
+subtitle: "🗓️ Week 01: Introduction, Context & Key Concepts"
 author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
+toc: true
+toc-depth: 2
+toc-title: "What we will cover today"
 from: markdown+emoji
+# bibliography: references.bib
+# csl: chicago-author-date.csl
 format:
   revealjs: 
     slide-number: true
+    mouse-wheel: true
     chalkboard: 
       buttons: true
     preview-links: auto
@@ -13,16 +21,9 @@ format:
     footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
 ---
 
-
-## **Week 01**
-
-
-What is Data Science? :unicorn: :juggling_person:
-
-
 ----
 
-## Structure of this course
+## Welcome
 
 - _TODO: Present the lecturer_
 - _TODO: Present the teaching assistants_
@@ -32,7 +33,6 @@ What is Data Science? :unicorn: :juggling_person:
 - _TODO: Office Hours_
 - _TODO: Knowledge exchange: Slack group_
 
-
 ----
 
 ## How did we get here?
@@ -41,26 +41,62 @@ What is Data Science? :unicorn: :juggling_person:
 
 ----
 
-## The mythical unicorn
+## The mythical unicorn :unicorn: {background-image="/figures/unicorn.png" background-position="70% 45%" background-size="75%" background-repeat="no-repeat"}
 
+[^*]
+
+
+[^*]: [@Davenport2020Beyond]
 
 ----
 
 ## The reality: we are all jugglers :juggling_person:
 
-- _TODO: Data Scientists need to know a **bit** of everything_
+- _TODO: Data Scientists need to know a **bit** of everything_ :juggling_person:
+
+--- 
+
+## How is that data science different to statistics? {.incremental}
+
+::: {.notes}
+Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+::: {.incremental}
+- It is important to understand the ideas behind the various techniques, in order to know how and when to use them.
+- One has to understand the simpler methods first, in order to grasp the more sophisticated ones.
+- It is important to accurately assess the performance of a method, to know how well or how badly it is working (simpler methods often perform as well as fancier ones!).
+:::
+
+--- 
+
+## How is that data science different to statistics? {.incremental}
+
+::: {.notes}
+Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+::: {.incremental}
+- This is an exciting research area, having important applications in science, industry and policy.
+- Machine learning is a fundamental ingredient in the training of a modern **data scientist**.
+:::
 
 ----
 
 ## How to analyse this data?
 
-- _TODO: I don't understand what should be the message here_
+- _TODO: <mark>I don't understand what should be the message here</mark>_
 
 ----
 
-## Machine Learning
+## What is Machine Learning
 
 - _TODO: What is ML_
 - _TODO: Types of ML_
 
+----
 
+## References
+
+::: {#refs}
+:::

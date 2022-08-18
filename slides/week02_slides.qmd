@@ -1,0 +1,65 @@
+---
+title: "**DS202 </br> Data Science for Social Scientists**"
+subtitle: "🗓️ Week 02: Linear Regression — a predictive approach, motivation, and examples"
+author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
+toc: true
+toc-depth: 2
+toc-title: "What we will cover today"
+from: markdown+emoji
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    logo: /figures/LSE Data Science Institute.png
+    css: /styles_slides.css
+    footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
+---
+
+----
+
+## Structure of this course
+
+- _TODO: Present the lecturer_
+- _TODO: Present the teaching assistants_
+- _TODO: Syllabus_
+- _TODO: Assessment_
+- _TODO: Structure of the classes_
+- _TODO: Office Hours_
+- _TODO: Knowledge exchange: Slack group_
+
+
+----
+
+## How did we get here?
+
+- <mark class="todo"> The recent changes that have led to the development of data science in the social sciences.</mark>
+
+----
+
+## The mythical unicorn :unicorn:
+
+- _TODO: add the :unicorn: illustration_
+
+----
+
+## The reality: we are all jugglers :juggling_person:
+
+- _TODO: Data Scientists need to know a **bit** of everything_ :juggling_person:
+
+----
+
+## How to analyse this data?
+
+- _TODO: <mark>I don't understand what should be the message here</mark>_
+
+----
+
+## Machine Learning
+
+- _TODO: What is ML_
+- _TODO: Types of ML_
+
+
