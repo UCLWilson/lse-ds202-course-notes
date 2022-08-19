@@ -6,9 +6,8 @@ institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
 toc: true
 toc-depth: 2
 toc-title: "What we will cover today"
+center-title-slide: false
 from: markdown+emoji
-# bibliography: references.bib
-# csl: chicago-author-date.csl
 format:
   revealjs: 
     slide-number: true
@@ -43,10 +42,10 @@ format:
 
 ## The mythical unicorn :unicorn: {background-image="/figures/unicorn.png" background-position="70% 45%" background-size="75%" background-repeat="no-repeat"}
 
-[^*]
+[^1]
 
 
-[^*]: [@Davenport2020Beyond]
+[^1]: [@Davenport2020Beyond]
 
 ----
 
@@ -56,7 +55,7 @@ format:
 
 --- 
 
-## How is that data science different to statistics? {.incremental}
+## How is data science different to statistics? {.incremental}
 
 ::: {.notes}
 Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
@@ -70,7 +69,7 @@ Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
 
 --- 
 
-## How is that data science different to statistics? {.incremental}
+## How is data science different to statistics? {.incremental}
 
 ::: {.notes}
 Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
@@ -96,6 +95,30 @@ Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
 
 ----
 
+## Supervised Learning
+
+----
+
+## Unsupervised Learning
+
+----
+
+## To predict or to explain? [^2]
+
+::: {.notes}
+Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+::: {.incremental}
+
+- Social science: The goal is typically **explanation**
+- Data science: The goal is frequently **prediction**, or data exploration
+- Many of the same methods are used for both objectives
+:::
+
+[^2]: See reference [@Shmueli2010] for a discussion on this topic.
+
+----
 ## References
 
 ::: {#refs}
