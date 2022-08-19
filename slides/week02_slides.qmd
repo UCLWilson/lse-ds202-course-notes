@@ -14,52 +14,26 @@ format:
       buttons: true
     preview-links: auto
     logo: /figures/LSE Data Science Institute.png
-    css: /styles_slides.css
+    css: /css/styles_slides.css
     footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
 ---
 
 ----
 
-## Structure of this course
+## Simple Linear Regression: Context
 
-- _TODO: Present the lecturer_
-- _TODO: Present the teaching assistants_
-- _TODO: Syllabus_
-- _TODO: Assessment_
-- _TODO: Structure of the classes_
-- _TODO: Office Hours_
-- _TODO: Knowledge exchange: Slack group_
+- Linear regression is a simple approach to supervised learning. It assumes that the dependence of $Y$ on $X_1, X_2, \dots, X_p$ is linear.
+- True regression functions are never linear!
+- Although it may seem overly simplistic, linear regression is extremely useful both conceptually and practically.
 
+::: {.notes}
+- See [📺 Regression: Crash Course Statistics on YouTube](https://www.youtube.com/watch?v=WWqE7YHR4Jc&ab_channel=CrashCourse) for inspiration on how to present linear regression to students.
+<video src="https://www.youtube.com/watch?v=WWqE7YHR4Jc&ab_channel=CrashCourse"> </video>
 
-----
+- Content borrowed from [ME314 Day 4](https://github.com/lse-me314/lectures)
 
-## How did we get here?
-
-- <mark class="todo"> The recent changes that have led to the development of data science in the social sciences.</mark>
+:::
 
 ----
 
-## The mythical unicorn :unicorn:
-
-- _TODO: add the :unicorn: illustration_
-
-----
-
-## The reality: we are all jugglers :juggling_person:
-
-- _TODO: Data Scientists need to know a **bit** of everything_ :juggling_person:
-
-----
-
-## How to analyse this data?
-
-- _TODO: <mark>I don't understand what should be the message here</mark>_
-
-----
-
-## Machine Learning
-
-- _TODO: What is ML_
-- _TODO: Types of ML_
-
-
+## 

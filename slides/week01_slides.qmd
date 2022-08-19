@@ -58,7 +58,7 @@ format:
 ## How is data science different to statistics? {.incremental}
 
 ::: {.notes}
-Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
 ::: {.incremental}
@@ -72,7 +72,7 @@ Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
 ## How is data science different to statistics? {.incremental}
 
 ::: {.notes}
-Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
 ::: {.incremental}
@@ -106,7 +106,7 @@ Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
 ## To predict or to explain? [^2]
 
 ::: {.notes}
-Content taken from [ME314 Day 1](https://github.com/lse-me314/lectures)
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
 ::: {.incremental}
