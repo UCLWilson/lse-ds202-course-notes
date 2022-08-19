@@ -1,15 +1,16 @@
 ---
-title: "**DS202 </br> Data Science for Social Scientists**"
+title: "**DS202 Data Science for Social Scientists**"
 subtitle: "🗓️ Week 01: Introduction, Context & Key Concepts"
 author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
 institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
 toc: true
-toc-depth: 2
+toc-depth: 1
 toc-title: "What we will cover today"
 center-title-slide: false
 from: markdown+emoji
 format:
   revealjs: 
+    theme: simple
     slide-number: true
     mouse-wheel: true
     chalkboard: 
@@ -20,42 +21,100 @@ format:
     footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
 ---
 
-----
+# Who are we
 
-## Welcome
 
-- _TODO: Present the lecturer_
-- _TODO: Present the teaching assistants_
-- _TODO: Syllabus_
-- _TODO: Assessment_
-- _TODO: Structure of the classes_
-- _TODO: Office Hours_
-- _TODO: Knowledge exchange: Slack group_
+## Present the Data Science Institute
 
-----
+<mark class="todo"> </mark>
+
+## Present the lecturer
+- <mark class="todo"> </mark>
+- <mark class="todo"> Present the teaching assistants </mark>
+
+## Who are you
+
+- <mark class="todo"> Present PBS regulation graph (experimental) </mark>
+
+# Structure of this course
+
+## Syllabus
+
+<mark class="todo"> What you will learn in this course  </mark>
+
+## Structure of lectures 👨🏻‍🏫
+
+<mark class="todo"> Explain how lectures will be split in two parts (theoretical vs demo) </mark>
+
+## Structure of classes 👩‍💻
+
+- <mark class="todo"> Bring your laptops </mark>
+
+## Assessments 📔
+
+<mark class="todo"> </mark>
+
+## When to book office hours
+
+## Communication
+
+- <mark class="todo"> Knowledge exchange: Slack group </mark>
+
+## Any questions?
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](/figures/week01/dalle_robot_holding_question_mark.png){.absolute height="80%"}
+:::
+
+::: {.column width="30%"}
+:::
+
+
+::: footer 
+[Image created with the [DALL·E](https://openai.com/blog/dall-e/) algorithm using the prompt: _'35mm macro photography of a robot holding a question mark card, white background'_]{style="font-size:0.6em;"}
+:::
+
+::::
+
+
+# What do we mean by data science?
+
+:juggling_person:
 
 ## How did we get here?
 
-- <mark class="todo"> The recent changes that have led to the development of data science in the social sciences.</mark>
+- <mark class="todo"> The recent changes that have led to the development of data science, and how this looks like in the social sciences.</mark>
 
 ----
 
-## The mythical unicorn :unicorn: {background-image="/figures/unicorn.png" background-position="70% 45%" background-size="75%" background-repeat="no-repeat"}
-
-[^1]
+## The mythical unicorn :unicorn: 
 
 
-[^1]: [@Davenport2020Beyond]
+![](/figures/unicorn.png){.absolute height="65%"}
+
+
+::: aside
+- See [@Davenport2020Beyond] for an in-depth discussion about this.
+- <mark class="todo"> </mark> Re-do unicorn illustration
+:::
 
 ----
 
 ## The reality: we are all jugglers :juggling_person:
 
-- _TODO: Data Scientists need to know a **bit** of everything_ :juggling_person:
+- <mark class="todo"> Data Scientists do not need know **everything**, only a **bit** of everything</mark> :juggling_person:
 
 --- 
 
-## How is data science different to statistics? {.incremental}
+## So, what do we mean by data science?
+
+- <mark class="todo"> Present the trinity (Drew Conway's venn diagram)? </mark>
+
+---
+
+## How is that different to what I learned in previous stats courses? {.incremental}
 
 ::: {.notes}
 Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
@@ -69,7 +128,7 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 
 --- 
 
-## How is data science different to statistics? {.incremental}
+## How is that different to what I learned in previous stats courses? {.incremental}
 
 ::: {.notes}
 Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
@@ -80,19 +139,51 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 - Machine learning is a fundamental ingredient in the training of a modern **data scientist**.
 :::
 
+# How to analyse this data?
+
+- <mark class="todo">I don't understand what should be the message here</mark>
+
+# Machine Learning 
+
+---
+
+## What is Machine Learning?
+
+::: {.incremental}
+-  **Machine learning** refers to a vast set of tools for *understanding data*.
+:::
+
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+---
+
+## What is Machine Learning?
+
+-  **Machine learning** refers to a vast set of tools for *understanding data*.
+-  For a quantitative response $Y$ and a set of predictors $X$:
+$$
+Y = f(X) + \epsilon 
+$$
+::: {.incremental}
+-  Here, $f$ represents the *systematic* information that $X$ provides about $Y$. 
+-  Statistical learning refers to a set of approaches for estimating $f$.
+:::
+
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
 ----
 
-## How to analyse this data?
+## What is Machine Learning?
 
-- _TODO: <mark>I don't understand what should be the message here</mark>_
+-  Most of the course we'll spend talking about different ways to estimate $f$ and how to evaluate whether we've done a good job with it.
 
-----
-
-## What is Machine Learning
-
-- _TODO: What is ML_
-- _TODO: Types of ML_
-
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
 ----
 
 ## Supervised Learning
@@ -118,7 +209,11 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 
 [^2]: See reference [@Shmueli2010] for a discussion on this topic.
 
-----
+# What's Next?
+
+- <mark class="todo"> Indicate recommended reading prior to next week's class </mark>
+
+---
 ## References
 
 ::: {#refs}
