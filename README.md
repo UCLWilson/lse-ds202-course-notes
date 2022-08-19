@@ -2,6 +2,21 @@
 
 [Quarto project](https://quarto.org/docs/projects/quarto-projects.html) containing Course Notes for DS202, updated Summer 2022.
 
+## How to build the course website
+
+1. Install [VSCode](https://code.visualstudio.com/download)
+
+2. Install [Quarto extension for VSCode](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+3. Open the terminal to a directory of your choice and clone the project
+```console
+git clone git@github.com:LSE-DSI/lse-ds202-course-notes.git
+```
+
+4. Open the project on VSCode (File -> Open Folder -> navigate to lse-ds202-course-notes)
+
+5. Open VSCode Command Palette (View -> Command Pallette) and type "Quarto: Render Project". _Voilà_, you should see the course website now.
+
 ## 📑 Course Content
 
 Data science and machine learning are exciting new areas that combine scientific inquiry, statistical knowledge, substantive expertise, and computer programming. One of the main challenges for businesses and policy makers when using big data is to find people with the appropriate skills. Good data science requires experts that combine substantive knowledge with data analytical skills, which makes it a prime area for social scientists with an interest in quantitative methods.
@@ -25,18 +40,3 @@ The topics covered include:
 The applications are drawn from social, political, economic, legal, and business and marketing fields.
 
 The final week of the module will cover several applications of data science for a specific discipline, designed to link the module to specific different groups of students.
-
-## How to build the course website
-
-1. Install [VSCode](https://code.visualstudio.com/download)
-
-2. Install [Quarto extension for VSCode](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
-
-3. Open the terminal to a directory of your choice and clone the project
-```console
-git clone git@github.com:LSE-DSI/lse-ds202-course-notes.git
-```
-
-4. Open the project on VSCode (File -> Open Folder -> navigate to lse-ds202-course-notes)
-
-5. Open VSCode Command Palette (View -> Command Pallette) and type "Quarto: Render Project". _Voilà_, you should see the course website now.
