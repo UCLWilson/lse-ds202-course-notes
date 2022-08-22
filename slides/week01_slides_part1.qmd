@@ -1,0 +1,263 @@
+---
+title: "**DS202 Data Science for Social Scientists**"
+subtitle: "🗓️ Week 01 - Part I: Structure of the course"
+author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    theme: simple
+    slide-number: true
+    mouse-wheel: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    logo: /figures/LSE Data Science Institute.png
+    css: /css/styles_slides.css
+    footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
+---
+
+# Who are we
+
+
+## The Data Science Institute
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](/figures/LSE%20Data%20Science%20Institute.png)
+:::
+
+::: {.column width="60%" .incremental .smaller}
+- This course is offered by the [LSE Data Science Institute (DSI)](https://www.lse.ac.uk/dsi).
+- DSI is the hub for LSE's interdisciplinary collaboration in data science
+:::
+::::
+
+::: footer
+Sign up for DSI events at [lse.ac.uk/DSI/Events](https://www.lse.ac.uk/DSI/Events)
+:::
+
+
+## The Data Science Institute
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](/figures/LSE%20Data%20Science%20Institute.png)
+:::
+
+::: {.column width="60%" .incremental .smaller}
+- Activities of interest to you: 
+  - [CIVICA Seminar Series](https://www.lse.ac.uk/DSI/seminar-series)
+  - [Careers in Data Science](https://www.lse.ac.uk/DSI/Events/Careers-in-Data-Science)
+  - Social events
+  - Industry "field trips"
+  - Summer projects
+:::
+
+::::
+
+::: footer
+Sign up for DSI events at [lse.ac.uk/DSI/Events](https://www.lse.ac.uk/DSI/Events)
+:::
+
+## Your lecturer
+- <mark class="todo"> </mark>
+- <mark class="todo"> Also present the teaching assistants </mark>
+
+## Who are you
+
+- <mark class="todo"> Present PBS regulation graph (experimental) </mark>
+
+# Structure of this course
+
+## Syllabus
+
+<mark class="todo"> What you will learn in this course  </mark>
+
+## Structure of lectures 👨🏻‍🏫
+
+Our lectures will be split in two parts:
+
+::: {.incremental}
+- Part I  (~ 50 min): Traditional exposition of theoretical content
+- break   (~ 10 min):
+  - Grab coffee ☕ 
+  - Stretch \\(´◞`)/
+  - Relax 🧘
+- Part II (~ 50 min): Live demo
+  - Typically, an exploratory analysis or application of an algorithm
+  - Feel free to follow along in your own laptops.
+:::
+
+## Structure of classes 👩‍💻
+
+::: {.incremental}
+- Students will work on weekly, structured problem sets in the staff-led class sessions.
+- <mark class="todo"> Update the groups here once we hear from LSE Timetables</mark>
+- Tips to get the most of classes:
+  - Bring your own laptops 💻 (most tablets are not suitable for programming)
+  - Read the recommended reading prior to the class
+  - Skim through the problem set before class
+:::
+
+## Assessments 📔
+
+The breakdown of assessment for this class will be as follows:
+
+## Assessments 📔
+
+<br/>
+
+### Problem sets (60%)
+
+::: {.incremental}
+- Summative problem sets will be released on <br/> **Weeks 5, 8 & 11**. 
+- These will have a similar style to the formative problem sets, a mix of `R` tasks and your written interpretation of the analyses. 
+- You will have 4-6 days to submit your solutions. 
+- Each of the three summative problem sets is worth 20% of the final mark, and will be graded on a 100 point scale.
+:::
+
+## Assessments 📔
+
+<br/>
+
+### Take-home exam (40%)
+
+::: {.incremental}
+- An open-book take home exam at the end of the term, which will be due in the January exams period. 
+- Exam questions will be comparable in style to the problem sets, with a mix of analyses in R and interpretation of those analyses.
+- The exam questions will be released on Moodle on 5 January 2023. 
+- The exam is due on 11 January at 4pm.
+:::
+
+## Office hours
+
+::: {.incremental}
+- It is probably a good idea to book office hours if:
+  - you struggled with a technical or theoretical aspect of a problem set,
+  - you have queries about careers in data science,
+  - you want guidance in how to apply data science to other things you are studying outside this course.
+- Come prepared. You will only have 15-min.
+- Ask for help earlier, not later.
+- Book slots via StudentHub up to 12 hours in advance.
+:::
+
+## Communication
+
+::: {.incremental}
+- Join our Slack group: <mark class="todo"> add link to slack</mark>
+- Use the public Slack channels to talk to share links, content (or _memes_) with your colleagues.
+- Teaching Assistants will dedicate some time during the week to answer questions or other interactions on Slack.
+- Reserve 📧 e-mail for **formal requests**: extensions, deferrals, etc.
+   - No need to e-mail to inform you will skip a class, for example.
+:::
+
+## Any questions?
+
+:::: {.columns}
+
+::: {.column width="70%"}
+![](/figures/week01/dalle_robot_holding_question_mark.png){.absolute height="80%"}
+:::
+
+::: {.column width="30%"}
+:::
+
+
+::: footer 
+[Image created with the [DALL·E](https://openai.com/blog/dall-e/) algorithm using the prompt: _'35mm macro photography of a robot holding a question mark card, white background'_]{style="font-size:0.6em;"}
+:::
+
+::::
+
+
+# What do we mean by data science?
+
+## So, what do we mean by data science?
+
+> A field of study and practice that involves the collection, storage, and processing of data in order to derive important insights into a problem or a phenomenon. <br/><br/> Such data may be generated by humans (surveys, logs, etc.) or machines (weather data, road vision, etc.), and could be in different formats (text, audio, video, augmented or virtual reality, etc.).
+
+::: aside
+[@shah_hands-introduction_2020, chapter 1]
+:::
+
+## How did we get here?
+
+- <mark class="todo"> The recent changes that have led to the development of data science, and how this looks like in the social sciences.</mark>
+
+----
+
+## The mythical unicorn :unicorn: 
+
+
+![](/figures/unicorn.png){.absolute height="65%"}
+
+
+::: aside
+- See [@davenport_beyond_2020] for an in-depth discussion about this.
+- <mark class="todo"> </mark> Re-do unicorn illustration
+:::
+
+----
+
+## The reality: we are all jugglers :juggling_person:
+
+- <mark class="todo"> Data Scientists do not need know **everything**, only a **bit** of everything</mark> :juggling_person:
+ 
+
+# How is that different to what I learned in my previous stats courses? 
+
+## Data Science and Social Science
+
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+- Social science: The goal is typically **explanation**
+- Data science: The goal is frequently **prediction**, or data exploration
+- Many of the same methods are used for both objectives
+
+::: aside
+<mark class="todo"> Illustrate </mark>
+:::
+
+[^2]: See reference [@Shmueli2010] for a discussion on this topic.
+
+# Philosophy
+
+::: {.incremental}
+- It is important to understand the ideas behind the various techniques, in order to know how and when to use them.
+- One has to understand the simpler methods first, in order to grasp the more sophisticated ones.
+- It is important to accurately assess the performance of a method, to know how well or how badly it is working (simpler methods often perform as well as fancier ones!).
+:::
+
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+## Philosophy
+
+::: {.incremental}
+- This is an exciting research area, having important applications in science, industry and policy.
+- Machine learning is a fundamental ingredient in the training of a modern **data scientist**.
+:::
+
+::: {.notes}
+Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
+:::
+
+# Next:
+
+An overview of the core concepts involved of Machine Learning.
+
+---
+## References
+
+::: {#refs}
+:::
