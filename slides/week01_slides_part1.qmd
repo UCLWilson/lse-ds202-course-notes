@@ -1,5 +1,5 @@
 ---
-title: "**DS202 Data Science for Social Scientists**"
+title: "DS202 Data Science for Social Scientists"
 subtitle: "🗓️ Week 01 - Part I: Structure of the course"
 author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
 institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
@@ -10,6 +10,7 @@ center-title-slide: false
 from: markdown+emoji
 format:
   revealjs: 
+    fig-responsive: true
     theme: simple
     slide-number: true
     mouse-wheel: true
@@ -70,9 +71,24 @@ Sign up for DSI events at [lse.ac.uk/DSI/Events](https://www.lse.ac.uk/DSI/Event
 - <mark class="todo"> </mark>
 - <mark class="todo"> Also present the teaching assistants </mark>
 
-## Who are you
+## Who are you {.scrollable}
 
-- <mark class="todo"> Present PBS regulation graph (experimental) </mark>
+### BSc Psychological and Behavioural Science 
+::: aside
+Data extracted from the [UBPBS 2020/2021 degree regulation](https://www.lse.ac.uk/resources/regulations/2020_UBPBS.html).
+:::
+
+:::: {.columns}
+
+::: {.column width="100%"}
+![](/figures/week01/UBPBS_2020_21.png){width="90%"}
+:::
+::::
+
+::: {.notes}
+<mark class="todo"> Add the overlaid graph, showing the actual paths these students took.</mark>
+:::
+
 
 # Structure of this course
 
@@ -213,7 +229,7 @@ The breakdown of assessment for this class will be as follows:
 - <mark class="todo"> Data Scientists do not need know **everything**, only a **bit** of everything</mark> :juggling_person:
  
 
-# How is that different to what I learned in my previous stats courses? 
+# How is that different to what I have learned in my previous stats courses? 
 
 ## Data Science and Social Science
 
@@ -221,9 +237,11 @@ The breakdown of assessment for this class will be as follows:
 Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
+::: {.incremental}
 - Social science: The goal is typically **explanation**
 - Data science: The goal is frequently **prediction**, or data exploration
 - Many of the same methods are used for both objectives
+:::
 
 ::: aside
 <mark class="todo"> Illustrate </mark>
@@ -231,7 +249,43 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 
 [^2]: See reference [@Shmueli2010] for a discussion on this topic.
 
-# Philosophy
+## Practical examples
+
+::: aside
+<mark class="todo"> Give a pratical example of how one would approach the same dataset differently under these two modelling views. </mark>
+:::
+
+## What do I need to know (Statistics)
+
+Basic concepts of Statistics you might want to recap [^1]:
+
+::: {.incremental}
+- Expected value, mean, median, variance, standard deviation
+- Probabilities and simple probability distributions
+- Types of data
+  - discrete vs continuous
+  - categorical vs numerical vs ordinal
+:::
+
+[^1]: A good reference is [@warne_statistics_2018, chapters 1-3,5,6,11-12]
+
+## What do I need to know (`R`)
+
+Basic concepts of programming in `R` to recap [^2]:
+
+::: {.incremental}
+- data structures (vectors, matrices, data frames)
+- how to manipulate data (filter, subset, select)
+- read/write data files (for example: CSV, JSON, TXT)
+- _(optional) if you want to become a more productive R user, try learning some [`tidyverse`](https://www.tidyverse.org/)_ [^3]
+:::
+
+[^2]: Check out _"R for Data Science"_ [@wickham_r_2016, chapters 1-21]. The online version is free.
+[^3]: _"Statistical inference via data science"_ [@ismay_statistical_2020, chapters 4-6] is another great free resource 
+
+
+
+## Philosophy of this course
 
 ::: {.incremental}
 - It is important to understand the ideas behind the various techniques, in order to know how and when to use them.
@@ -243,7 +297,7 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
-## Philosophy
+## Philosophy of this course (cont.)
 
 ::: {.incremental}
 - This is an exciting research area, having important applications in science, industry and policy.
@@ -254,7 +308,7 @@ Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 Content borrowed from [ME314 Day 1](https://github.com/lse-me314/lectures)
 :::
 
-# Next:
+# What's next
 
 An overview of the core concepts involved of Machine Learning.
 
