@@ -87,29 +87,19 @@ Data extracted from the [UBPBS 2020/2021 degree regulation](https://www.lse.ac.u
 
 # Structure of this course
 
-## Syllabus (up to reading week) {.smaller}
+## Syllabus {.smaller}
 
-| **Intro**                                                |         |
-|----------------------------------------------------------|---------|
-|      Introduction, Context & Key Concepts                | Week 01 |
-| **Supervised Learning**                                  |         |
-|      Simple and Multiple Linear Regression               | Week 02 |
-|      Classifiers (Logistic Regression & Naive Bayes)     | Week 03 |
-|      Resampling methods                                  | Week 04 |
-|      Non-linear algorithms (Regression & Classification) | Week 05 |
-| **Reading Week**                                         |         |
-| _(break)_                                                | Week 06 |
-
-## Syllabus (after reading week) {.scrollable .smaller}
-
-| **Unsupervised Learning**                            |         |
-|------------------------------------------------------|---------|
-|      Principal Component Analysis (PCA) & Clustering | Week 07 |
-|      Dimensionality Reduction (t-SNE & UMAP)         | Week 08 |
-| **Applications**                                     |         |
-|      Applications: Text as Data                      | Week 09 |
-|      Applications: Topic Modelling                   | Week 10 |
-|      Applications: Social Media Data                 | Week 11 |
+| **Intro**                                                |                  |
+|----------------------------------------------------------|------------------|
+| &nbsp;&nbsp;&nbsp;&nbsp;Introduction, Context & Key Concepts                | Week 01 |
+| **Supervised Learning**                                  |                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Simple and Multiple Linear Regression  <br/> &nbsp;&nbsp;&nbsp;&nbsp;Classifiers (Logistic Regression & Naive Bayes) <br/> &nbsp;&nbsp;&nbsp;&nbsp;Resampling methods <br/> &nbsp;&nbsp;&nbsp;&nbsp; Non-linear algorithms (SVM & tree-based models)           | Week 02 <br/> Week 03 <br/> Week 04 <br/> Week 05|
+<hr style="margin: 0.01em; background-color:red;">
+| **Unsupervised Learning**                                |                  |
+|----------------------------------------------------------|------------------|
+| &nbsp;&nbsp;&nbsp;&nbsp;Principal Component Analysis (PCA) & Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction (t-SNE & UMAP)  | Week 07 <br/> Week 08|
+| **Applications**                                         |                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Text as Data <br/>&nbsp;&nbsp;&nbsp; Applications: Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data | Week 09 <br/> Week 10 <br/> Week 11 |
 
 ## Structure of lectures 👨🏻‍:school:
 
