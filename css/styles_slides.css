@@ -54,3 +54,7 @@ mark:before {
 div.csl-entry {
     margin-bottom: 0.35em;
 }
+
+td {
+    vertical-align: middle;
+}
