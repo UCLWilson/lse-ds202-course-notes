@@ -2,8 +2,6 @@
 title: "🗓️ Week 01 - Introduction, Context & Key Concepts"
 ---
 
-<mark></mark> Slides from previous year: [DS202/2021MT (Sharepoint)](https://lsecloud.sharepoint.com/:f:/r/sites/TEAM_LSE-LSEDataScienceInitiative-DS202/Shared%20Documents/DS202/Contents?csf=1&web=1&e=ESDLfH)
-
 ## Lecture (45-50 min)
 
 

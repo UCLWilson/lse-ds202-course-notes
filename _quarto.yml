@@ -6,6 +6,7 @@ project:
   render:
     - "index.qmd"
     - "weeks/*.qmd"
+    - "slides/*.qmd"
 
 bibliography: references/references.bib
 csl: references/chicago-author-date.csl
