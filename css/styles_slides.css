@@ -58,3 +58,8 @@ div.csl-entry {
 td {
     vertical-align: middle;
 }
+
+/* https://github.com/hakimel/reveal.js/issues/1002 */
+.reveal > .slides > section > section {
+    transform-style: flat;
+  }

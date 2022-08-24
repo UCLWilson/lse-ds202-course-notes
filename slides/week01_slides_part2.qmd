@@ -16,6 +16,7 @@ format:
     chalkboard: 
       buttons: true
     preview-links: auto
+    background-color: '#ededed'
     logo: /figures/LSE Data Science Institute.png
     css: /css/styles_slides.css
     footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'

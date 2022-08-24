@@ -85,6 +85,30 @@ Data extracted from the [UBPBS 2020/2021 degree regulation](https://www.lse.ac.u
 <mark class="todo"> Add the overlaid graph, showing the actual paths these students took.</mark>
 :::
 
+# Learning Objectives
+
+::: incremental
+- Understand the **fundamentals of the data science approach**, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;
+- Understand how **classical methods** such as regression analysis or principal components analysis can be treated **as machine learning approaches** for prediction or for data mining.
+- Know how to fit and apply **supervised machine learning models** for classification and prediction.
+:::
+
+## Learning Objectives (cont.)
+
+::: incremental
+- Know how to evaluate and **compare fitted models**, and to improve model performance.
+- Use applied computer programming, including the **hands-on use of programming** through course exercises.
+- Apply the methods learned to **real data** through hands-on exercises.
+- Integrate the insights from data analytics into **knowledge generation** and **decision-making**;
+:::
+
+## Learning Objectives (cont.)
+
+::: incremental
+- Understand an introductory framework for working with **natural language (text) data** using techniques of machine learning.
+- Learn how data science methods have been applied to a particular domain of study (**applications**).
+:::
+
 # Structure of this course
 
 ## Syllabus {.smaller}
@@ -94,12 +118,10 @@ Data extracted from the [UBPBS 2020/2021 degree regulation](https://www.lse.ac.u
 | &nbsp;&nbsp;&nbsp;&nbsp;Introduction, Context & Key Concepts                | Week 01 |
 | **Supervised Learning**                                  |                  |
 | &nbsp;&nbsp;&nbsp;&nbsp;Simple and Multiple Linear Regression  <br/> &nbsp;&nbsp;&nbsp;&nbsp;Classifiers (Logistic Regression & Naive Bayes) <br/> &nbsp;&nbsp;&nbsp;&nbsp;Resampling methods <br/> &nbsp;&nbsp;&nbsp;&nbsp; Non-linear algorithms (SVM & tree-based models)           | Week 02 <br/> Week 03 <br/> Week 04 <br/> Week 05|
-<hr style="margin: 0.01em; background-color:red;">
 | **Unsupervised Learning**                                |                  |
-|----------------------------------------------------------|------------------|
-| &nbsp;&nbsp;&nbsp;&nbsp;Principal Component Analysis (PCA) & Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction (t-SNE & UMAP)  | Week 07 <br/> Week 08|
+| &nbsp;&nbsp;&nbsp;&nbsp;Principal Component Analysis (PCA) & Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction (t-SNE & UMAP)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Week 07 <br/> Week 08|
 | **Applications**                                         |                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Text as Data <br/>&nbsp;&nbsp;&nbsp; Applications: Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data | Week 09 <br/> Week 10 <br/> Week 11 |
+| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Text as Data <br/>&nbsp;&nbsp;&nbsp; Applications: Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data| Week 09 <br/> Week 10 <br/> Week 11 |
 
 ## Structure of lectures 👨🏻‍:school:
 
@@ -150,15 +172,15 @@ The breakdown of assessment for this class will be as follows:
 ::: incremental
 -   An open-book take home exam at the end of the term, which will be due in the January exams period.
 -   Exam questions will be comparable in style to the problem sets.
--   The exam questions will be released on Moodle on 5 January 2023.
--   The exam is due on 11 January at 4pm.
+-   The exam questions will be released on Moodle on <mark>5 January 2023.</mark>
+-   The exam is due on <mark>11 January at 4pm</mark>.
 :::
 
 ## Office hours
 
 ::: incremental
 -   It is probably a good idea to book office hours if:
-    -   you struggled with a technical or theoretical aspect of a problem set,
+    -   you struggled with a technical or theoretical aspect of a problem set in the previous week,
     -   you have queries about careers in data science,
     -   you want guidance in how to apply data science to other things you are studying outside this course.
 -   Come prepared. You only have 15 minutes.
@@ -171,7 +193,7 @@ The breakdown of assessment for this class will be as follows:
 ::: incremental
 -   Join our Slack group: <mark class="todo"> add link to slack</mark>
 -   Use the public Slack channels to talk to share links, content (or *memes*) with your colleagues.
--   Teaching Assistants will dedicate some time during the week to answer questions or other interactions on Slack.
+-   Our teaching team will dedicate some time during the week to answer questions or other interactions on Slack.
 -   Reserve :email: e-mail for **formal requests**: extensions, deferrals, etc.
     -   No need to e-mail to inform you will skip a class, for example.
 :::
@@ -196,7 +218,7 @@ The breakdown of assessment for this class will be as follows:
 ## Data science is...
 
 ::: {.fragment .fade-in}
-> *"\[...\] a field of study and practice that involves the collection, storage, and processing of data in order to derive important insights into a problem or a phenomenon.*
+> *"\[...\] a field of study and practice that involves the **collection**, **storage**, and **processing** of data in order to derive important 💡 **insights** into a problem or a phenomenon.*
 :::
 
 ::: {.fragment .fade-in}
@@ -204,7 +226,7 @@ The breakdown of assessment for this class will be as follows:
 :::
 
 ::: aside
-[@shah_hands-introduction_2020, chapter 1]
+[@shah_hands-introduction_2020, chapter 1] - _Emphasis and emojis are of my own making._
 :::
 
 ## How did we get here?
@@ -268,18 +290,37 @@ Basic concepts of Statistics you might want to recap [^1]:
 
 ## What do I need to know (`R`)
 
-Basic concepts of programming in `R` to recap [^2]:
-
-[^2]: Check out *"R for Data Science"* [@wickham_r_2016, chapters 1-21]. The online version is free.
+Basic concepts of programming in `R` to recap:
 
 ::: incremental
 -   data structures (vectors, matrices, data frames)
 -   how to manipulate data (filter, subset, select)
 -   read/write data files (for example: CSV, JSON, TXT)
--   *(optional) if you want to become a more productive R user, try learning some [`tidyverse`](https://www.tidyverse.org/)* [^3]
+-   *(optional but encouraged)* some knowledge [`tidyverse`](https://www.tidyverse.org/)* can give you a productive boost
 :::
 
+
+## What do I need to know (`R`)
+
+Basic concepts of programming in `R` to recap [^2]:
+
+[^2]: Check out *"R for Data Science"* [@wickham_r_2016, chapters 1-21]. The online version is free.
+
+-   data structures (vectors, matrices, data frames)
+-   how to manipulate data (filter, subset, select)
+-   read/write data files (for example: CSV, JSON, TXT)
+-   *(optional but encouraged)* some knowledge [`tidyverse`](https://www.tidyverse.org/) can give you a productive boost [^3]
+
 [^3]: *"Statistical inference via data science"* [@ismay_statistical_2020, chapters 4-6] is another great free resource
+
+## What if I struggle with R?
+
+➡️ Our first lab (Week 02) is a recap of some basic `R` commands, plus some ggplot2.
+
+::: incremental
+- If you are not confident with your `R` skills, I strongly encourage you invest in studying the basics in the next couple of weeks. 
+- Contact [LSE Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) to attend in-person workshops or self-paced online R courses.
+:::
 
 ## Philosophy of this course
 

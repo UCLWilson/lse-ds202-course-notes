@@ -37,27 +37,27 @@ website:
       - section: "🗓️ Weeks"
         contents:
          - href: weeks/week01.qmd
-           text: 🗓️ Week 01
+           text: Week 01
          - href: weeks/week02.qmd
-           text: 🗓️ Week 02
+           text: Week 02
          - href: weeks/week03.qmd
-           text: 🗓️ Week 03
+           text: Week 03
          - href: weeks/week04.qmd
-           text: 🗓️ Week 04
+           text: Week 04
          - href: weeks/week05.qmd
-           text: 🗓️ Week 05
+           text: Week 05
          - href: weeks/week06.qmd
-           text: 🗓️ Week 06
+           text: Week 06
          - href: weeks/week07.qmd
-           text: 🗓️ Week 07
+           text: Week 07
          - href: weeks/week08.qmd
-           text: 🗓️ Week 08
+           text: Week 08
          - href: weeks/week09.qmd
-           text: 🗓️ Week 09
+           text: Week 09
          - href: weeks/week10.qmd
-           text: 🗓️ Week 10
+           text: Week 10
          - href: weeks/week11.qmd
-           text: 🗓️ Week 11
+           text: Week 11
 
                  
   navbar:
