@@ -49,12 +49,12 @@ Sign up for DSI events at [lse.ac.uk/DSI/Events](https://www.lse.ac.uk/DSI/Event
 :::
 
 ::: {.column .incremental .smaller width="60%"}
--   Activities of interest to you:
-    -   [CIVICA Seminar Series](https://www.lse.ac.uk/DSI/seminar-series)
-    -   [Careers in Data Science](https://www.lse.ac.uk/DSI/Events/Careers-in-Data-Science)
-    -   Social events
-    -   Industry "field trips"
-    -   Summer projects
+Activities of interest to you:
+-   [CIVICA Seminar Series](https://www.lse.ac.uk/DSI/seminar-series)
+-   [Careers in Data Science](https://www.lse.ac.uk/DSI/Events/Careers-in-Data-Science)
+-   Social events
+-   Industry "field trips"
+-   Summer projects
 :::
 :::
 

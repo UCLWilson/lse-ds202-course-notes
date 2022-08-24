@@ -17,6 +17,18 @@ git clone git@github.com:LSE-DSI/lse-ds202-course-notes.git
 
 5. Open VSCode Command Palette (View -> Command Pallette) and type "Quarto: Render Project". _Voilà_, you should see the course website now.
 
+## Syllabus
+
+| **Intro**                                                |                  |
+|:----------------------------------------------------------|------------------|
+| &nbsp;&nbsp;&nbsp;&nbsp;Introduction, Context & Key Concepts                | Week 01 |
+| **Supervised Learning**                                  |                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Simple and Multiple Linear Regression  <br/> &nbsp;&nbsp;&nbsp;&nbsp;Classifiers (Logistic Regression & Naive Bayes) <br/> &nbsp;&nbsp;&nbsp;&nbsp;Resampling methods <br/> &nbsp;&nbsp;&nbsp;&nbsp; Non-linear algorithms (SVM & tree-based models)           | Week 02 <br/> Week 03 <br/> Week 04 <br/> Week 05|
+| **Unsupervised Learning**                                |                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Principal Component Analysis (PCA) & Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction (t-SNE & UMAP)  | Week 07 <br/> Week 08|
+| **Applications**                                         |                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Text as Data <br/>&nbsp;&nbsp;&nbsp; Applications: Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data | Week 09 <br/> Week 10 <br/> Week 11 |
+
 ## 📑 Course Content
 
 Data science and machine learning are exciting new areas that combine scientific inquiry, statistical knowledge, substantive expertise, and computer programming. One of the main challenges for businesses and policy makers when using big data is to find people with the appropriate skills. Good data science requires experts that combine substantive knowledge with data analytical skills, which makes it a prime area for social scientists with an interest in quantitative methods.
