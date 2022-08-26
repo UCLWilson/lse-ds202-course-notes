@@ -1,0 +1,345 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LSE DS202M - Data Science for Social Scientists",
+    "section": "",
+    "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Teaching Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\n\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute\n\n\n\n(pending confirmation)\n(pending confirmation)\n(pending confirmation)\n\n\n\n\n\n\n\n\n\n📓 Syllabus\nA list of what will happen every week.\nClick on each Week for more information (slides, lab instructions, recommended resources, etc.).\n\n\n\nIntro\n\n\n\n\n\n    Introduction, Context & Key Concepts\n🗓️ Week 01\n\n\nSupervised Learning\n\n\n\n    Simple and Multiple Linear Regression      Classifiers (Logistic Regression & Naive Bayes)      Resampling methods       Non-linear algorithms (SVM & tree-based models)\n🗓️ Week 02  🗓️ Week 03  🗓️ Week 04  🗓️ Week 05\n\n\nUnsupervised Learning\n\n\n\n    Principal Component Analysis (PCA) & Clustering     Dimensionality Reduction (t-SNE & UMAP)         \n🗓️ Week 07  🗓️ Week 08\n\n\nApplications\n\n\n\n    Applications: Text as Data     Applications: Topic Modelling     Applications: Social Media Data\n🗓️ Week 09  🗓️ Week 10  🗓️ Week 11"
+  },
+  {
+    "objectID": "weeks/week01.html",
+    "href": "weeks/week01.html",
+    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments and how we will interact throughout this course.\nWe will also cover some of the basics: what do we mean by data science & machine learning, and what do you need to do to get the most of this course?"
+  },
+  {
+    "objectID": "weeks/week01.html#slides---part-i-45-50-min",
+    "href": "weeks/week01.html#slides---part-i-45-50-min",
+    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
+    "section": "🖼️ Slides - Part I (45-50 min)",
+    "text": "🖼️ Slides - Part I (45-50 min)\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "weeks/week01.html#coffee-break-10-min",
+    "href": "weeks/week01.html#coffee-break-10-min",
+    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
+    "section": "Coffee Break ☕ (10 min)",
+    "text": "Coffee Break ☕ (10 min)\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself."
+  },
+  {
+    "objectID": "weeks/week01.html#slides---part-ii-45-50-min",
+    "href": "weeks/week01.html#slides---part-ii-45-50-min",
+    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
+    "section": "🖼️ Slides - Part II (45-50 min)",
+    "text": "🖼️ Slides - Part II (45-50 min)\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "weeks/week06.html",
+    "href": "weeks/week06.html",
+    "title": "🗓️ Week 06 - Reading Week",
+    "section": "",
+    "text": "Check out this blog post from Students@LSE blog.\nI would definitely recommend you take a break during Week 06. After all, rest and sleep can help you consolidate memories and improve your learning process.\nHowever, if you feel like revisiting concepts you have learned so far, check out the Recommended Learning sections present in each week’s sections here on our Moodle Page.\nWe will return with our lectures and classes on Week 07."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#the-data-science-institute",
+    "href": "slides/week01_slides_part1.html#the-data-science-institute",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The Data Science Institute",
+    "text": "The Data Science Institute\n\n\n\n\n\nThis course is offered by the LSE Data Science Institute (DSI).\nDSI is the hub for LSE’s interdisciplinary collaboration in data science\n\n\n\n\nSign up for DSI events at lse.ac.uk/DSI/Events"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#the-data-science-institute-1",
+    "href": "slides/week01_slides_part1.html#the-data-science-institute-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The Data Science Institute",
+    "text": "The Data Science Institute\n\n\n\n\nActivities of interest to you: - CIVICA Seminar Series - Careers in Data Science - Social events - Industry “field trips” - Summer projects\n\n\n\nSign up for DSI events at lse.ac.uk/DSI/Events"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#our-courses",
+    "href": "slides/week01_slides_part1.html#our-courses",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Our courses",
+    "text": "Our courses\nDSI offer accessible introductions to Data Science:\n\n\nDS101\nFundamentals of  Data Science\n🎯 Focus:  theoretical concepts of data science\n📂 How:  reflections through reading and writing\n\nDS105\nData for  Data Scientists\n🎯 Focus: collection and handling of real data\n📂 How: hands-on coding exercises and a group project\n\nDS202\nData Science for  Social Scientists\n🎯 Focus: fundamental machine learning algorithms\n📂 How: practical use of ML techniques and metrics"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#your-lecturer",
+    "href": "slides/week01_slides_part1.html#your-lecturer",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Your lecturer",
+    "text": "Your lecturer\n\n \n Also present the teaching assistants"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#who-are-you",
+    "href": "slides/week01_slides_part1.html#who-are-you",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Who are you",
+    "text": "Who are you\nBSc Psychological and Behavioural Science\n\n\n\n\n\n\n\n Add the overlaid graph, showing the actual paths these students took.\n\n\nData extracted from the UBPBS 2020/2021 degree regulation."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#learning-objectives-cont.",
+    "href": "slides/week01_slides_part1.html#learning-objectives-cont.",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Learning Objectives (cont.)",
+    "text": "Learning Objectives (cont.)\n\n\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making;"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#learning-objectives-cont.-1",
+    "href": "slides/week01_slides_part1.html#learning-objectives-cont.-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Learning Objectives (cont.)",
+    "text": "Learning Objectives (cont.)\n\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\n\n\n\nLearn how data science methods have been applied to a particular domain of study (applications)."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#philosophy-of-this-course-cont.",
+    "href": "slides/week01_slides_part1.html#philosophy-of-this-course-cont.",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Philosophy of this course (cont.)",
+    "text": "Philosophy of this course (cont.)\n\nThis is an exciting research area, having important applications in science, industry and policy.\nMachine learning is a fundamental ingredient in the training of a modern data scientist.\n\n\nContent borrowed from ME314 Day 1"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#the-basics-of-statistics",
+    "href": "slides/week01_slides_part1.html#the-basics-of-statistics",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The basics of statistics",
+    "text": "The basics of statistics\nBasic concepts of Statistics you might want to recap:\n\n\nExpected value, mean, median, variance, standard deviation\nProbabilities and simple probability distributions\nTypes of data\n\ndiscrete vs continuous\ncategorical vs numerical vs ordinal"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#resources-stats",
+    "href": "slides/week01_slides_part1.html#resources-stats",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Resources (Stats)",
+    "text": "Resources (Stats)\nA few references that might be useful to read or skim through:\n\n(Warne 2018, chaps. 1-3,5,6,11-12)\n(Gelman, Hill, and Vehtari 2020, chaps. 1–4)\nIf you are a PBS student, you can revisit the content of PB130 (MT3, MT4, MT8-MT11)"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#the-basics-of-r-programming",
+    "href": "slides/week01_slides_part1.html#the-basics-of-r-programming",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The basics of R programming",
+    "text": "The basics of R programming\nBasic concepts of programming in R to recap:\n\n\ndata structures (vectors, matrices, data frames)\nhow to manipulate data (filter, subset, select)\nread/write data files (for example: CSV, JSON, TXT)\n(optional but encouraged) some knowledge tidyverse can give you a productive boost\n\nthe official website (tidyverse.org) has some good tutorials."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#resources-r",
+    "href": "slides/week01_slides_part1.html#resources-r",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Resources (R)",
+    "text": "Resources (R)\n\nCheck out “R for Data Science” (Wickham and Grolemund 2016, chaps. 1–21). The online version is free.\n“Statistical inference via data science” (Ismay and Kim 2020, chaps. 4–6) is another great free resource"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#what-if-i-struggle-with-r",
+    "href": "slides/week01_slides_part1.html#what-if-i-struggle-with-r",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "‘What if I struggle with R’?",
+    "text": "‘What if I struggle with R’?\n➡️ Our first lab (Week 02) is a recap of some basic R commands, plus some ggplot2.\n\n\nIf you are not confident with your R skills, I strongly encourage you invest in studying the basics in the next couple of weeks.\nContact LSE Digital Skills Lab to attend in-person workshops or self-paced online R courses."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#any-questions",
+    "href": "slides/week01_slides_part1.html#any-questions",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Any questions?",
+    "text": "Any questions?\n\n\n\n\n\n\nImage created with the DALL·E algorithm using the prompt: ‘35mm macro photography of a robot holding a question mark card, white background’"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#syllabus",
+    "href": "slides/week01_slides_part1.html#syllabus",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Syllabus",
+    "text": "Syllabus\n\n\n\n\n\n\n\nIntro\n\n\n\n\n\n    Introduction, Context & Key Concepts\nWeek 01\n\n\nSupervised Learning\n\n\n\n    Simple and Multiple Linear Regression      Classifiers (Logistic Regression & Naive Bayes)      Resampling methods       Non-linear algorithms (SVM & tree-based models)\nWeek 02  Week 03  Week 04  Week 05\n\n\nUnsupervised Learning\n\n\n\n    Principal Component Analysis (PCA) & Clustering     Dimensionality Reduction (t-SNE & UMAP)         \nWeek 07  Week 08\n\n\nApplications\n\n\n\n    Applications: Text as Data     Applications: Topic Modelling     Applications: Social Media Data\nWeek 09  Week 10  Week 11"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#structure-of-lectures",
+    "href": "slides/week01_slides_part1.html#structure-of-lectures",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Structure of lectures 👨🏻‍🏫",
+    "text": "Structure of lectures 👨🏻‍🏫\nOur lectures will be split in two parts:\n\n\nPart I (~ 50 min): Traditional exposition of theoretical content\nbreak (~ 10 min): Grab coffee ☕ or relax 🧘\nPart II (~ 50 min): Live demo\n\nTypically, an exploratory analysis or application of an algorithm\nFeel free to follow along in your own laptops."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#structure-of-classes",
+    "href": "slides/week01_slides_part1.html#structure-of-classes",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Structure of classes 👩‍💻",
+    "text": "Structure of classes 👩‍💻\n\n\nStudents will work on weekly, structured problem sets in the staff-led class sessions.\nTips to get the most of classes:\n\nBring your own laptops 💻 (most tablets are not suitable for programming)\nRead the recommended reading prior to the class\nSkim through the problem set before class"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#class-groups",
+    "href": "slides/week01_slides_part1.html#class-groups",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Class groups",
+    "text": "Class groups\n Update the groups here once we hear back from LSE Timetables"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#assessments",
+    "href": "slides/week01_slides_part1.html#assessments",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Assessments 📔",
+    "text": "Assessments 📔\nThe breakdown of assessment for this class will be as follows:"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#assessments-1",
+    "href": "slides/week01_slides_part1.html#assessments-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Assessments 📔",
+    "text": "Assessments 📔\n\nProblem sets (60%)\n\n\nSummative problem sets released on Weeks 5, 8 & 11.\nThese will have a similar style to the formative problem sets, a mix of R tasks and your written interpretation of the analyses.\nYou will have 4-6 days to submit your solutions.\nEach of the three summative problem sets is worth 20% of the final mark, and will be graded on a 100 point scale."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#assessments-2",
+    "href": "slides/week01_slides_part1.html#assessments-2",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Assessments 📔",
+    "text": "Assessments 📔\n\nTake-home exam (40%)\n\n\nAn open-book take home exam at the end of the term, which will be due in the January exams period.\nExam questions will be comparable in style to the problem sets.\nThe exam questions will be released on Moodle on 5 January 2023.\nThe exam is due on 11 January at 4pm."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#office-hours",
+    "href": "slides/week01_slides_part1.html#office-hours",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Office hours",
+    "text": "Office hours\n\n\nIt is probably a good idea to book office hours if:\n\nyou struggled with a technical or theoretical aspect of a problem set in the previous week,\nyou have queries about careers in data science,\nyou want guidance in how to apply data science to other things you are studying outside this course.\n\nCome prepared. You only have 15 minutes.\nAsk for help sooner rather than later.\nBook slots via StudentHub up to 12 hours in advance."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#communication",
+    "href": "slides/week01_slides_part1.html#communication",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Communication",
+    "text": "Communication\n\n\nJoin our Slack group:  add link to slack\nUse the public Slack channels to talk to share links, content (or memes) with your colleagues.\nOur teaching team will dedicate some time during the week to answer questions or other interactions on Slack.\nReserve 📧 e-mail for formal requests: extensions, deferrals, etc.\n\nNo need to e-mail to inform you will skip a class, for example."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#any-questions-1",
+    "href": "slides/week01_slides_part1.html#any-questions-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Any questions?",
+    "text": "Any questions?\n\n\n\n\n\n\nImage created with the DALL·E algorithm using the prompt: ‘35mm macro photography of a robot holding a question mark card, white background’"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#we-changed-how-we-consume-music",
+    "href": "slides/week01_slides_part1.html#we-changed-how-we-consume-music",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "We changed how we consume music 🎧",
+    "text": "We changed how we consume music 🎧\n\n\n\n\n\n\nTo interact with this plot, check reference (Fischer-Baum 2017) at the end of this presentation."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#we-changed-how-we-consume-video",
+    "href": "slides/week01_slides_part1.html#we-changed-how-we-consume-video",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "We changed how we consume video 🎞️",
+    "text": "We changed how we consume video 🎞️\n\n\n\n\n\n\nTo interact with this plot, check reference (Fischer-Baum 2017) at the end of this presentation."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#smartphones-are-a-very-recent-thing",
+    "href": "slides/week01_slides_part1.html#smartphones-are-a-very-recent-thing",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Smartphones 📱 are a very recent thing",
+    "text": "Smartphones 📱 are a very recent thing\n\n\n\n\n\n\nTo interact with this plot, check reference (Fischer-Baum 2017) at the end of this presentation."
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#we-spend-a-lot-more-time-connected",
+    "href": "slides/week01_slides_part1.html#we-spend-a-lot-more-time-connected",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "We spend a lot more time connected",
+    "text": "We spend a lot more time connected"
+  },
+  {
+    "objectID": "slides/week01_slides_part1.html#references",
+    "href": "slides/week01_slides_part1.html#references",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "References",
+    "text": "References\n\n\nFischer-Baum, Reuben. 2017. “What ‘Tech World’ Did You Grow up In?” Washington Post. https://www.washingtonpost.com/graphics/2017/entertainment/tech-generations/.\n\n\nGelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. Regression and Other Stories. 1st ed. Cambridge University Press. https://doi.org/10.1017/9781139161879.\n\n\nIsmay, Chester, and Albert Young-Sun Kim. 2020. Statistical Inference via Data Science: A ModernDive into R and the Tidyverse. Chapman & Hall/CRC the R Series. Boca Raton: CRC Press / Taylor & Francis Group. https://moderndive.com/.\n\n\nKolawole, Emi. 2013. “About Those 2005 and 2013 Photos of the Crowds in St. Peter’s Square.” Washington Post. http://wapo.st/WKKTMh.\n\n\nWarne, Russell T. 2018. Statistics for the Social Sciences: A General Linear Model Approach. https://www.cambridge.org/highereducation/books/statistics-for-the-social-sciences/716FF25785A6154CC6822D067A959445.\n\n\nWickham, Hadley, and Garrett Grolemund. 2016. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. First edition. Sebastopol, CA: O’Reilly. https://r4ds.had.co.nz/.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#data-science-is",
+    "href": "slides/week01_slides_part2.html#data-science-is",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Data science is…",
+    "text": "Data science is…\n\n\n“[…] a field of study and practice that involves the collection, storage, and processing of data in order to derive important 💡 insights into a problem or a phenomenon.\n\n\n\n\nSuch data may be generated by humans (surveys, logs, etc.) or machines (weather data, road vision, etc.),\n\n\n\n\nand could be in different formats (text, audio, video, augmented or virtual reality, etc.).”\n\n\n\n\n(Shah 2020, chap. 1) - Emphasis and emojis are of my own making."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#the-mythical-unicorn",
+    "href": "slides/week01_slides_part2.html#the-mythical-unicorn",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The mythical unicorn 🦄",
+    "text": "The mythical unicorn 🦄\n\n\n\n\nSee (Davenport 2020) for an in-depth discussion about this.\n  Re-do unicorn illustration"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#the-reality-we-are-all-jugglers",
+    "href": "slides/week01_slides_part2.html#the-reality-we-are-all-jugglers",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The reality: we are all jugglers 🤹",
+    "text": "The reality: we are all jugglers 🤹\n\n Data Scientists do not need know everything, only a bit of everything 🤹"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#data-science-and-social-science",
+    "href": "slides/week01_slides_part2.html#data-science-and-social-science",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Data Science and Social Science",
+    "text": "Data Science and Social Science\n\nContent borrowed from ME314 Day 1\n\n\n\nSocial science: The goal is typically explanation\nData science: The goal is frequently prediction, or data exploration\nMany of the same methods are used for both objectives\n\n\n\n\n Illustrate"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#practical-examples",
+    "href": "slides/week01_slides_part2.html#practical-examples",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Practical examples",
+    "text": "Practical examples\n\n\n Give a pratical example of how one would approach the same dataset differently under these two modelling views."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#what-does-it-mean-to-learn-something",
+    "href": "slides/week01_slides_part2.html#what-does-it-mean-to-learn-something",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "What does it mean to learn something?",
+    "text": "What does it mean to learn something?\n\n\n\n\n\n\nImage created with the DALL·E algorithm using the prompt: ‘35mm macro photography of a robot holding a question mark card, white background’"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#what-is-machine-learning",
+    "href": "slides/week01_slides_part2.html#what-is-machine-learning",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\n\nMachine learning refers to a vast set of tools for understanding data.\n\n\n\nContent borrowed from ME314 Day 1"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#what-is-machine-learning-1",
+    "href": "slides/week01_slides_part2.html#what-is-machine-learning-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nMachine learning refers to a vast set of tools for understanding data.\nFor a quantitative response \\(Y\\) and a set of predictors \\(X\\):\n\n\\[\nY = f(X) + \\epsilon\n\\]\n\n\nHere, \\(f\\) represents the systematic information that \\(X\\) provides about \\(Y\\).\nStatistical learning refers to a set of approaches for estimating \\(f\\).\n\n\n\nContent borrowed from ME314 Day 1"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#what-is-machine-learning-2",
+    "href": "slides/week01_slides_part2.html#what-is-machine-learning-2",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n\nMost of the course we’ll spend talking about different ways to estimate \\(f\\) and how to evaluate whether we’ve done a good job with it.\n\n\nContent borrowed from ME314 Day 1"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#supervised-learning",
+    "href": "slides/week01_slides_part2.html#supervised-learning",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\nWORK IN PROGRESS"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#unsupervised-learning",
+    "href": "slides/week01_slides_part2.html#unsupervised-learning",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\nWORK IN PROGRESS"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#references",
+    "href": "slides/week01_slides_part2.html#references",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "References",
+    "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
+  },
+  {
+    "objectID": "slides/week02_slides.html#simple-linear-regression-context",
+    "href": "slides/week02_slides.html#simple-linear-regression-context",
+    "title": "DS202  Data Science for Social Scientists",
+    "section": "Simple Linear Regression: Context",
+    "text": "Simple Linear Regression: Context\n\nLinear regression is a simple approach to supervised learning. It assumes that the dependence of \\(Y\\) on \\(X_1, X_2, \\dots, X_p\\) is linear.\nTrue regression functions are never linear!\nAlthough it may seem overly simplistic, linear regression is extremely useful both conceptually and practically.\n\n\n\nSee 📺 Regression: Crash Course Statistics on YouTube for inspiration on how to present linear regression to students.  \nContent borrowed from ME314 Day 4"
+  },
+  {
+    "objectID": "slides/week02_slides.html#section",
+    "href": "slides/week02_slides.html#section",
+    "title": "DS202  Data Science for Social Scientists",
+    "section": "",
+    "text": "DS202 - Data Science for Social Scientists 🦄 🤹"
+  }
+]
