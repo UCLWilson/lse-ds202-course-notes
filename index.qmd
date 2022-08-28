@@ -1,6 +1,6 @@
 ---
-title: "LSE DS202M - Data Science for Social Scientists"
-subtitle: "(2022/23 summer revision)"
+title: "LSE DS202M"
+subtitle: "Data Science for Social Scientists"
 ---
 
 # 📑 Course Brief
