@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+  <meta name="generator" content="quarto-1.1.149">
 
   <meta name="author" content="Dr.&nbsp;Jon Cardoso Silva">
-  <title>LSE DS202 2022/23 (summer revision) - DS202 Data Science for Social Scientists</title>
+  <title>LSE DS202 2022/23 - DS202 Data Science for Social Scientists</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -20,10 +20,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -552,8 +557,8 @@
 <h2>Resources (Stats)</h2>
 <p>A few references that might be useful to read or skim through:</p>
 <ul>
-<li><span class="citation" data-cites="warne_statistics_2018">(<a href="#/ref-warne_statistics_2018" role="doc-biblioref" onclick="return false;">Warne 2018, chaps. 1-3,5,6,11-12</a>)</span></li>
-<li><span class="citation" data-cites="gelman_regression_2020">(<a href="#/ref-gelman_regression_2020" role="doc-biblioref" onclick="return false;">Gelman, Hill, and Vehtari 2020, chaps. 1–4</a>)</span></li>
+<li><span class="citation" data-cites="warne_statistics_2018">(<a href="#/references" role="doc-biblioref" onclick="">Warne 2018, chaps. 1-3,5,6,11-12</a>)</span></li>
+<li><span class="citation" data-cites="gelman_regression_2020">(<a href="#/references" role="doc-biblioref" onclick="">Gelman, Hill, and Vehtari 2020, chaps. 1–4</a>)</span></li>
 <li>If you are a PBS student, you can revisit the content of <br><a href="https://moodle.lse.ac.uk/course/view.php?id=6446">PB130</a> (MT3, MT4, MT8-MT11)</li>
 </ul>
 </section>
@@ -575,8 +580,8 @@
 <section id="resources-r" class="slide level2">
 <h2>Resources (<code>R</code>)</h2>
 <ul>
-<li>Check out <em>“R for Data Science”</em> <span class="citation" data-cites="wickham_r_2016">(<a href="#/ref-wickham_r_2016" role="doc-biblioref" onclick="return false;">Wickham and Grolemund 2016, chaps. 1–21</a>)</span>. The online version is free.</li>
-<li><em>“Statistical inference via data science”</em> <span class="citation" data-cites="ismay_statistical_2020">(<a href="#/ref-ismay_statistical_2020" role="doc-biblioref" onclick="return false;">Ismay and Kim 2020, chaps. 4–6</a>)</span> is another great free resource</li>
+<li>Check out <em>“R for Data Science”</em> <span class="citation" data-cites="wickham_r_2016">(<a href="#/references" role="doc-biblioref" onclick="">Wickham and Grolemund 2016, chaps. 1–21</a>)</span>. The online version is free.</li>
+<li><em>“Statistical inference via data science”</em> <span class="citation" data-cites="ismay_statistical_2020">(<a href="#/references" role="doc-biblioref" onclick="">Ismay and Kim 2020, chaps. 4–6</a>)</span> is another great free resource</li>
 </ul>
 </section>
 <section id="what-if-i-struggle-with-r" class="slide level2">
@@ -785,8 +790,8 @@
 <div class="columns">
 <div class="column" style="width:85%;">
 <div class="r-stack">
-<p><img data-src="../figures/week01/st_peters_square_2005.jpg" class="fragment img-fluid" data-fragment-index="2" style="width:80.0%"></p>
-<p><img data-src="../figures/week01/st_peters_square_2013.jpg" class="fragment img-fluid" data-fragment-index="3" style="width:80.0%"></p>
+<p><img data-src="../figures/week01/st_peters_square_2005.jpg" class="fragment img-fluid" style="width:80.0%" data-fragment-index="2"></p>
+<p><img data-src="../figures/week01/st_peters_square_2013.jpg" class="fragment img-fluid" style="width:80.0%" data-fragment-index="3"></p>
 </div>
 </div><div class="column" style="width:20%;margin-left:-15%;margin=right:0;padding:0;">
 <div class="r-stack">
@@ -800,7 +805,7 @@
 </div>
 </div>
 <div class="footer">
-<p>Source: <span class="citation" data-cites="kolawole_about_2013">(<a href="#/ref-kolawole_about_2013" role="doc-biblioref" onclick="return false;">Kolawole 2013</a>)</span></p>
+<p>Source: <span class="citation" data-cites="kolawole_about_2013">(<a href="#/references" role="doc-biblioref" onclick="">Kolawole 2013</a>)</span></p>
 </div>
 </section>
 <section id="we-changed-how-we-consume-music" class="slide level2">
@@ -811,7 +816,7 @@
 </div>
 </div>
 <div class="footer">
-<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/ref-fischer-baum_what_2017" role="doc-biblioref" onclick="return false;">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
+<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/references" role="doc-biblioref" onclick="">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
 </div>
 </section>
 <section id="we-changed-how-we-consume-video" class="slide level2">
@@ -822,7 +827,7 @@
 </div>
 </div>
 <div class="footer">
-<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/ref-fischer-baum_what_2017" role="doc-biblioref" onclick="return false;">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
+<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/references" role="doc-biblioref" onclick="">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
 </div>
 </section>
 <section id="smartphones-are-a-very-recent-thing" class="slide level2">
@@ -833,7 +838,7 @@
 </div>
 </div>
 <div class="footer">
-<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/ref-fischer-baum_what_2017" role="doc-biblioref" onclick="return false;">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
+<p>To interact with this plot, check reference <span class="citation" data-cites="fischer-baum_what_2017">(<a href="#/references" role="doc-biblioref" onclick="">Fischer-Baum 2017</a>)</span> at the end of this presentation.</p>
 </div>
 </section>
 <section id="we-spend-a-lot-more-time-connected" class="slide level2">
@@ -1208,7 +1213,8 @@ Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data Science: Import, Ti
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

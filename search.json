@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "LSE DS202M - Data Science for Social Scientists",
+    "title": "LSE DS202M",
     "section": "",
     "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Teaching Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\n\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute\n\n\n\n(pending confirmation)\n(pending confirmation)\n(pending confirmation)\n\n\n\n\n\n\n\n\n\n📓 Syllabus\nA list of what will happen every week.\nClick on each Week for more information (slides, lab instructions, recommended resources, etc.).\n\n\n\nIntro\n\n\n\n\n\n    Introduction, Context & Key Concepts\n🗓️ Week 01\n\n\nSupervised Learning\n\n\n\n    Simple and Multiple Linear Regression      Classifiers (Logistic Regression & Naive Bayes)      Resampling methods       Non-linear algorithms (SVM & tree-based models)\n🗓️ Week 02  🗓️ Week 03  🗓️ Week 04  🗓️ Week 05\n\n\nUnsupervised Learning\n\n\n\n    Principal Component Analysis (PCA) & Clustering     Dimensionality Reduction (t-SNE & UMAP)         \n🗓️ Week 07  🗓️ Week 08\n\n\nApplications\n\n\n\n    Applications: Text as Data     Applications: Topic Modelling     Applications: Social Media Data\n🗓️ Week 09  🗓️ Week 10  🗓️ Week 11"
   },
@@ -256,21 +256,21 @@
     "href": "slides/week01_slides_part2.html#the-mythical-unicorn",
     "title": "DS202 Data Science for Social Scientists",
     "section": "The mythical unicorn 🦄",
-    "text": "The mythical unicorn 🦄\n\n\n\n\nSee (Davenport 2020) for an in-depth discussion about this.\n  Re-do unicorn illustration"
+    "text": "The mythical unicorn 🦄\n\n\nknows everything about statistics\n\n\nable to communicate insights perfectly\n\n\nfully understands businesses like no one\n\n\nis a fluent computer programmer\n\n\n\nOf course, such a person does not exist!\n\n\nSee (Davenport 2020) for a more in-depth discussion about this"
   },
   {
-    "objectID": "slides/week01_slides_part2.html#the-reality-we-are-all-jugglers",
-    "href": "slides/week01_slides_part2.html#the-reality-we-are-all-jugglers",
+    "objectID": "slides/week01_slides_part2.html#in-reality",
+    "href": "slides/week01_slides_part2.html#in-reality",
     "title": "DS202 Data Science for Social Scientists",
-    "section": "The reality: we are all jugglers 🤹",
-    "text": "The reality: we are all jugglers 🤹\n\n Data Scientists do not need know everything, only a bit of everything 🤹"
+    "section": "In reality…",
+    "text": "In reality…\n\n\nWe are all jugglers 🤹\n\n\nEveryone brings a different skill set.\nWe need multi-disciplinary teams.\nGood data scientists know a bit of everything.\n\nNot fluent in all things\nUnderstands their strenghts and weaknessess\nThey know when and where to interface with others\n\n\n\n\n\n\n\n\n\nSee (Schutt and O’Neil 2013, chap. 1) for more on this."
   },
   {
     "objectID": "slides/week01_slides_part2.html#data-science-and-social-science",
     "href": "slides/week01_slides_part2.html#data-science-and-social-science",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Data Science and Social Science",
-    "text": "Data Science and Social Science\n\nContent borrowed from ME314 Day 1\n\n\n\nSocial science: The goal is typically explanation\nData science: The goal is frequently prediction, or data exploration\nMany of the same methods are used for both objectives\n\n\n\n\n Illustrate"
+    "text": "Data Science and Social Science\n\nIn reality, data scientists work as a multidisciplinary group, collaborating towards a common goal.\nContent borrowed from ME314 Day 1\n\n\n\nSocial science: The goal is typically explanation\nData science: The goal is frequently prediction, or data exploration\nMany of the same methods are used for both objectives"
   },
   {
     "objectID": "slides/week01_slides_part2.html#practical-examples",
@@ -298,7 +298,7 @@
     "href": "slides/week01_slides_part2.html#what-is-machine-learning-1",
     "title": "DS202 Data Science for Social Scientists",
     "section": "What is Machine Learning?",
-    "text": "What is Machine Learning?\n\nMachine learning refers to a vast set of tools for understanding data.\nFor a quantitative response \\(Y\\) and a set of predictors \\(X\\):\n\n\\[\nY = f(X) + \\epsilon\n\\]\n\n\nHere, \\(f\\) represents the systematic information that \\(X\\) provides about \\(Y\\).\nStatistical learning refers to a set of approaches for estimating \\(f\\).\n\n\n\nContent borrowed from ME314 Day 1"
+    "text": "What is Machine Learning?\n\nMachine learning refers to a vast set of tools for understanding data.\nFor a quantitative response \\(Y\\) and a set of predictors \\(X\\): \\[\nY = f(X) + \\epsilon\n\\] ::: {.incremental}\nHere, \\(f\\) represents the systematic information that \\(X\\) provides about \\(Y\\).\nStatistical learning refers to a set of approaches for estimating \\(f\\). :::\n\n\nContent borrowed from ME314 Day 1"
   },
   {
     "objectID": "slides/week01_slides_part2.html#what-is-machine-learning-2",
@@ -326,7 +326,7 @@
     "href": "slides/week01_slides_part2.html#references",
     "title": "DS202 Data Science for Social Scientists",
     "section": "References",
-    "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
+    "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nSchutt, Rachel, and Cathy O’Neil. 2013. Doing Data Science. First edition. Beijing ; Sebastopol: O’Reilly Media. https://ebookcentral.proquest.com/lib/londonschoolecons/detail.action?docID=1465965.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
   },
   {
     "objectID": "slides/week02_slides.html#simple-linear-regression-context",
