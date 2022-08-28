@@ -30,7 +30,9 @@ subtitle: "Data Science for Social Scientists"
 
 Dr. [Jonathan Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva) <br/>
 _Assistant Professorial Lecturer_ <br/>
-LSE Data Science Institute
+LSE Data Science Institute<br/>
+Office Hours: book via StudentHub
+
 
 ## Teaching assistants
 
@@ -53,8 +55,8 @@ Click on each Week for more information (slides, lab instructions, recommended r
 |----------------------------------------------------------|------------------|
 | &nbsp;&nbsp;&nbsp;&nbsp;Introduction, Context & Key Concepts                | 🗓️ [Week 01](/weeks/week01.html) |
 | **Supervised Learning**                                  |                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Simple and Multiple Linear Regression  <br/> &nbsp;&nbsp;&nbsp;&nbsp;Classifiers (Logistic Regression & Naive Bayes) <br/> &nbsp;&nbsp;&nbsp;&nbsp;Resampling methods <br/> &nbsp;&nbsp;&nbsp;&nbsp; Non-linear algorithms (SVM & tree-based models)           | 🗓️ [Week 02]() <br/> 🗓️ [Week 03]() <br/> 🗓️ [Week 04]() <br/> 🗓️ [Week 05]()|
+| &nbsp;&nbsp;&nbsp;&nbsp;Simple and Multiple Linear Regression  <br/> &nbsp;&nbsp;&nbsp;&nbsp;Classifiers (Logistic Regression & Naive Bayes) <br/> &nbsp;&nbsp;&nbsp;&nbsp;Resampling methods <br/> &nbsp;&nbsp;&nbsp; Non-linear algorithms (SVM & tree-based models)           | 🗓️ [Week 02]() <br/> 🗓️ [Week 03]() <br/> 🗓️ [Week 04]() <br/> 🗓️ [Week 05]()|
 | **Unsupervised Learning**                                |                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Principal Component Analysis (PCA) & Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction (t-SNE & UMAP)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 🗓️ [Week 07]() <br/> 🗓️ [Week 08]()|
+| &nbsp;&nbsp;&nbsp;&nbsp;Clustering <br/>&nbsp;&nbsp;&nbsp;&nbsp;Dimensionality Reduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 🗓️ [Week 07]() <br/> 🗓️ [Week 08]()|
 | **Applications**                                         |                  |
-| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Text as Data <br/>&nbsp;&nbsp;&nbsp; Applications: Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data| 🗓️ [Week 09]() <br/> 🗓️ [Week 10]() <br/> 🗓️ [Week 11]() |
+| &nbsp;&nbsp;&nbsp;&nbsp;Applications: Predictive Modelling on Tabular Data <br/>&nbsp;&nbsp;&nbsp; Applications: Text as Data & Topic Modelling <br/>&nbsp;&nbsp;&nbsp;  Applications: Social Media Data| 🗓️ [Week 09]() <br/> 🗓️ [Week 10]() <br/> 🗓️ [Week 11]() |
