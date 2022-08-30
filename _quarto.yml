@@ -4,6 +4,9 @@ project:
   output-dir: _output
   render:
     - "index.qmd"
+    - "assessments.qmd"
+    - "syllabus.qmd"
+    - "communication.qmd"
     - "weeks/*.qmd"
     - "slides/*.qmd"
 
@@ -25,10 +28,10 @@ website:
     contents:
       - href: index.qmd
         text: "🏠 Home"
-      # - href: regulation.qmd
-      #   text: "📜 CAPIS"
-      # - href: assessments.qmd
-      #   text: "✍️ Assessments"
+      - href: syllabus.qmd
+        text: "📓 Syllabus"
+      - href: communication.qmd
+        text: "📟 Communication"
       - section: "🗓️ Weeks"
         contents:
          - href: weeks/week01.qmd
@@ -68,7 +71,13 @@ website:
   
 format:
   html:
-    author: Dr. [Jonathan Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+    subtitle: "DS202 - Data Science for Social Scientists"
+    email-obfuscation: javascript
+    link-external-newwindow: true
+    link-external-icon: true
+    author: Dr. [Jon Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+    author-meta: Dr. Jon Cardoso-Silva
+    date-format: "DD MMMM YYYY"
     theme:
       light: journal
       dark:  darkly

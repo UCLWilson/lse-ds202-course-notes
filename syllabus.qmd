@@ -1,0 +1,205 @@
+---
+title: "LSE DS202"
+subtitle: "Data Science for Social Scientists"
+date: 30 August 2022
+date-meta: 30 August 2022
+---
+
+# 📓 Syllabus
+
+A list of what will happen every week. 
+
+Click on each Week's link for more information (slides, lab instructions, recommended resources, etc.).
+
+<table class="syllabus">
+    <thead>
+        
+    </thead>
+    
+    <tr class="odd">
+        <th colspan=4>Intro</th>
+    </tr>
+
+    <!-- WEEK 01 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=2></td>
+            <td rowspan=2>🗓️ <a href="/weeks/week01.qmd">Week 01</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Introduction, Context & Key Concepts</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>No class this week. <br/>_(Use this time to revisit basic R programming)_</td>
+        </tr>
+    </tbody>
+
+    <tr class="odd">
+        <th colspan=4>Supervised Learning</th>
+    </tr>
+
+    <!-- WEEK 02 -->
+    <tbody>
+        <tr class="even">
+           <td rowspan=2></td>
+           <td rowspan=2>🗓️ <a href="">Week 02</a></td>
+           <td style="font-weight:bold;">Lecture</td>
+           <td>Simple and Multiple Linear Regression</td>
+       </tr>
+       <tr class="even">
+           <td style="font-weight:bold;">Lab</td>
+           <td>Revision of `R`: data structures, basic commands and some tidyverse</td>
+       </tr>
+   </tbody>
+
+    <!-- WEEK 03 -->
+    <tbody>
+    <tr class="even">
+        <td rowspan=2></td>
+        <td rowspan=2>🗓️ <a href="">Week 03</a></td>
+        <td style="font-weight:bold;">Lecture</td>
+        <td>Classifiers (Logistic Regression & Naive Bayes)</td>
+    </tr>
+    <tr class="even">
+        <td style="font-weight:bold;">Lab</td>
+        <td>Linear Regression [@james_introduction_2021, chapter 3]</td>
+    </tr>
+   </tbody>
+
+    <!-- WEEK 04 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=2></td>
+            <td rowspan=2>🗓️ <a href="">Week 04</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Resampling methods</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>Classification Methods [@james_introduction_2021, chapter 4]</td>
+        </tr>
+       </tbody>
+
+    <!-- WEEK 05 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=3></td>
+            <td rowspan=3>🗓️ <a href="">Week 05</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Non-linear algorithms (SVM & tree-based models)</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>Cross-Validation and the Bootstrap [@james_introduction_2021, chapter 5]</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Summative</td>
+            <td>
+                <ul>
+                    <li>Worth: 20% of final marks</li>
+                    <li>Problem set involving all content covered until Week 05</li>
+                    <li>Deadline: day before next lab</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+
+    <tr class="odd">
+        <th colspan=4>Unsupervised Learning</th>
+    </tr>
+
+    <!-- WEEK 07 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=2></td>
+            <td rowspan=2>🗓️ <a href="">Week 07</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Unsupervised Learning: Clustering</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>Unsupervised Learning: Clustering [@james_introduction_2021, chapter 12]</td>
+        </tr>
+    </tbody>
+
+    <!-- WEEK 08 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=3></td>
+            <td rowspan=3>🗓️ <a href="">Week 08</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Unsupervised Learning: Dimensionality Reduction</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>Unsupervised Learning: PCA [@james_introduction_2021, chapter 12]</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Summative</td>
+            <td>
+                <ul>
+                    <li>Worth: 20% of final marks</li>
+                    <li>Problem set about non-linear regression and clustering</li>
+                    <li>Deadline: day before next lab</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+
+    <tr class="odd">
+        <th colspan=4>Applications</th>
+    </tr>
+
+    <!-- WEEK 09 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=2></td>
+            <td rowspan=2>🗓️ <a href="">Week 09</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Applications: Predictive Modelling on Tabular Data</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>We will create machine learning models using a selected real tabular dataset</td>
+        </tr>
+    </tbody>
+
+    <!-- WEEK 10 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=2></td>
+            <td rowspan=2>🗓️ <a href="">Week 10</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Applications: Text as Data & Topic Modelling (with guest speakers)</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>We will explore unsupervised models using a couple of text datasets</td>
+        </tr>
+    </tbody>
+
+    <!-- WEEK 11 -->
+    <tbody>
+        <tr class="even">
+            <td rowspan=3></td>
+            <td rowspan=3>🗓️ <a href="">Week 11</a></td>
+            <td style="font-weight:bold;">Lecture</td>
+            <td>Applications: Social Media Data (with guest speakers)</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Lab</td>
+            <td>We will create ML models using the data provided by [@sumner_predicting_2012] <br/>followed by a discussion on explainability and potential ethical issues</td>
+        </tr>
+        <tr class="even">
+            <td style="font-weight:bold;">Summative</td>
+            <td>
+                <ul>
+                    <li>Worth: 20% of final marks</li>
+                    <li>Problem set about unsupervised learning applications</li>
+                    <li>Deadline: end of Week 11+1</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
