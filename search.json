@@ -2,9 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "LSE DS202M",
+    "title": "LSE DS202 (2022/2023)",
     "section": "",
-    "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Teaching Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\n\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute Office Hours: book via StudentHub\n\n\n\n(pending confirmation)\n(pending confirmation)\n(pending confirmation)\n\n\n\n\n\n\n\n\n\n📓 Syllabus\nA list of what will happen every week.\nClick on each Week for more information (slides, lab instructions, recommended resources, etc.).\n\n\n\nIntro\n\n\n\n\n\n    Introduction, Context & Key Concepts\n🗓️ Week 01\n\n\nSupervised Learning\n\n\n\n    Simple and Multiple Linear Regression      Classifiers (Logistic Regression & Naive Bayes)      Resampling methods      Non-linear algorithms (SVM & tree-based models)\n🗓️ Week 02  🗓️ Week 03  🗓️ Week 04  🗓️ Week 05\n\n\nUnsupervised Learning\n\n\n\n    Clustering     Dimensionality Reduction         \n🗓️ Week 07  🗓️ Week 08\n\n\nApplications\n\n\n\n    Applications: Predictive Modelling on Tabular Data     Applications: Text as Data & Topic Modelling     Applications: Social Media Data\n🗓️ Week 09  🗓️ Week 10  🗓️ Week 11"
+    "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Teaching Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\n\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute Office Hours: book via StudentHub\n\n\n\n(pending confirmation)\n(pending confirmation)\n(pending confirmation)"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "LSE DS202",
+    "section": "",
+    "text": "References\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\nSumner, Chris, Alison Byers, Rachel Boochever, and Gregory J. Park. 2012. “Predicting Dark Triad Personality Traits from Twitter Usage and a Linguistic Analysis of Tweets.” In 2012 11th International Conference on Machine Learning and Applications, 2:386–93. https://doi.org/10.1109/ICMLA.2012.218."
+  },
+  {
+    "objectID": "communication.html",
+    "href": "communication.html",
+    "title": "LSE DS202",
+    "section": "",
+    "text": "Find out how to reach out to your peers, teaching and administrative staff during this course.\n\n\n\nMost of our “informal” communication and interactions will happen through Slack.\nSlack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project.\nThere will be channels dedicated to discussing each week’s content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.\n\nYou will receive an invitation to join our Slack group via e-mail. Send an e-mail to Jon (J.Cardoso-Silva at lse dot ac dot uk) if you have not received an invite by the time of the first lecture.\nCheck out the following links to understand more about this tool:\n\nSlack tutorials\nCollaborate effectively in channels"
   },
   {
     "objectID": "weeks/week01.html",
@@ -14,25 +28,32 @@
     "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments and how we will interact throughout this course.\nWe will also cover some of the basics: what do we mean by data science & machine learning, and what do you need to do to get the most of this course?"
   },
   {
-    "objectID": "weeks/week01.html#slides---part-i-45-50-min",
-    "href": "weeks/week01.html#slides---part-i-45-50-min",
+    "objectID": "weeks/week01.html#lecture",
+    "href": "weeks/week01.html#lecture",
     "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "🖼️ Slides - Part I (45-50 min)",
-    "text": "🖼️ Slides - Part I (45-50 min)\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+    "section": "👨‍🏫 Lecture",
+    "text": "👨‍🏫 Lecture\n\nPart I - Introduction (45-50 min)\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\n☕ Coffee Break (10 min)\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\nPart II - Key Concepts (45-50 min)\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
   },
   {
-    "objectID": "weeks/week01.html#coffee-break-10-min",
-    "href": "weeks/week01.html#coffee-break-10-min",
+    "objectID": "weeks/week01.html#labs",
+    "href": "weeks/week01.html#labs",
     "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "Coffee Break ☕ (10 min)",
-    "text": "Coffee Break ☕ (10 min)\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself."
+    "section": "💻 Labs",
+    "text": "💻 Labs\nWe do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language R.\nSee sections below for advice on how to do that."
   },
   {
-    "objectID": "weeks/week01.html#slides---part-ii-45-50-min",
-    "href": "weeks/week01.html#slides---part-ii-45-50-min",
+    "objectID": "weeks/week01.html#preparing-for-the-next-week",
+    "href": "weeks/week01.html#preparing-for-the-next-week",
     "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "🖼️ Slides - Part II (45-50 min)",
-    "text": "🖼️ Slides - Part II (45-50 min)\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+    "section": "📒 Preparing for the next week",
+    "text": "📒 Preparing for the next week\n\nJoin the Slack group of this course (more info)\nUse this time to learn or revisit basic R programming skills.\nWrite down your R questions. Next week’s lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with R."
+  },
+  {
+    "objectID": "weeks/week01.html#recommended-resources",
+    "href": "weeks/week01.html#recommended-resources",
+    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
+    "section": "🔖 Recommended Resources",
+    "text": "🔖 Recommended Resources\n\nCheckout the upcoming book ‘Modeling Mindsets’ (Molnar 2022) (it’s free to read online) where you can learn about the different ways one can approach a modelling problem (traditional frequentist statistics vs Bayesian statistics vs Machine Learning, etc.). The following twitter thread also summarises the main points of these different paradigms:\n\n\nIn a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, …).Realistically, you only have time to master a few mindsets.So what to do? A thread 🧵\n\n— Christoph Molnar (@ChristophMolnar) August 30, 2022\n\n\nDigital Skills Lab offer workshops on R and Python skills.\nCheckout this summer’s LSE Careers Skill Accelerator programme. Some of the self-paced courses will remain available until the end of the year."
   },
   {
     "objectID": "weeks/week06.html",

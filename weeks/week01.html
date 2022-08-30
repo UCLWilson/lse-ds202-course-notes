@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.149">
+<meta name="generator" content="quarto-1.1.163">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dr.&nbsp;Jonathan Cardoso Silva">
+<meta name="author" content="Dr.&nbsp;Jon Cardoso-Silva">
+<meta name="dcterms.date" content="30 August 2022">
 
 <title>LSE DS202 2022/23 - 🗓️ Week 01 - Introduction, Context &amp; Key Concepts</title>
 <style>
@@ -21,6 +22,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -31,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../index.html" rel="prev">
+<link href="../communication.html" rel="prev">
 <link href="..//figures/LSE Data Science Institute.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -110,6 +130,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="../index.html" class="sidebar-item-text sidebar-link">🏠 Home</a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">📓 Syllabus</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../communication.html" class="sidebar-item-text sidebar-link">📟 Communication</a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">🗓️ Weeks</a>
@@ -136,15 +166,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#communication" id="toc-communication" class="nav-link active" data-scroll-target="#communication">Communication</a></li>
-  <li><a href="#lecture" id="toc-lecture" class="nav-link" data-scroll-target="#lecture">Lecture</a>
+  <li><a href="#lecture" id="toc-lecture" class="nav-link active" data-scroll-target="#lecture">👨‍🏫 Lecture</a>
   <ul class="collapse">
-  <li><a href="#slides---part-i-45-50-min" id="toc-slides---part-i-45-50-min" class="nav-link" data-scroll-target="#slides---part-i-45-50-min"><strong>🖼️ Slides - Part I</strong> (45-50 min)</a></li>
-  <li><a href="#coffee-break-10-min" id="toc-coffee-break-10-min" class="nav-link" data-scroll-target="#coffee-break-10-min">Coffee Break ☕ (10 min)</a></li>
-  <li><a href="#slides---part-ii-45-50-min" id="toc-slides---part-ii-45-50-min" class="nav-link" data-scroll-target="#slides---part-ii-45-50-min"><strong>🖼️ Slides - Part II</strong> (45-50 min)</a></li>
+  <li><a href="#part-i---introduction-45-50-min" id="toc-part-i---introduction-45-50-min" class="nav-link" data-scroll-target="#part-i---introduction-45-50-min">Part I - Introduction (45-50 min)</a></li>
+  <li><a href="#coffee-break-10-min" id="toc-coffee-break-10-min" class="nav-link" data-scroll-target="#coffee-break-10-min">☕ Coffee Break (10 min)</a></li>
+  <li><a href="#part-ii---key-concepts-45-50-min" id="toc-part-ii---key-concepts-45-50-min" class="nav-link" data-scroll-target="#part-ii---key-concepts-45-50-min">Part II - Key Concepts (45-50 min)</a></li>
   </ul></li>
+  <li><a href="#labs" id="toc-labs" class="nav-link" data-scroll-target="#labs">💻 Labs</a></li>
   <li><a href="#preparing-for-the-next-week" id="toc-preparing-for-the-next-week" class="nav-link" data-scroll-target="#preparing-for-the-next-week">📒 Preparing for the next week</a></li>
-  <li><a href="#recommended-reading" id="toc-recommended-reading" class="nav-link" data-scroll-target="#recommended-reading">Recommended Reading</a></li>
+  <li><a href="#recommended-resources" id="toc-recommended-resources" class="nav-link" data-scroll-target="#recommended-resources">🔖 Recommended Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -154,6 +184,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">🗓️ Week 01 - Introduction, Context &amp; Key Concepts</h1>
+<p class="subtitle lead">DS202 - Data Science for Social Scientists</p>
 </div>
 
 
@@ -163,10 +194,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Dr.&nbsp;<a href="https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva">Jonathan Cardoso Silva</a> </p>
+             <p>Dr.&nbsp;<a href="https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva">Jon Cardoso-Silva</a> </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">30 August 2022</p>
+    </div>
+  </div>
     
   </div>
   
@@ -175,57 +212,88 @@ ul.task-list li input[type="checkbox"] {
 
 <p>In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments and how we will interact throughout this course.</p>
 <p>We will also cover some of the basics: what do we mean by data science &amp; machine learning, and what do you need to do to get the most of this course?</p>
-<section id="communication" class="level1">
-<h1>Communication</h1>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="../figures/slack_logo.svg" style="height:1.5em" alt="Slack logo" class="figure-img"></p>
-</figure>
-</div>
-<p>Importantly, you will receive an invitation to join our Slack group via e-mail.</p>
-<p>Send an <a href="mailto:J.Cardoso-Silva@lse.ac.uk">e-mail to Jon</a> if you have not received an invite by the time of the first lecture.</p>
-<p>Slack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project. Most of our “informal” communication and interactions will happen through Slack. There will be channels dedicated to discussing each week’s content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.</p>
-<p>Check out the following links to understand more about this software:</p>
-<ul>
-<li><a href="https://slack.com/intl/en-gb/help/categories/360000049063-Slack-tutorials">Slack tutorials</a></li>
-<li><a href="https://slack.com/intl/en-gb/help/articles/360058495654-Collaborate-effectively-in-channels?from=channels">Collaborate effectively in channels</a></li>
-</ul>
-</section>
-<section id="lecture" class="level1">
-<h1>Lecture</h1>
-<section id="slides---part-i-45-50-min" class="level2">
-<h2 class="anchored" data-anchor-id="slides---part-i-45-50-min"><strong>🖼️ Slides - Part I</strong> (45-50 min)</h2>
+<details>
+<summary>
+👨‍🏫 Lecture
+</summary>
+<section id="lecture" class="level2">
+<h2 class="anchored" data-anchor-id="lecture">👨‍🏫 Lecture</h2>
+<section id="part-i---introduction-45-50-min" class="level3">
+<h3 class="anchored" data-anchor-id="part-i---introduction-45-50-min">Part I - Introduction (45-50 min)</h3>
+<p><mark class="todo"></mark></p>
 <p>Either click on the slide area below or click <a href="../slides/week01_slides_part1.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
 <div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
 <iframe src="../slides/week01_slides_part1.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
 </iframe>
 </div>
 </section>
-<section id="coffee-break-10-min" class="level2">
-<h2 class="anchored" data-anchor-id="coffee-break-10-min">Coffee Break ☕ (10 min)</h2>
+<section id="coffee-break-10-min" class="level3">
+<h3 class="anchored" data-anchor-id="coffee-break-10-min">☕ Coffee Break (10 min)</h3>
 <p>Use this time to chat, stretch, drink some coffee or just relax for a bit by yourself.</p>
 </section>
-<section id="slides---part-ii-45-50-min" class="level2">
-<h2 class="anchored" data-anchor-id="slides---part-ii-45-50-min"><strong>🖼️ Slides - Part II</strong> (45-50 min)</h2>
+<section id="part-ii---key-concepts-45-50-min" class="level3">
+<h3 class="anchored" data-anchor-id="part-ii---key-concepts-45-50-min">Part II - Key Concepts (45-50 min)</h3>
+<p><mark class="todo"></mark></p>
 <p>Either click on the slide area below or click <a href="../slides/week01_slides_part2.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
 <div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
 <iframe src="../slides/week01_slides_part2.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
 </iframe>
 </div>
-</section>
-</section>
-<section id="preparing-for-the-next-week" class="level1">
-<h1>📒 Preparing for the next week</h1>
-<p><mark class="todo"></mark></p>
-</section>
-<section id="recommended-reading" class="level1">
-<h1>Recommended Reading</h1>
-<p><mark class="todo"></mark></p>
+</section></section></details>
+<details>
+<summary>
+💻 Labs
+</summary>
 
 
-</section>
+<section id="labs" class="level2">
+<h2 class="anchored" data-anchor-id="labs">💻 Labs</h2>
+<p>We do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language <code>R</code>.</p>
+See sections below for advice on how to do that.
+</section></details>
+<details>
+<summary>
+📒 Preparing for the next week
+</summary>
 
-</main> <!-- /main -->
+<section id="preparing-for-the-next-week" class="level2">
+<h2 class="anchored" data-anchor-id="preparing-for-the-next-week">📒 Preparing for the next week</h2>
+<ul>
+<li>Join the Slack group of this course <a href="../communication.html">(more info)</a></li>
+<li>Use this time to learn or revisit basic <code>R</code> programming skills.</li>
+<li>Write down your <code>R</code> questions. Next week’s lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with <code>R</code>.</li>
+</ul>
+</section></details>
+<details>
+<summary>
+🔖 Recommended Resources
+</summary>
+
+<section id="recommended-resources" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-resources">🔖 Recommended Resources</h2>
+<ul>
+<li>Checkout the upcoming book <a href="https://book.modeling-mindsets.com/">‘Modeling Mindsets’</a> <span class="citation" data-cites="molnar_modeling_2022">(<a href="#ref-molnar_modeling_2022" role="doc-biblioref">Molnar 2022</a>)</span> (it’s free to read online) where you can learn about the different ways one can approach a modelling problem (traditional frequentist statistics vs Bayesian statistics vs Machine Learning, etc.). The following twitter thread also summarises the main points of these different paradigms:
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+In a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, …).<br><br>Realistically, you only have time to master a few mindsets.<br><br>So what to do? A thread 🧵
+</p>
+— Christoph Molnar (@ChristophMolnar) <a href="https://twitter.com/ChristophMolnar/status/1564624829009072129?ref_src=twsrc%5Etfw">August 30, 2022</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+<li><a href="https://info.lse.ac.uk/current-students/digital-skills-lab">Digital Skills Lab</a> offer workshops on R and Python skills.</li>
+<li>Checkout this summer’s <a href="https://twitter.com/LSECareers/status/1534868470495596545">LSE Careers Skill Accelerator programme</a>. Some of the self-paced courses will remain available until the end of the year.</li>
+</ul>
+</section></details>
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-molnar_modeling_2022" class="csl-entry" role="doc-biblioentry">
+Molnar, Christoph. 2022. <em>Modeling <span>Mindsets</span></em>. 1st ed. Leanpub. <a href="https://book.modeling-mindsets.com/">https://book.modeling-mindsets.com/</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -435,12 +503,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return popup.innerHTML;
     });
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/github\.com\/LSE-DSI\/lse-ds202-course-notes/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">🏠 Home</span>
+      <a href="../communication.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">📟 Communication</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
