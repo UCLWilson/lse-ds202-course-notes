@@ -68,7 +68,7 @@ See sections below for advice on how to do that.
 
 - Checkout the upcoming book ['Modeling Mindsets'](https://book.modeling-mindsets.com/) [@molnar_modeling_2022] (it's free to read online) where you can learn about the different ways one can approach a modelling problem (traditional frequentist statistics vs Bayesian statistics vs Machine Learning, etc.). The following twitter thread also summarises the main points of these different paradigms:
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, ...).<br><br>Realistically, you only have time to master a few mindsets.<br><br>So what to do? A thread 🧵</p>&mdash; Christoph Molnar (\@ChristophMolnar) <a href="https://twitter.com/ChristophMolnar/status/1564624829009072129?ref_src=twsrc%5Etfw">August 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-- [Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) offer workshops on R and Python skills.
-- Checkout this summer's [LSE Careers Skill Accelerator programme](https://twitter.com/LSECareers/status/1534868470495596545). Some of the self-paced courses will remain available until the end of the year.
+- [Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) offer R and python workshops. Check out their page.
+- Checkout this summer's [LSE Careers Skill Accelerator programme](https://twitter.com/LSECareers/status/1534868470495596545). Some of the self-paced courses will remain open to LSE students until the end of the year.
 
 </details>
