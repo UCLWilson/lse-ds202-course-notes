@@ -1,5 +1,7 @@
 ---
 title: "🗓️ Week 01 - Introduction, Context & Key Concepts"
+date: 30 August 2022
+date-meta: 30 August 2022
 ---
 
 
@@ -7,26 +9,15 @@ In this first week, we will cover what you can expect to learn from this course 
 
 We will also cover some of the basics: what do we mean by data science & machine learning, and what do you need to do to get the most of this course?
 
-# Communication
 
-![](/figures/slack_logo.svg){height="1.5em" fig-align="left" fig-alt="Slack logo"}
+<details> <summary>👨‍🏫 Lecture</summary> 
 
-Importantly, you will receive an invitation to join our Slack group via e-mail. 
-
-Send an [e-mail to Jon](mailto:J.Cardoso-Silva@lse.ac.uk) if you have not received an invite by the time of the first lecture. 
-
-Slack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project. 
-Most of our "informal" communication and interactions will happen through Slack. There will be channels dedicated to discussing each week's content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.
-
-Check out the following links to understand more about this software:
-
-- [Slack tutorials](https://slack.com/intl/en-gb/help/categories/360000049063-Slack-tutorials)
-- [Collaborate effectively in channels](https://slack.com/intl/en-gb/help/articles/360058495654-Collaborate-effectively-in-channels?from=channels)
-
-# Lecture
+## 👨‍🏫 Lecture
 
 
-## **🖼️ Slides - Part I** (45-50 min)
+### Part I - Introduction (45-50 min)
+
+<mark class="todo"></mark>
 
 Either click on the slide area below or click [here](/slides/week01_slides_part1.html) to view it in fullscreen.
 Use your keypad to navigate the slides.
@@ -36,11 +27,14 @@ Use your keypad to navigate the slides.
 </div>
 
 
-## Coffee Break ☕ (10 min)
+### ☕ Coffee Break  (10 min)
 
 Use this time to chat, stretch, drink some coffee or just relax for a bit by yourself.
 
-## **🖼️ Slides - Part II** (45-50 min)
+### Part II - Key Concepts (45-50 min)
+
+
+<mark class="todo"></mark>
 
 Either click on the slide area below or click [here](/slides/week01_slides_part2.html) to view it in fullscreen.
 Use your keypad to navigate the slides.
@@ -49,9 +43,32 @@ Use your keypad to navigate the slides.
 <iframe src="/slides/week01_slides_part2.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
 </div>
 
-# 📒 Preparing for the next week
+</details>
 
-<mark class="todo"></mark>
+<details> <summary>💻 Labs</summary>
 
-# Recommended Reading
-<mark class="todo"></mark>
+## 💻 Labs
+
+We do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language `R`.
+
+See sections below for advice on how to do that.
+</details>
+
+<details> <summary>📒 Preparing for the next week</summary> 
+
+## 📒 Preparing for the next week
+
+- Join the Slack group of this course [(more info)](/communication.qmd)
+- Use this time to learn or revisit basic `R` programming skills.
+- Write down your `R` questions. Next week's lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with `R`.
+</details>
+
+<details> <summary>🔖 Recommended Resources</summary> 
+## 🔖 Recommended Resources
+
+- Checkout the upcoming book ['Modeling Mindsets'](https://book.modeling-mindsets.com/) [@molnar_modeling_2022] (it's free to read online) where you can learn about the different ways one can approach a modelling problem (traditional frequentist statistics vs Bayesian statistics vs Machine Learning, etc.). The following twitter thread also summarises the main points of these different paradigms:
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, ...).<br><br>Realistically, you only have time to master a few mindsets.<br><br>So what to do? A thread 🧵</p>&mdash; Christoph Molnar (\@ChristophMolnar) <a href="https://twitter.com/ChristophMolnar/status/1564624829009072129?ref_src=twsrc%5Etfw">August 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+- [Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) offer workshops on R and Python skills.
+- Checkout this summer's [LSE Careers Skill Accelerator programme](https://twitter.com/LSECareers/status/1534868470495596545). Some of the self-paced courses will remain available until the end of the year.
+
+</details>
