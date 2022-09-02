@@ -108,6 +108,175 @@ We are all jugglers 🤹
 See [@schutt_doing_2013, chapter 1] for more on this.
 :::
 
+# The <br/> Data <br/> Science <br/> Workflow
+
+## The Data Science Workflow
+```{dot}
+//| data-id: 1
+//| fig-width: 100%
+
+digraph {
+  pad=0.5;
+  margin=0;
+	fontname="Helvetica,Arial,sans-serif";
+	node [fontname="Helvetica,Arial,sans-serif", fontsize="20", fontcolor="#8431A6", shape=plaintext, margin=0.2]
+	edge [fontname="Helvetica,Arial,sans-serif", penwidth=4, color="#8431A6";]
+	
+	rankdir=TB;
+	
+	
+	start       [shape=box, margin=0.2, fontcolor="#8431A6", style=filled, color="#f2eaf6", label="Start"];
+	gather      [label="Gather\ldata  ", imagepos="tc"];
+	store       [label="Store it         \lsomewhere"];
+	clean       [label="Clean &        \lpre-process"];
+	build       [label="Build a \ldataset"];
+	eda         [label="Exploratory    \ldata analysis"];
+  ml          [label="Machine\llearning"];
+	insight     [label="Obtain   \linsights"];
+	communicate [label="Communicate\lresults         "];
+	end         [shape=box, margin=0.1, fontcolor="#8431A6", color="#f2eaf6", style=filled, label="End"];
+	
+	subgraph cluster_80_percent {
+	  color=blue;
+		gather -> store  [label="      "];
+	  store  -> clean  [label="      "];
+	  clean  -> build  [label="      "];
+	}
+
+  build -> eda;
+
+  subgraph cluster_20_percent{
+    color=blue;
+	  eda     -> ml           [label="      "];
+    ml      -> insight      [label="      "];
+	  insight -> communicate  [label="      "];
+  }
+    
+  {rank = same; gather; store; clean; build;}
+  {rank = same; eda; ml; insight; communicate;}
+  
+  start -> gather;
+  communicate -> end;
+}
+```
+
+::: aside
+⚠️ Note that this is a simplified version of what happens in a data science project. <br/>
+In practice, the process is not linear and there are many feedback loops.
+:::
+
+## The Data Science Workflow {auto-animate=true auto-animate-easing="ease-in-out"}
+```{dot}
+//| data-id: 1
+//| fig-width: 100%
+
+digraph {
+  pad=0.5;
+  margin=0;
+	fontname="Helvetica,Arial,sans-serif";
+	node [fontname="Helvetica,Arial,sans-serif", fontsize="20", margin=0.2]
+	edge [fontname="Helvetica,Arial,sans-serif", penwidth=4, color="#8431A6";]
+	
+	rankdir=TB;
+	
+  node [shape=box, margin=0.2, fontcolor="#8431A6", style=filled, color="#f2eaf6"];
+  	
+	start       [label="Start"];
+  end         [margin=0.1, label="End"];
+  
+  node [fontcolor="#fcfcfc", style=filled, color="#8431A6"];
+	gather      [label="Gather\ldata  ", imagepos="tc"];
+	store       [label="Store it         \lsomewhere"];
+	clean       [label="Clean &        \lpre-process"];
+	build       [label="Build a \ldataset"];
+	eda         [label="Exploratory    \ldata analysis"];
+
+  node [fontcolor="#dac1e4", style=filled, color="#f2eaf6"];
+  ml          [label="Machine\llearning"];
+	insight     [label="Obtain   \linsights"];
+	communicate [label="Communicate\lresults         "];
+
+	start -> gather;
+	subgraph cluster_80_percent {
+	  color=blue;
+		gather -> store  [label="      "];
+	  store  -> clean  [label="      "];
+	  clean  -> build  [label="      "];
+	}
+
+  build -> eda;
+
+  edge [color="#f2eaf6"];
+  subgraph cluster_20_percent{
+    color=blue;
+	  eda     -> ml           [label="      "];
+    ml      -> insight      [label="      "];
+	  insight -> communicate  [label="      "];
+  }
+    
+  {rank = same; gather; store; clean; build;}
+  {rank = same; eda; ml; insight; communicate;}
+
+  communicate -> end;
+}
+```
+
+It is often said that **80%** of the time and effort spent on a data science project goes to the tasks highlighted above.
+
+## The Data Science Workflow {auto-animate=true auto-animate-easing="ease-in-out"}
+```{dot}
+//| data-id: 1
+//| fig-width: 100%
+
+digraph {
+  pad=0.5;
+  margin=0;
+	fontname="Helvetica,Arial,sans-serif";
+	node [fontname="Helvetica,Arial,sans-serif", fontsize="20", margin=0.2]
+	edge [fontname="Helvetica,Arial,sans-serif", penwidth=4, color="#f2eaf6"]
+	
+	rankdir=TB;
+	
+  node [shape=box, margin=0.2, fontcolor="#8431A6", style=filled, color="#f2eaf6"];
+  	
+	start       [label="Start"];
+  end         [margin=0.1, label="End"];
+  
+  node [fontcolor="#dac1e4", style=filled, color="#f2eaf6"];
+	gather      [label="Gather\ldata  ", imagepos="tc"];
+	store       [label="Store it         \lsomewhere"];
+	clean       [label="Clean &        \lpre-process"];
+	build       [label="Build a \ldataset"];
+	eda         [label="Exploratory    \ldata analysis"];
+  ml          [label="Machine\llearning", fontcolor="#fcfcfc", style=filled, color="#8431A6", margin=0.3];
+	insight     [label="Obtain   \linsights"];
+	communicate [label="Communicate\lresults         "];
+
+	start -> gather;
+	subgraph cluster_80_percent {
+	  color=blue;
+		gather -> store  [label="      "];
+	  store  -> clean  [label="      "];
+	  clean  -> build  [label="      "];
+	}
+
+  build -> eda;
+
+  subgraph cluster_20_percent{
+    color=blue;
+	  eda     -> ml           [label="      "];
+    ml      -> insight      [label="      "];
+	  insight -> communicate  [label="      "];
+  }
+    
+  {rank = same; gather; store; clean; build;}
+  {rank = same; eda; ml; insight; communicate;}
+
+  communicate -> end;
+}
+```
+
+This course is about **Machine Learning**. So, in most examples and tutorials, we will assume that we already have good quality data. 
 
 # How is that different to what I have learned in my previous stats courses?
 
