@@ -4,21 +4,42 @@
     "href": "index.html",
     "title": "LSE DS202 (2022/2023)",
     "section": "",
-    "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Teaching Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\n\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute Office Hours: book via StudentHub\n\n\n\n(pending confirmation)\n(pending confirmation)\n(pending confirmation)"
+    "text": "🎯 Learning Objectives\n\nUnderstand the fundamentals of the data science approach, with an emphasis on social scientific analysis and the study of the social, political, and economic worlds;\nUnderstand how classical methods such as regression analysis or principal components analysis can be treated as machine learning approaches for prediction or for data mining.\nKnow how to fit and apply supervised machine learning models for classification and prediction.\nKnow how to evaluate and compare fitted models, and to improve model performance.\nUse applied computer programming, including the hands-on use of programming through course exercises.\nApply the methods learned to real data through hands-on exercises.\nIntegrate the insights from data analytics into knowledge generation and decision-making.\nUnderstand an introductory framework for working with natural language (text) data using techniques of machine learning.\nLearn how data science methods have been applied to a particular domain of study (applications).\n\n\n\n🧑🏻‍🏫 Our Team\n\nTeacher responsibleTeaching assistantsAdministrative support\n\n\n\nDr. Jonathan Cardoso-Silva  Assistant Professorial Lecturer  LSE Data Science Institute Office Hours: book via StudentHub\n\n\n\nAnton Boichenko  Guest Teacher Office Hours: book via StudentHub\n\nXiaowei Gao  Guest Teacher Office Hours: book via StudentHub\n\nYijun Wang  Guest Teacher Office Hours: book via StudentHub\n\n\n\nNathaniel Ocquaye  Teaching Support and Events Officer Office: PEL 9.01 Email: DSI.UG at lse dot ac dot uk\n\nJill Beattie  Institute Coordinator Office: PEL 9.01E Tel: +44 (0) 20 7955 7759 Email: DSI.Admin at lse dot ac dot uk"
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "LSE DS202",
+    "objectID": "main/assessments.html",
+    "href": "main/assessments.html",
+    "title": "Assessments",
     "section": "",
-    "text": "References\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\nSumner, Chris, Alison Byers, Rachel Boochever, and Gregory J. Park. 2012. “Predicting Dark Triad Personality Traits from Twitter Usage and a Linguistic Analysis of Tweets.” In 2012 11th International Conference on Machine Learning and Applications, 2:386–93. https://doi.org/10.1109/ICMLA.2012.218."
+    "text": "This course is assessed by a mix of problem sets and final exam. You can find the details below:"
   },
   {
-    "objectID": "communication.html",
-    "href": "communication.html",
+    "objectID": "main/assessments.html#problem-sets-60",
+    "href": "main/assessments.html#problem-sets-60",
+    "title": "Assessments",
+    "section": "📝 Problem Sets (60%)",
+    "text": "📝 Problem Sets (60%)\n\nA mix of coding tasks and questions about concepts, similar to problem sets we solve in the weekly labs\nSummative problem sets will be released on:\n\nWeek 05 - worth 20% of final mark\nWeek 08 - worth 20% of final mark\nWeek 11 - worth 20% of final mark"
+  },
+  {
+    "objectID": "main/assessments.html#exam-40",
+    "href": "main/assessments.html#exam-40",
+    "title": "Assessments",
+    "section": "✍️ Exam (40%)",
+    "text": "✍️ Exam (40%)\n\nA take-home open book exam involving coding tasks and questions about concepts.\nStudents will have 24 hours to work on the exam and submit their solutions via Moodle\nWhen: January exam period"
+  },
+  {
+    "objectID": "main/communication.html",
+    "href": "main/communication.html",
     "title": "LSE DS202",
     "section": "",
     "text": "Find out how to reach out to your peers, teaching and administrative staff during this course.\n\n\n\nMost of our “informal” communication and interactions will happen through Slack.\nSlack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project.\nThere will be channels dedicated to discussing each week’s content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.\n\nYou will receive an invitation to join our Slack group via e-mail. Send an e-mail to Jon (J.Cardoso-Silva at lse dot ac dot uk) if you have not received an invite by the time of the first lecture.\nCheck out the following links to understand more about this tool:\n\nSlack tutorials\nCollaborate effectively in channels"
+  },
+  {
+    "objectID": "main/syllabus.html",
+    "href": "main/syllabus.html",
+    "title": "LSE DS202",
+    "section": "",
+    "text": "References\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\nSumner, Chris, Alison Byers, Rachel Boochever, and Gregory J. Park. 2012. “Predicting Dark Triad Personality Traits from Twitter Usage and a Linguistic Analysis of Tweets.” In 2012 11th International Conference on Machine Learning and Applications, 2:386–93. https://doi.org/10.1109/ICMLA.2012.218."
   },
   {
     "objectID": "weeks/week01.html",
@@ -285,6 +306,27 @@
     "title": "DS202 Data Science for Social Scientists",
     "section": "In reality…",
     "text": "In reality…\n\n\nWe are all jugglers 🤹\n\n\nEveryone brings a different skill set.\nWe need multi-disciplinary teams.\nGood data scientists know a bit of everything.\n\nNot fluent in all things\nUnderstands their strenghts and weaknessess\nThey know when and where to interface with others\n\n\n\n\n\n\n\n\n\nSee (Schutt and O’Neil 2013, chap. 1) for more on this."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#the-data-science-workflow-1",
+    "href": "slides/week01_slides_part2.html#the-data-science-workflow-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The Data Science Workflow",
+    "text": "The Data Science Workflow\n\n\n\n\n\n   \n\nstart\n\n Start   \n\ngather\n\nGather data     \n\nstart->gather\n\n    \n\nstore\n\nStore it          somewhere   \n\ngather->store\n\n           \n\nclean\n\nClean &         pre-process   \n\nstore->clean\n\n           \n\nbuild\n\nBuild a  dataset   \n\nclean->build\n\n           \n\neda\n\nExploratory     data analysis   \n\nbuild->eda\n\n    \n\nml\n\nMachine learning   \n\neda->ml\n\n           \n\ninsight\n\nObtain    insights   \n\nml->insight\n\n           \n\ncommunicate\n\nCommunicate results            \n\ninsight->communicate\n\n           \n\nend\n\n End   \n\ncommunicate->end\n\n   \n\n\n\n\n\n\n\n⚠️ Note that this is a simplified version of what happens in a data science project.  In practice, the process is not linear and there are many feedback loops."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#the-data-science-workflow-2",
+    "href": "slides/week01_slides_part2.html#the-data-science-workflow-2",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The Data Science Workflow",
+    "text": "The Data Science Workflow\n\n\n\n\n\n   \n\nstart\n\n Start   \n\ngather\n\n Gather data     \n\nstart->gather\n\n    \n\nend\n\n End   \n\nstore\n\n Store it          somewhere   \n\ngather->store\n\n           \n\nclean\n\n Clean &         pre-process   \n\nstore->clean\n\n           \n\nbuild\n\n Build a  dataset   \n\nclean->build\n\n           \n\neda\n\n Exploratory     data analysis   \n\nbuild->eda\n\n    \n\nml\n\n Machine learning   \n\neda->ml\n\n           \n\ninsight\n\n Obtain    insights   \n\nml->insight\n\n           \n\ncommunicate\n\n Communicate results            \n\ninsight->communicate\n\n           \n\ncommunicate->end\n\n   \n\n\n\n\n\nIt is often said that 80% of the time and effort spent on a data science project goes to the tasks highlighted above."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#the-data-science-workflow-3",
+    "href": "slides/week01_slides_part2.html#the-data-science-workflow-3",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "The Data Science Workflow",
+    "text": "The Data Science Workflow\n\n\n\n\n\n   \n\nstart\n\n Start   \n\ngather\n\n Gather data     \n\nstart->gather\n\n    \n\nend\n\n End   \n\nstore\n\n Store it          somewhere   \n\ngather->store\n\n           \n\nclean\n\n Clean &         pre-process   \n\nstore->clean\n\n           \n\nbuild\n\n Build a  dataset   \n\nclean->build\n\n           \n\neda\n\n Exploratory     data analysis   \n\nbuild->eda\n\n    \n\nml\n\n Machine learning   \n\neda->ml\n\n           \n\ninsight\n\n Obtain    insights   \n\nml->insight\n\n           \n\ncommunicate\n\n Communicate results            \n\ninsight->communicate\n\n           \n\ncommunicate->end\n\n   \n\n\n\n\n\nThis course is about Machine Learning. So, in most examples and tutorials, we will assume that we already have good quality data."
   },
   {
     "objectID": "slides/week01_slides_part2.html#data-science-and-social-science",

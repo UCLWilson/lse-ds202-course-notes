@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/index.html</loc>
-    <lastmod>2022-08-30T17:57:29.899Z</lastmod>
+    <lastmod>2022-09-05T09:26:43.429Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/syllabus.html</loc>
-    <lastmod>2022-08-30T17:57:31.503Z</lastmod>
+    <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/main/assessments.html</loc>
+    <lastmod>2022-09-05T09:26:44.773Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/communication.html</loc>
-    <lastmod>2022-08-30T17:57:31.999Z</lastmod>
+    <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/main/communication.html</loc>
+    <lastmod>2022-09-05T09:26:45.277Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/main/syllabus.html</loc>
+    <lastmod>2022-09-05T09:26:45.885Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/weeks/week01.html</loc>
-    <lastmod>2022-08-30T17:57:32.508Z</lastmod>
+    <lastmod>2022-09-05T09:26:46.397Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/weeks/week06.html</loc>
-    <lastmod>2022-08-30T17:57:32.992Z</lastmod>
+    <lastmod>2022-09-05T09:26:46.813Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/slides/week01_slides_part1.html</loc>
-    <lastmod>2022-08-30T17:57:33.876Z</lastmod>
+    <lastmod>2022-09-05T09:26:47.669Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/slides/week01_slides_part2.html</loc>
-    <lastmod>2022-08-30T17:57:34.452Z</lastmod>
+    <lastmod>2022-09-05T09:26:48.685Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/LSE-DSI/lse-ds202-course-notes/slides/week02_slides.html</loc>
-    <lastmod>2022-08-30T17:57:34.876Z</lastmod>
+    <lastmod>2022-09-05T09:26:49.129Z</lastmod>
   </url>
 </urlset>
