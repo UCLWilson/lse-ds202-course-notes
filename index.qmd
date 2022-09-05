@@ -1,8 +1,8 @@
 ---
 title: "LSE DS202 (2022/2023)"
 subtitle: "Data Science for Social Scientists"
-date: 30 August 2022
-date-meta: 30 August 2022
+date: 05 September 2022
+date-meta: 05 September 2022
 ---
 
 # 📑 Course Brief
@@ -23,26 +23,48 @@ date-meta: 30 August 2022
 - Understand an introductory framework for working with **natural language (text) data** using techniques of machine learning.
 - Learn how data science methods have been applied to a particular domain of study (**applications**).
 
-# 🧑🏻‍🏫 Teaching Team
+# 🧑🏻‍🏫 Our Team
 
 ::: {.panel-tabset}
 ## Teacher responsible
 
-![](/figures/JonathanCardosoSilva_2022.jpg){fig-align="left" fig-alt="Photo of Dr. Jonathan Cardoso-Silva" width="5em"}  
-
-Dr. [Jonathan Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva) <br/>
+![](/figures/people/JonathanCardosoSilva_2022.jpg){fig-align="left" fig-alt="Photo of Dr. Jonathan Cardoso-Silva" width="5em"}  
+**Dr. [Jonathan Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)** <br/>
 _Assistant Professorial Lecturer_ <br/>
 LSE Data Science Institute<br/>
 Office Hours: book via StudentHub
 
-
 ## Teaching assistants
 
-- _(pending confirmation)_
-- _(pending confirmation)_
-- _(pending confirmation)_ 
+![](/figures/people/Anton.jpg){fig-align="left" fig-alt="Photo of Anton Boichenko" width="5em"}  
+**[Anton Boichenko](http://boychenko.pro/)** <br/>
+_Guest Teacher_<br/>
+Office Hours: book via StudentHub
+
+![](/figures/people/Xiaowei.png){fig-align="left" fig-alt="Photo of Xiaowei Gao" width="5em"}  
+**[Xiaowei Gao](https://github.com/UCLWilson)** <br/>
+_Guest Teacher_<br/>
+Office Hours: book via StudentHub
+
+![](/figures/people/Yijun.jpg){fig-align="left" fig-alt="Photo of Yijun Wang" width="5em"}  
+**[Yijun Wang](https://www.kcl.ac.uk/people/yijun-wang)** <br/>
+_Guest Teacher_<br/>
+Office Hours: book via StudentHub
 
 ## Administrative support
 
-<mark class="todo"></mark>
+
+![](/figures/people/Nathaniel-Ocquaye-Cropped-450x450.jpg){fig-align="left" fig-alt="Photo of Nathaniel Ocquaye" width="5em"}  
+**Nathaniel Ocquaye** <br/>
+_Teaching Support and Events Officer_<br/>
+Office: PEL 9.01<br/>
+Email: [DSI.UG@lse.ac.uk](mailto:DSI.UG@lse.ac.uk)
+
+![](/figures/people/Jill-Beattie.png){fig-align="left" fig-alt="Photo of Jill Beattie" width="5em"}  
+**Jill Beattie** <br/>
+_Institute Coordinator_<br/>
+Office: PEL 9.01E<br/>
+Tel: +44 (0) 20 7955 7759<br/>
+Email: [DSI.Admin@lse.ac.uk](mailto:DSI.Admin@lse.ac.uk)
+
 :::

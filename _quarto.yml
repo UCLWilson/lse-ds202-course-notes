@@ -4,9 +4,7 @@ project:
   output-dir: _output
   render:
     - "index.qmd"
-    - "assessments.qmd"
-    - "syllabus.qmd"
-    - "communication.qmd"
+    - "main/*.qmd"
     - "weeks/*.qmd"
     - "slides/*.qmd"
 
@@ -18,7 +16,7 @@ website:
   repo-url: https://github.com/LSE-DSI/lse-ds202-course-notes
   page-navigation: true
   reader-mode: true
-  favicon: "/figures/LSE Data Science Institute.png"
+  favicon: "/figures/logos/LSE Data Science Institute.png"
   search:
     location: navbar
     type: overlay
@@ -28,10 +26,12 @@ website:
     contents:
       - href: index.qmd
         text: "🏠 Home"
-      - href: syllabus.qmd
+      - href: main/syllabus.qmd
         text: "📓 Syllabus"
-      - href: communication.qmd
+      - href: main/communication.qmd
         text: "📟 Communication"
+      - href: main/assessments.qmd
+        text: "✍️ Assessments"
       - section: "🗓️ Weeks"
         contents:
          - href: weeks/week01.qmd
@@ -86,7 +86,4 @@ format:
     toc: true
 
 margin-header: |
- ![](/figures/LSE Data Science Institute.png)
-
-body-header: |
-  Experimenting
+ ![](/figures/logos/LSE Data Science Institute.png)

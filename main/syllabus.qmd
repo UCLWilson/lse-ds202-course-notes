@@ -1,8 +1,8 @@
 ---
 title: "LSE DS202"
 subtitle: "Data Science for Social Scientists"
-date: 30 August 2022
-date-meta: 30 August 2022
+date: 05 September 2022
+date-meta: 05 September 2022
 ---
 
 # 📓 Syllabus

@@ -1,0 +1,22 @@
+---
+title: "Assessments"
+subtitle: "Data for Data Science"
+date: 05 September 2022
+date-meta: 05 September 2022
+---
+
+This course is assessed by a mix of problem sets and final exam. You can find the details below:
+
+## 📝 Problem Sets (60%)
+
+-   A mix of coding tasks and questions about concepts, similar to problem sets we solve in the weekly labs
+-   Summative problem sets will be released on: 
+    - **Week 05** - worth 20% of final mark
+    - **Week 08** - worth 20% of final mark
+    - **Week 11** - worth 20% of final mark
+
+## ✍️ Exam (40%)
+
+- A take-home open book exam involving coding tasks and questions about concepts.
+- Students will have 24 hours to work on the exam and submit their solutions via Moodle
+- When: January exam period

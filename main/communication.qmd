@@ -1,6 +1,8 @@
 ---
 title: "LSE DS202"
-subtitle: "Data for Data Science"
+subtitle: "Data Science for Social Scientists"
+date: 05 September 2022
+date-meta: 05 September 2022
 ---
 
 # 📟 Communication
