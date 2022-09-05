@@ -18,21 +18,21 @@
     "href": "main/assessments.html#problem-sets-60",
     "title": "Assessments",
     "section": "📝 Problem Sets (60%)",
-    "text": "📝 Problem Sets (60%)\n\nA mix of coding tasks and questions about concepts, similar to problem sets we solve in the weekly labs\nSummative problem sets will be released on:\n\nWeek 05 - worth 20% of final mark\nWeek 08 - worth 20% of final mark\nWeek 11 - worth 20% of final mark"
+    "text": "📝 Problem Sets (60%)\n\nSummative problem sets released on Weeks 5, 8 & 11.\nThese will have a similar style to the formative problem sets, a mix of R tasks and your written interpretation of the analyses.\nTypically, you will have 4-6 days to submit your solutions.\nEach of the three summative problem sets is worth 20% of the final mark, and will be graded on a 100 point scale."
   },
   {
     "objectID": "main/assessments.html#exam-40",
     "href": "main/assessments.html#exam-40",
     "title": "Assessments",
     "section": "✍️ Exam (40%)",
-    "text": "✍️ Exam (40%)\n\nA take-home open book exam involving coding tasks and questions about concepts.\nStudents will have 24 hours to work on the exam and submit their solutions via Moodle\nWhen: January exam period"
+    "text": "✍️ Exam (40%)\n\nAn open-book take-home exam, taken during the January exams period.\nExam questions will be comparable in style to the problem sets.\nThe exam questions will be released on Moodle"
   },
   {
     "objectID": "main/communication.html",
     "href": "main/communication.html",
     "title": "LSE DS202",
     "section": "",
-    "text": "Find out how to reach out to your peers, teaching and administrative staff during this course.\n\n\n\nMost of our “informal” communication and interactions will happen through Slack.\nSlack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project.\nThere will be channels dedicated to discussing each week’s content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.\n\nYou will receive an invitation to join our Slack group via e-mail. Send an e-mail to Jon (J.Cardoso-Silva at lse dot ac dot uk) if you have not received an invite by the time of the first lecture.\nCheck out the following links to understand more about this tool:\n\nSlack tutorials\nCollaborate effectively in channels"
+    "text": "Find out how to reach out to your peers, teaching and administrative staff during this course.\n\n\n\nMost of our “informal” communication and interactions will happen through Slack.\nSlack is a platform used by many companies and institutions where teams can collaborate and communicate about a specific project.\nThere will be channels dedicated to discussing each week’s content, a channel for sharing useful links and events, plus a random channel to share random stuff about data science.\n\nYou will receive an invitation to join our Slack group via e-mail. Send an e-mail to Jon (J.Cardoso-Silva at lse dot ac dot uk) if you have not received an invite by the time of the first lecture.\nCheck out the following links to understand more about this tool:\n\nSlack tutorials\nCollaborate effectively in channels\n\n\n\n\n\nIt is probably a good idea to book office hours if:\n\nyou struggled with a technical or theoretical aspect of a problem set in the previous week,\nyou have queries about careers in data science,\nyou want guidance in how to apply data science to other things you are studying outside this course.\n\nCome prepared. You only have 15 minutes.\nAsk for help sooner rather than later.\nBook slots via StudentHub up to 12 hours in advance.\n\n⚠️ Reserve 📧 e-mail for formal requests: extensions, deferrals, etc. No need to e-mail to inform you will skip a class, for example."
   },
   {
     "objectID": "main/syllabus.html",
@@ -49,32 +49,11 @@
     "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments and how we will interact throughout this course.\nWe will also cover some of the basics: what do we mean by data science & machine learning, and what do you need to do to get the most of this course?"
   },
   {
-    "objectID": "weeks/week01.html#lecture",
-    "href": "weeks/week01.html#lecture",
+    "objectID": "weeks/week01.html#links",
+    "href": "weeks/week01.html#links",
     "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "👨‍🏫 Lecture",
-    "text": "👨‍🏫 Lecture\n\nPart I - Introduction (45-50 min)\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\n☕ Coffee Break (10 min)\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\nPart II - Key Concepts (45-50 min)\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
-  },
-  {
-    "objectID": "weeks/week01.html#labs",
-    "href": "weeks/week01.html#labs",
-    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "💻 Labs",
-    "text": "💻 Labs\nWe do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language R.\nSee sections below for advice on how to do that."
-  },
-  {
-    "objectID": "weeks/week01.html#preparing-for-the-next-week",
-    "href": "weeks/week01.html#preparing-for-the-next-week",
-    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "📒 Preparing for the next week",
-    "text": "📒 Preparing for the next week\n\nJoin the Slack group of this course (more info)\nUse this time to learn or revisit basic R programming skills.\nWrite down your R questions. Next week’s lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with R."
-  },
-  {
-    "objectID": "weeks/week01.html#recommended-resources",
-    "href": "weeks/week01.html#recommended-resources",
-    "title": "🗓️ Week 01 - Introduction, Context & Key Concepts",
-    "section": "🔖 Recommended Resources",
-    "text": "🔖 Recommended Resources\n\nCheckout the upcoming book ‘Modeling Mindsets’ (Molnar 2022) (it’s free to read online) where you can learn about the different ways one can approach a modelling problem (traditional frequentist statistics vs Bayesian statistics vs Machine Learning, etc.). The following twitter thread also summarises the main points of these different paradigms:\n\n\nIn a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, …).Realistically, you only have time to master a few mindsets.So what to do? A thread 🧵\n\n— Christoph Molnar (@ChristophMolnar) August 30, 2022\n\n\nDigital Skills Lab offer R and python workshops. Check out their page.\nCheckout this summer’s LSE Careers Skill Accelerator programme. Some of the self-paced courses will remain open to LSE students until the end of the year."
+    "section": "Links",
+    "text": "Links\n\n👨‍🏫 Lecture slides\n📒 Preparing for next week’s lab\n🔖 Appendix"
   },
   {
     "objectID": "weeks/week06.html",
@@ -82,6 +61,62 @@
     "title": "🗓️ Week 06 - Reading Week",
     "section": "",
     "text": "Check out this blog post from Students@LSE blog.\nI would definitely recommend you take a break during Week 06. After all, rest and sleep can help you consolidate memories and improve your learning process.\nHowever, if you feel like revisiting concepts you have learned so far, check out the Recommended Learning sections present in each week’s sections here on our Moodle Page.\nWe will return with our lectures and classes on Week 07."
+  },
+  {
+    "objectID": "weeks/week01/appendix.html",
+    "href": "weeks/week01/appendix.html",
+    "title": "🔖 Week 01 - Appendix",
+    "section": "",
+    "text": "This week’s indicative reading: (James et al. 2021, chaps. 2, 2.1–2.2)"
+  },
+  {
+    "objectID": "weeks/week01/appendix.html#recommended-additional-reading",
+    "href": "weeks/week01/appendix.html#recommended-additional-reading",
+    "title": "🔖 Week 01 - Appendix",
+    "section": "Recommended (additional) reading",
+    "text": "Recommended (additional) reading\nWhat are different ways one can approach a modelling problem?\nCheckout the upcoming book ‘Modeling Mindsets’ (Molnar 2022, chaps. 2–3) (it’s free to read online) to learn about the traditional frequentist statistics vs Bayesian statistics vs Machine Learning approaches.\nThe following twitter thread also summarises the main points of these different paradigms:\n\n\nIn a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, …).Realistically, you only have time to master a few mindsets.So what to do? A thread 🧵\n\n— Christoph Molnar (@ChristophMolnar) August 30, 2022"
+  },
+  {
+    "objectID": "weeks/week01/appendix.html#lse-digital-skills-lab",
+    "href": "weeks/week01/appendix.html#lse-digital-skills-lab",
+    "title": "🔖 Week 01 - Appendix",
+    "section": "LSE Digital Skills Lab",
+    "text": "LSE Digital Skills Lab\nLSE Digital Skills Lab offers R and python workshops during Term time and they will also give DSI students access to self-paced programming courses via Dataquest.\nIf you want to take the self-paced course to revise basic R programming, sign up via this link.\nKeep an eye on the following pages for news of the in-person workshops:\n\nR workshops\nPython workshops"
+  },
+  {
+    "objectID": "weeks/week01/appendix.html#other-resources",
+    "href": "weeks/week01/appendix.html#other-resources",
+    "title": "🔖 Week 01 - Appendix",
+    "section": "Other resources",
+    "text": "Other resources\n\nCheckout this summer’s LSE Careers Skill Accelerator programme. Some of the self-paced courses will remain open to LSE students until the end of the year.\n\n\n\nReady to develop the key skills employers are looking for in 2022?Join this summer's LSE Careers Skills Accelerator programme to expand your skillset!⭐Apply on CareerHub by 11.59pm, Wed 15 June for your chance to join the programme⭐https://t.co/J5sI1NRaMA\n\n— LSE Careers ((LSECareers?)) June 9, 2022\n\n\n\nThe book R for Data Science is free to read online and is a great resource to advance your R skills."
+  },
+  {
+    "objectID": "weeks/week01/lecture.html",
+    "href": "weeks/week01/lecture.html",
+    "title": "👨‍🏫 Week 01 - Slides",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\n\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "weeks/week01/prep.html",
+    "href": "weeks/week01/prep.html",
+    "title": "📒 Week 01 - Preparing for next week’s lab",
+    "section": "",
+    "text": "We do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language R.\nSee sections below for advice on how to do that."
+  },
+  {
+    "objectID": "weeks/week01/prep.html#preparing-for-the-next-week",
+    "href": "weeks/week01/prep.html#preparing-for-the-next-week",
+    "title": "📒 Week 01 - Preparing for next week’s lab",
+    "section": "📒 Preparing for the next week",
+    "text": "📒 Preparing for the next week\n\nJoin the Slack group of this course (more info)\nUse this time to learn or revisit basic R programming skills.\nWrite down your R questions. Next week’s lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with R."
+  },
+  {
+    "objectID": "weeks/week01/prep.html#recommended-reading-other-resources",
+    "href": "weeks/week01/prep.html#recommended-reading-other-resources",
+    "title": "📒 Week 01 - Preparing for next week’s lab",
+    "section": "🔖 Recommended reading & other resources",
+    "text": "🔖 Recommended reading & other resources\nCheck out the Appendix page."
   },
   {
     "objectID": "slides/week01_slides_part1.html#the-data-science-institute",
@@ -95,7 +130,7 @@
     "href": "slides/week01_slides_part1.html#the-data-science-institute-1",
     "title": "DS202 Data Science for Social Scientists",
     "section": "The Data Science Institute",
-    "text": "The Data Science Institute\n\n\n\n\nActivities of interest to you: - CIVICA Seminar Series - Careers in Data Science - Social events - Industry “field trips” - Summer projects\n\n\n\nSign up for DSI events at lse.ac.uk/DSI/Events"
+    "text": "The Data Science Institute\n\n\n\n\nActivities of interest to you:\n\nCIVICA Seminar Series\nCareers in Data Science\nSocial events\nIndustry “field trips”\nSummer projects\n\n\n\n\nSign up for DSI events at lse.ac.uk/DSI/Events"
   },
   {
     "objectID": "slides/week01_slides_part1.html#our-courses",
@@ -228,7 +263,7 @@
     "href": "slides/week01_slides_part1.html#assessments-2",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Assessments 📔",
-    "text": "Assessments 📔\n\nTake-home exam (40%)\n\n\nAn open-book take home exam at the end of the term, which will be due in the January exams period.\nExam questions will be comparable in style to the problem sets.\nThe exam questions will be released on Moodle on 5 January 2023.\nThe exam is due on 11 January at 4pm."
+    "text": "Assessments 📔\n\nTake-home exam (40%)\n\n\nAn open-book take-home exam, taken during the January exams period.\nExam questions will be comparable in style to the problem sets.\nThe exam questions will be released on Moodle on 5 January 2023.\nThe exam is due on 11 January at 4pm."
   },
   {
     "objectID": "slides/week01_slides_part1.html#office-hours",
