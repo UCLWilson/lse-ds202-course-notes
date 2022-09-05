@@ -19,15 +19,16 @@ The following twitter thread also summarises the main points of these different 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a perfect world, you could effortlessly switch between modeling mindsets (statistics, machine learning, causal inference, ...).<br><br>Realistically, you only have time to master a few mindsets.<br><br>So what to do? A thread 🧵</p>&mdash; Christoph Molnar (\@ChristophMolnar) <a href="https://twitter.com/ChristophMolnar/status/1564624829009072129?ref_src=twsrc%5Etfw">August 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-## Digital Skills Lab
+## LSE Digital Skills Lab
 
-[Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) offer R and python workshops during Term time, and they will also give DSI students access to self-paced programming courses on Dataquest.
+LSE [Digital Skills Lab](https://info.lse.ac.uk/current-students/digital-skills-lab) offers R and python workshops during Term time and they will also give DSI students access to self-paced programming courses via Dataquest.
 
 If you want to take the self-paced course to revise basic R programming, sign up via [this link](https://lse.eu.qualtrics.com/jfe/form/SV_6DbHqit2R8Y324u).
 
 Keep an eye on the following pages for news of the in-person workshops:
-- R: https://info.lse.ac.uk/current-students/digital-skills-lab/r
-- Python: https://info.lse.ac.uk/current-students/digital-skills-lab/python
+
+- [R workshops](https://info.lse.ac.uk/current-students/digital-skills-lab/r)
+- [Python workshops](https://info.lse.ac.uk/current-students/digital-skills-lab/python)
 
 
 ## Other resources
