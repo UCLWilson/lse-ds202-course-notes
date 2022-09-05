@@ -58,7 +58,7 @@ See sections below for advice on how to do that.
 
 ## 📒 Preparing for the next week
 
-- Join the Slack group of this course [(more info)](/communication.qmd)
+- Join the Slack group of this course [(more info)](/main/communication.qmd)
 - Use this time to learn or revisit basic `R` programming skills.
 - Write down your `R` questions. Next week's lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with `R`.
 </details>
