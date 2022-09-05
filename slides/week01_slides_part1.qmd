@@ -49,7 +49,9 @@ Sign up for DSI events at [lse.ac.uk/DSI/Events](https://www.lse.ac.uk/DSI/Event
 :::
 
 ::: {.column .incremental .smaller width="60%"}
+
 Activities of interest to you:
+
 -   [CIVICA Seminar Series](https://www.lse.ac.uk/DSI/seminar-series)
 -   [Careers in Data Science](https://www.lse.ac.uk/DSI/Events/Careers-in-Data-Science)
 -   Social events
@@ -293,7 +295,7 @@ The breakdown of assessment for this class will be as follows:
 ### Take-home exam (40%)
 
 ::: incremental
--   An open-book take home exam at the end of the term, which will be due in the January exams period.
+-   An open-book take-home exam, taken during the January exams period.
 -   Exam questions will be comparable in style to the problem sets.
 -   The exam questions will be released on Moodle on <mark>5 January 2023.</mark>
 -   The exam is due on <mark>11 January at 4pm</mark>.

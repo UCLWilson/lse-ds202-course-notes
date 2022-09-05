@@ -1,0 +1,22 @@
+---
+title: "📒 Week 01 - Preparing for next week's lab"
+date: 1 September 2022
+date-meta: 1 September 2022
+---
+
+## 💻 Labs
+
+We do not have classes this week. Instead, we recommend you use this time to learn or revisit the basics of the programming language `R`.
+
+See sections below for advice on how to do that.
+</details>
+
+## 📒 Preparing for the next week
+
+- Join the Slack group of this course [(more info)](/main/communication.qmd)
+- Use this time to learn or revisit basic `R` programming skills.
+- Write down your `R` questions. Next week's lab, we have a roadmap for a revision of basic commands but we can tailor it to address any questions you might have with `R`.
+
+## 🔖 Recommended reading & other resources
+
+Check out the [Appendix](/weeks/week01/appendix.qmd) page.

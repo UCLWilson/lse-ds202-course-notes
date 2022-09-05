@@ -9,14 +9,13 @@ This course is assessed by a mix of problem sets and final exam. You can find th
 
 ## 📝 Problem Sets (60%)
 
--   A mix of coding tasks and questions about concepts, similar to problem sets we solve in the weekly labs
--   Summative problem sets will be released on: 
-    - **Week 05** - worth 20% of final mark
-    - **Week 08** - worth 20% of final mark
-    - **Week 11** - worth 20% of final mark
+-   Summative problem sets released on **Weeks 5, 8 & 11**.
+-   These will have a similar style to the formative problem sets, a mix of `R` tasks and your written interpretation of the analyses.
+-   Typically, you will have 4-6 days to submit your solutions.
+-   Each of the three summative problem sets is worth 20% of the final mark, and will be graded on a 100 point scale.
 
 ## ✍️ Exam (40%)
 
-- A take-home open book exam involving coding tasks and questions about concepts.
-- Students will have 24 hours to work on the exam and submit their solutions via Moodle
-- When: January exam period
+-   An open-book take-home exam, taken during the January exams period.
+-   Exam questions will be comparable in style to the problem sets.
+-   The exam questions will be released on Moodle
