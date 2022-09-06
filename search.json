@@ -95,7 +95,7 @@
     "href": "weeks/week01/lecture.html",
     "title": "👨‍🏫 Week 01 - Slides",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\n\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
   },
   {
     "objectID": "weeks/week01/prep.html",
@@ -368,14 +368,7 @@
     "href": "slides/week01_slides_part2.html#data-science-and-social-science",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Data Science and Social Science",
-    "text": "Data Science and Social Science\n\nIn reality, data scientists work as a multidisciplinary group, collaborating towards a common goal.\nContent borrowed from ME314 Day 1\n\n\n\nSocial science: The goal is typically explanation\nData science: The goal is frequently prediction, or data exploration\nMany of the same methods are used for both objectives"
-  },
-  {
-    "objectID": "slides/week01_slides_part2.html#practical-examples",
-    "href": "slides/week01_slides_part2.html#practical-examples",
-    "title": "DS202 Data Science for Social Scientists",
-    "section": "Practical examples",
-    "text": "Practical examples\n\n\n Give a pratical example of how one would approach the same dataset differently under these two modelling views."
+    "text": "Data Science and Social Science\n\nIn reality, data scientists work as a multidisciplinary group, collaborating towards a common goal.\nContent borrowed from ME314 Day 1\n\n\n\nSocial science: The goal is typically explanation\nData science: The goal is frequently prediction, or data exploration\nMany of the same methods are used for both objectives\n\n\n\n\nCheck (Shmueli 2010) for a discussion about this topic."
   },
   {
     "objectID": "slides/week01_slides_part2.html#what-does-it-mean-to-learn-something",
@@ -385,46 +378,123 @@
     "text": "What does it mean to learn something?\n\n\n\n\n\n\nImage created with the DALL·E algorithm using the prompt: ‘35mm macro photography of a robot holding a question mark card, white background’"
   },
   {
+    "objectID": "slides/week01_slides_part2.html#predicting-a-sequence-intuitively",
+    "href": "slides/week01_slides_part2.html#predicting-a-sequence-intuitively",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Predicting a sequence intuitively",
+    "text": "Predicting a sequence intuitively\n\n\nSay our data is the following simple sequence:  \\(6, 9, 12, 15, 18, 21, 24, ...\\) \nWhat number do you expect to come next? Why?\nIt is very likely that you guessed that \\(\\operatorname{next number}=27\\)\nWe spot that the sequence follows a pattern\nFrom this, we notice — we learn — that the sequence is governed by: \\(\\operatorname{next number} = \\operatorname{previous number} + 3\\)"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#predicting-a-sequence-formula",
+    "href": "slides/week01_slides_part2.html#predicting-a-sequence-formula",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Predicting a sequence (formula)",
+    "text": "Predicting a sequence (formula)\nThe next number is a function of the previous one:\n \\[\n\\operatorname{next number} = f(\\operatorname{previous number})\n\\]"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#predicting-a-sequence-generic-formula",
+    "href": "slides/week01_slides_part2.html#predicting-a-sequence-generic-formula",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Predicting a sequence (generic formula)",
+    "text": "Predicting a sequence (generic formula)\nIn general terms, we can represented it as:\n \\[\n\\operatorname{Y} = f(\\operatorname{X})\n\\] \n\nwhere:\n\n\\(Y\\): a quantitative response.  It goes by many names: dependent variable, response, target, outcome\n\\(X\\): a set of predictors,  also called inputs, regressors, covariates, features, independent variables.\n\\(f\\): the systematic information that \\(X\\) provides about \\(Y\\)"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#predicting-a-sequence-generic-formula-1",
+    "href": "slides/week01_slides_part2.html#predicting-a-sequence-generic-formula-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Predicting a sequence (generic formula)",
+    "text": "Predicting a sequence (generic formula)\nIn general terms, we can represented it as:\n\n\\[\n\\operatorname{Y} = f(\\operatorname{X}) + \\epsilon\n\\]\n\nwhere:\n\n\\(Y\\): the output\n\\(X\\): a set of inputs\n\\(f\\): the systematic information that \\(X\\) provides about \\(Y\\)\n\\(\\epsilon~~\\): a random error term\n\n\nIn reality, there is some error \\(\\epsilon\\) that cannot be reduced."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#approximating-f",
+    "href": "slides/week01_slides_part2.html#approximating-f",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Approximating \\(f\\)",
+    "text": "Approximating \\(f\\)\n\n\n\\(f\\) is almost always unknown\nWe aim to find an approximation (a model). Let’s call it \\(\\hat{f}\\)\nthat can then use it to predict values of \\(Y\\) for whatever \\(X\\).\nThat is: \\(\\hat{Y} = \\hat{f}(X)\\)"
+  },
+  {
     "objectID": "slides/week01_slides_part2.html#what-is-machine-learning",
     "href": "slides/week01_slides_part2.html#what-is-machine-learning",
     "title": "DS202 Data Science for Social Scientists",
     "section": "What is Machine Learning?",
-    "text": "What is Machine Learning?\n\n\nMachine learning refers to a vast set of tools for understanding data.\n\n\n\nContent borrowed from ME314 Day 1"
+    "text": "What is Machine Learning?\n\n\nStatistical learning, or Machine learning, refers to a set of approaches for estimating \\(f\\).\nEach algorithm you will learn on this course has its own way to determine \\(\\hat{f}\\) given data"
   },
   {
-    "objectID": "slides/week01_slides_part2.html#what-is-machine-learning-1",
-    "href": "slides/week01_slides_part2.html#what-is-machine-learning-1",
+    "objectID": "slides/week01_slides_part2.html#types-of-learning",
+    "href": "slides/week01_slides_part2.html#types-of-learning",
     "title": "DS202 Data Science for Social Scientists",
-    "section": "What is Machine Learning?",
-    "text": "What is Machine Learning?\n\nMachine learning refers to a vast set of tools for understanding data.\nFor a quantitative response \\(Y\\) and a set of predictors \\(X\\): \\[\nY = f(X) + \\epsilon\n\\] ::: {.incremental}\nHere, \\(f\\) represents the systematic information that \\(X\\) provides about \\(Y\\).\nStatistical learning refers to a set of approaches for estimating \\(f\\). :::\n\n\nContent borrowed from ME314 Day 1"
+    "section": "Types of learning",
+    "text": "Types of learning\n\nIn general terms, there are two main ways to learn from data:\n\n\nSupervised Learning\n\nEach observation (\\(x_i\\)) has an outcome associated with it (\\(y_i\\)).\nYour goal is to find a \\(\\hat{f}\\) that produces \\(\\hat{Y}\\) value close to the true \\(Y\\) values.\nOur focus on 🗓️ Weeks 2, 3, 4 & 5.\n\n\nUnsupervised Learning\n\nYou have observations (\\(x_i\\)) but there is no response variable.\nYour goal is to find a \\(\\hat{f}\\), focused only on \\(X\\) that best represents the patterns in the data.\nOur focus on 🗓️ Weeks 7 & 8."
   },
   {
-    "objectID": "slides/week01_slides_part2.html#what-is-machine-learning-2",
-    "href": "slides/week01_slides_part2.html#what-is-machine-learning-2",
+    "objectID": "slides/week01_slides_part2.html#data-structure",
+    "href": "slides/week01_slides_part2.html#data-structure",
     "title": "DS202 Data Science for Social Scientists",
-    "section": "What is Machine Learning?",
-    "text": "What is Machine Learning?\n\nMost of the course we’ll spend talking about different ways to estimate \\(f\\) and how to evaluate whether we’ve done a good job with it.\n\n\nContent borrowed from ME314 Day 1"
+    "section": "Data Structure",
+    "text": "Data Structure\nLet’s go back to our example:\n\n\n\nOur simple sequence:\n \\(6, 9, 12, 15, 18, 21, 24\\) \n\n\n\nBecomes:\n\n\n\n\\(X\\)\n\\(Y\\)\n\n\n\n\n6\n9\n\n\n9\n12\n\n\n12\n15\n\n\n15\n18\n\n\n18\n21\n\n\n21\n24\n\n\n\n\n\n\nAnd for prediction:\n\n\n\n\n\n\n\n\\(X\\)\n\\(\\hat{Y}\\)\n\n\n\n\n24\n?\n\n\n\nwe present the \\(X\\) values and ask the fitted model to give us \\(\\hat{Y}\\).\n\n\n\n\nSame data but now in tabular format\na few other terms: - training data/test data - fitted model"
   },
   {
-    "objectID": "slides/week01_slides_part2.html#supervised-learning",
-    "href": "slides/week01_slides_part2.html#supervised-learning",
+    "objectID": "slides/week01_slides_part2.html#the-ground-truth",
+    "href": "slides/week01_slides_part2.html#the-ground-truth",
     "title": "DS202 Data Science for Social Scientists",
-    "section": "Supervised Learning",
-    "text": "Supervised Learning\nWORK IN PROGRESS"
+    "section": "The ground truth",
+    "text": "The ground truth\nLet’s create a dataframe to illustrate the process of training an algorithm:\n\nlibrary(tidyverse)\n\ndf = tibble(X=as.integer(seq(6, 21, 3)),\n            Y=as.integer(seq(6+3, 21+3, 3)))\nprint(df)\n\n\n\n# A tibble: 6 × 2\n      X     Y\n  <int> <int>\n1     6     9\n2     9    12\n3    12    15\n4    15    18\n5    18    21\n6    21    24"
   },
   {
-    "objectID": "slides/week01_slides_part2.html#unsupervised-learning",
-    "href": "slides/week01_slides_part2.html#unsupervised-learning",
+    "objectID": "slides/week01_slides_part2.html#adding-noise",
+    "href": "slides/week01_slides_part2.html#adding-noise",
     "title": "DS202 Data Science for Social Scientists",
-    "section": "Unsupervised Learning",
-    "text": "Unsupervised Learning\nWORK IN PROGRESS"
+    "section": "Adding noise",
+    "text": "Adding noise\nLet’s simulate the introduction of some random error:\n\n# Let's simulate some noise\ngaussian_noise = rnorm(n=nrow(df), mean=0, sd=1.5)\n\n# Call it \"observed Y\"\ndf$obsY = df$Y + gaussian_noise\nprint(df)\n\n\n\n# A tibble: 6 × 3\n      X     Y  obsY\n  <int> <int> <dbl>\n1     6     9  9.96\n2     9    12 11.0 \n3    12    15 16.4 \n4    15    18 19.0 \n5    18    21 19.4 \n6    21    24 21.0"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#visualizing-the-data",
+    "href": "slides/week01_slides_part2.html#visualizing-the-data",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Visualizing the data",
+    "text": "Visualizing the data"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#visualizing-the-data-w-noise",
+    "href": "slides/week01_slides_part2.html#visualizing-the-data-w-noise",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Visualizing the data (w/ noise)",
+    "text": "Visualizing the data (w/ noise)"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#visualizing-the-data-w-noise-1",
+    "href": "slides/week01_slides_part2.html#visualizing-the-data-w-noise-1",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Visualizing the data (w/ noise)",
+    "text": "Visualizing the data (w/ noise)\n\n\n\n\n\n\n\nWhich line is closer to the “truth”?"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#visualizing-the-data-w-noise-2",
+    "href": "slides/week01_slides_part2.html#visualizing-the-data-w-noise-2",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Visualizing the data (w/ noise)",
+    "text": "Visualizing the data (w/ noise)\n\n\n\n\n\n\n\nHow much error can we accept?"
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#assessing-error",
+    "href": "slides/week01_slides_part2.html#assessing-error",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Assessing error",
+    "text": "Assessing error\nHow much error was introduced by \\(\\epsilon\\) per sample?\n\ndf$error    <- df$Y - df$obsY  # Calculate the error\ndf$absError <- abs(df$error)   # Ignore the sign of error\ndf\n\n\n\n# A tibble: 6 × 5\n      X     Y  obsY  error absError\n  <int> <int> <dbl>  <dbl>    <dbl>\n1     6     9  9.96 -0.959    0.959\n2     9    12 11.0   1.03     1.03 \n3    12    15 16.4  -1.39     1.39 \n4    15    18 19.0  -0.957    0.957\n5    18    21 19.4   1.61     1.61 \n6    21    24 21.0   3.04     3.04 \n\n\n\nOn average, what is the error?\n\nmean(df$absError)\n\n[1] 1.496301\n\n\n\n\nThis measure is called the Mean Absolute Error."
+  },
+  {
+    "objectID": "slides/week01_slides_part2.html#measures-of-error",
+    "href": "slides/week01_slides_part2.html#measures-of-error",
+    "title": "DS202 Data Science for Social Scientists",
+    "section": "Measures of error",
+    "text": "Measures of error\nThis is what we computed:\n\\[\n\\operatorname{MAE} = \\frac{\\sum_{i=1}^n{|(y_i + \\epsilon) - y_i|}}{n}\n\\]\n\n\nWe were able to compute this error because we knew what the ground truth \\(Y\\), we knew what its real value was.\nIt was only possible because it was a simulation, not real data.\nIn practice, we will almost never be able to assess the impact of \\(\\epsilon\\).\nWe will use this same way of thinking to assess how good and accurate our models are. 🔜"
   },
   {
     "objectID": "slides/week01_slides_part2.html#references",
     "href": "slides/week01_slides_part2.html#references",
     "title": "DS202 Data Science for Social Scientists",
     "section": "References",
-    "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nSchutt, Rachel, and Cathy O’Neil. 2013. Doing Data Science. First edition. Beijing ; Sebastopol: O’Reilly Media. https://ebookcentral.proquest.com/lib/londonschoolecons/detail.action?docID=1465965.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
+    "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nSchutt, Rachel, and Cathy O’Neil. 2013. Doing Data Science. First edition. Beijing ; Sebastopol: O’Reilly Media. https://ebookcentral.proquest.com/lib/londonschoolecons/detail.action?docID=1465965.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\nShmueli, Galit. 2010. “To Explain or to Predict?” Statistical Science 25 (3). https://doi.org/10.1214/10-STS330.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
   },
   {
     "objectID": "slides/week02_slides.html#simple-linear-regression-context",

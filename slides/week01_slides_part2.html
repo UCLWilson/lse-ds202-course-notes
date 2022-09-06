@@ -29,6 +29,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -360,7 +424,9 @@
 <li><a href="#/the-data-science-workflow" id="/toc-the-data-science-workflow">The <br> Data <br> Science <br> Workflow</a></li>
 <li><a href="#/how-is-that-different-to-what-i-have-learned-in-my-previous-stats-courses" id="/toc-how-is-that-different-to-what-i-have-learned-in-my-previous-stats-courses">How is that different to what I have learned in my previous stats courses?</a></li>
 <li><a href="#/machine-learning" id="/toc-machine-learning">Machine Learning</a></li>
+<li><a href="#/training-algorithm" id="/toc-training-algorithm">Training algorithm</a></li>
 <li><a href="#/whats-next" id="/toc-whats-next">What’s Next?</a></li>
+<li><a href="#/thank-you" id="/toc-thank-you">Thank you</a></li>
 </ul>
 </nav>
 </section>
@@ -455,11 +521,11 @@
 </section>
 <section id="the-data-science-workflow-1" class="slide level2">
 <h2>The Data Science Workflow</h2>
-<div class="cell" data-id="1" data-fig-width="100%">
+<div class="cell" data-id="1" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <p>
-<svg width="NaN" height="480" viewbox="0.00 0.00 1104.31 425.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<svg width="960" height="480" viewbox="0.00 0.00 1104.31 425.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 389)"> <polygon fill="white" stroke="transparent" points="-36,36 -36,-389 1068.31,-389 1068.31,36 -36,36"></polygon> <!-- start --> <g id="node1" class="node">
 <title>
 start
@@ -548,11 +614,11 @@ communicate-&gt;end
 </div></aside></section>
 <section id="the-data-science-workflow-2" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">The Data Science Workflow</h2>
-<div class="cell" data-id="1" data-fig-width="100%">
+<div class="cell" data-id="1" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <p>
-<svg width="NaN" height="480" viewbox="0.00 0.00 1104.31 425.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<svg width="960" height="480" viewbox="0.00 0.00 1104.31 425.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 389)"> <polygon fill="white" stroke="transparent" points="-36,36 -36,-389 1068.31,-389 1068.31,36 -36,36"></polygon> <!-- start --> <g id="node1" class="node">
 <title>
 start
@@ -639,12 +705,12 @@ communicate-&gt;end
 </section>
 <section id="the-data-science-workflow-3" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
 <h2 data-id="quarto-animate-title">The Data Science Workflow</h2>
-<div class="cell" data-id="1" data-fig-width="100%">
+<div class="cell" data-id="1" data-fig-width="10">
 <div class="cell-output-display">
 <div>
 <p>
-<svg width="NaN" height="480" viewbox="0.00 0.00 1120.31 441.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 405)"> <polygon fill="white" stroke="transparent" points="-36,36 -36,-405 1084.31,-405 1084.31,36 -36,36"></polygon> <!-- start --> <g id="node1" class="node">
+<svg width="960" height="480" viewbox="0.00 0.00 1128.31 441.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 405)"> <polygon fill="white" stroke="transparent" points="-36,36 -36,-405 1092.31,-405 1092.31,36 -36,36"></polygon> <!-- start --> <g id="node1" class="node">
 <title>
 start
 </title>
@@ -660,7 +726,7 @@ start-&gt;gather
 <title>
 end
 </title>
-<polygon fill="#f2eaf6" stroke="#f2eaf6" points="1005.21,-38 951.21,-38 951.21,0 1005.21,0 1005.21,-38"></polygon> <text text-anchor="middle" x="978.21" y="-13" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#8431a6">End</text> </g> <!-- store --> <g id="node4" class="node">
+<polygon fill="#f2eaf6" stroke="#f2eaf6" points="1013.21,-38 959.21,-38 959.21,0 1013.21,0 1013.21,-38"></polygon> <text text-anchor="middle" x="986.21" y="-13" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#8431a6">End</text> </g> <!-- store --> <g id="node4" class="node">
 <title>
 store
 </title>
@@ -688,39 +754,39 @@ clean-&gt;build
 <title>
 eda
 </title>
-<polygon fill="#f2eaf6" stroke="#f2eaf6" points="581.74,-159 438.68,-159 438.68,-83 581.74,-83 581.74,-159"></polygon> <text text-anchor="start" x="452.44" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">Exploratory &nbsp;&nbsp;&nbsp;</text> <text text-anchor="middle" x="510.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">data analysis</text> </g> <!-- build&#45;&gt;eda --> <g id="edge5" class="edge">
+<polygon fill="#8431a6" stroke="#8431a6" points="589.74,-167 430.68,-167 430.68,-75 589.74,-75 589.74,-167"></polygon> <text text-anchor="start" x="452.44" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">Exploratory &nbsp;&nbsp;&nbsp;</text> <text text-anchor="middle" x="510.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">data analysis</text> </g> <!-- build&#45;&gt;eda --> <g id="edge5" class="edge">
 <title>
 build-&gt;eda
 </title>
-<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M510.21,-204C510.21,-193.13 510.21,-181.1 510.21,-169.66"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="513.71,-169.39 510.21,-159.39 506.71,-169.39 513.71,-169.39"></polygon> </g> <!-- ml --> <g id="node8" class="node">
+<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M510.21,-204C510.21,-195.57 510.21,-186.44 510.21,-177.43"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="513.71,-177.36 510.21,-167.36 506.71,-177.36 513.71,-177.36"></polygon> </g> <!-- ml --> <g id="node8" class="node">
 <title>
 ml
 </title>
-<polygon fill="#8431a6" stroke="#8431a6" points="734.18,-167 620.24,-167 620.24,-75 734.18,-75 734.18,-167"></polygon> <text text-anchor="start" x="642.22" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">Machine</text> <text text-anchor="middle" x="677.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">learning</text> </g> <!-- eda&#45;&gt;ml --> <g id="edge6" class="edge">
+<polygon fill="#8431a6" stroke="#8431a6" points="742.18,-167 628.24,-167 628.24,-75 742.18,-75 742.18,-167"></polygon> <text text-anchor="start" x="650.22" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">Machine</text> <text text-anchor="middle" x="685.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#fcfcfc">learning</text> </g> <!-- eda&#45;&gt;ml --> <g id="edge6" class="edge">
 <title>
 eda-&gt;ml
 </title>
-<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M582,-121C591.25,-121 600.69,-121 609.87,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="610.09,-124.5 620.09,-121 610.09,-117.5 610.09,-124.5"></polygon> <text text-anchor="middle" x="601.1" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- insight --> <g id="node9" class="node">
+<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M589.77,-121C599.15,-121 608.65,-121 617.85,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="618.06,-124.5 628.06,-121 618.06,-117.5 618.06,-124.5"></polygon> <text text-anchor="middle" x="609.1" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- insight --> <g id="node9" class="node">
 <title>
 insight
 </title>
-<polygon fill="#f2eaf6" stroke="#f2eaf6" points="870.14,-159 772.27,-159 772.27,-83 870.14,-83 870.14,-159"></polygon> <text text-anchor="start" x="786.49" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">Obtain &nbsp;&nbsp;</text> <text text-anchor="middle" x="821.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">insights</text> </g> <!-- ml&#45;&gt;insight --> <g id="edge7" class="edge">
+<polygon fill="#f2eaf6" stroke="#f2eaf6" points="878.14,-159 780.27,-159 780.27,-83 878.14,-83 878.14,-159"></polygon> <text text-anchor="start" x="794.49" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">Obtain &nbsp;&nbsp;</text> <text text-anchor="middle" x="829.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">insights</text> </g> <!-- ml&#45;&gt;insight --> <g id="edge7" class="edge">
 <title>
 ml-&gt;insight
 </title>
-<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M734.53,-121C743.65,-121 753.1,-121 762.25,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="762.43,-124.5 772.43,-121 762.43,-117.5 762.43,-124.5"></polygon> <text text-anchor="middle" x="753.34" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- communicate --> <g id="node10" class="node">
+<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M742.53,-121C751.65,-121 761.1,-121 770.25,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="770.43,-124.5 780.43,-121 770.43,-117.5 770.43,-124.5"></polygon> <text text-anchor="middle" x="761.34" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- communicate --> <g id="node10" class="node">
 <title>
 communicate
 </title>
-<polygon fill="#f2eaf6" stroke="#f2eaf6" points="1048.4,-159 908.01,-159 908.01,-83 1048.4,-83 1048.4,-159"></polygon> <text text-anchor="start" x="922.11" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">Communicate</text> <text text-anchor="middle" x="978.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">results &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- insight&#45;&gt;communicate --> <g id="edge8" class="edge">
+<polygon fill="#f2eaf6" stroke="#f2eaf6" points="1056.4,-159 916.01,-159 916.01,-83 1056.4,-83 1056.4,-159"></polygon> <text text-anchor="start" x="930.11" y="-127" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">Communicate</text> <text text-anchor="middle" x="986.21" y="-103" font-family="Helvetica,Arial,sans-serif" font-size="20.00" fill="#dac1e4">results &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- insight&#45;&gt;communicate --> <g id="edge8" class="edge">
 <title>
 insight-&gt;communicate
 </title>
-<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M870.02,-121C878.88,-121 888.33,-121 897.82,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="898.1,-124.5 908.1,-121 898.1,-117.5 898.1,-124.5"></polygon> <text text-anchor="middle" x="889.02" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- communicate&#45;&gt;end --> <g id="edge9" class="edge">
+<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M878.02,-121C886.88,-121 896.33,-121 905.82,-121"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="906.1,-124.5 916.1,-121 906.1,-117.5 906.1,-124.5"></polygon> <text text-anchor="middle" x="897.02" y="-128.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> </g> <!-- communicate&#45;&gt;end --> <g id="edge9" class="edge">
 <title>
 communicate-&gt;end
 </title>
-<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M978.21,-82.76C978.21,-71.35 978.21,-58.99 978.21,-48.28"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="981.71,-48.21 978.21,-38.21 974.71,-48.21 981.71,-48.21"></polygon> </g> </g>
+<path fill="none" stroke="#f2eaf6" stroke-width="4" d="M986.21,-82.76C986.21,-71.35 986.21,-58.99 986.21,-48.28"></path> <polygon fill="#f2eaf6" stroke="#f2eaf6" stroke-width="4" points="989.71,-48.21 986.21,-38.21 982.71,-48.21 989.71,-48.21"></polygon> </g> </g>
 </svg>
 </p>
 </div>
@@ -756,12 +822,9 @@ communicate-&gt;end
 <li class="fragment">Many of the same methods are used for both objectives</li>
 </ul>
 </div>
-</section>
-<section id="practical-examples" class="slide level2">
-<h2>Practical examples</h2>
 
 <aside><div>
-<p><mark class="todo"> Give a pratical example of how one would approach the same dataset differently under these two modelling views. </mark></p>
+<p>Check <span class="citation" data-cites="shmueli_explain_2010">(<a href="#/references" role="doc-biblioref" onclick="">Shmueli 2010</a>)</span> for a discussion about this topic.</p>
 </div></aside></section></section>
 <section>
 <section id="machine-learning" class="title-slide slide level1">
@@ -780,84 +843,364 @@ communicate-&gt;end
 </div>
 </div>
 </section>
+<section id="predicting-a-sequence-intuitively" class="slide level2">
+<h2>Predicting a sequence intuitively</h2>
+<div>
+<ul>
+<li class="fragment">Say our data is the following simple sequence: <font color="#4285F4"> <span class="math inline">\(6, 9, 12, 15, 18, 21, 24, ...\)</span> </font></li>
+<li class="fragment">What number do you expect to come next? Why?</li>
+<li class="fragment">It is very likely that you guessed that <br><font color="#4285F4"><span class="math inline">\(\operatorname{next number}=27\)</span></font></li>
+<li class="fragment">We spot that the sequence follows a pattern</li>
+<li class="fragment">From this, we notice — we <strong>learn</strong> — that the sequence is governed by:<br> <font color="#4285F4"><span class="math inline">\(\operatorname{next number} = \operatorname{previous number} + 3\)</span></font></li>
+</ul>
+</div>
+</section>
+<section id="predicting-a-sequence-formula" class="slide level2">
+<h2>Predicting a sequence (formula)</h2>
+<p>The next number is a <strong>function</strong> of the previous one:</p>
+<p><font color="#4285F4"> <span class="math display">\[
+\operatorname{next number} = f(\operatorname{previous number})
+\]</span> </font></p>
+</section>
+<section id="predicting-a-sequence-generic-formula" class="slide level2">
+<h2>Predicting a sequence (generic formula)</h2>
+<p>In general terms, we can represented it as:</p>
+<p><font color="#274f92"> <span class="math display">\[
+\operatorname{Y} = f(\operatorname{X})
+\]</span> </font></p>
+<div class="r-fit-text">
+<p>where:</p>
+<ul>
+<li class="fragment"><font color="#274f92"><span class="math inline">\(Y\)</span></font>: a quantitative <strong>response</strong>. <br> It goes by many names: dependent variable, response, target, outcome</li>
+<li class="fragment"><font color="#274f92"><span class="math inline">\(X\)</span></font>: a set of <strong>predictors</strong>, <br> also called inputs, regressors, covariates, features, independent variables.</li>
+<li class="fragment"><font color="#274f92"><span class="math inline">\(f\)</span></font>: the <em>systematic</em> information that <span class="math inline">\(X\)</span> provides about <span class="math inline">\(Y\)</span></li>
+</ul>
+</div>
+</section>
+<section id="predicting-a-sequence-generic-formula-1" class="slide level2">
+<h2>Predicting a sequence (generic formula)</h2>
+<p>In general terms, we can represented it as:</p>
+<p><font color="#274f92"></font></p><font color="#274f92">
+<p><span class="math display">\[
+\operatorname{Y} = f(\operatorname{X}) + \epsilon
+\]</span></p>
+</font><p><font color="#274f92"></font></p>
+<p>where:</p>
+<ul>
+<li><font color="#274f92"><span class="math inline">\(Y\)</span></font>: the output</li>
+<li><font color="#274f92"><span class="math inline">\(X\)</span></font>: a set of inputs</li>
+<li><font color="#274f92"><span class="math inline">\(f\)</span></font>: the <em>systematic</em> information that <span class="math inline">\(X\)</span> provides about <span class="math inline">\(Y\)</span></li>
+<li><font color="#274f92"><span class="math inline">\(\epsilon~~\)</span></font>: a <strong>random error term</strong></li>
+</ul>
+<aside class="notes">
+<p>In reality, there is some error <span class="math inline">\(\epsilon\)</span> that cannot be reduced.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="approximating-f" class="slide level2">
+<h2>Approximating <span class="math inline">\(f\)</span></h2>
+<div>
+<ul>
+<li class="fragment"><font color="#274f92"><span class="math inline">\(f\)</span></font> is almost always unknown</li>
+<li class="fragment">We aim to find an approximation (a <strong>model</strong>). Let’s call it <font color="#274f92"><span class="math inline">\(\hat{f}\)</span></font></li>
+<li class="fragment">that can then use it to predict values of <span class="math inline">\(Y\)</span> for whatever <font color="#274f92"><span class="math inline">\(X\)</span></font>.</li>
+<li class="fragment">That is: <font color="#274f92"><span class="math inline">\(\hat{Y} = \hat{f}(X)\)</span></font></li>
+</ul>
+</div>
+</section>
 <section id="what-is-machine-learning" class="slide level2">
 <h2>What is Machine Learning?</h2>
 <div>
 <ul>
-<li class="fragment"><strong>Machine learning</strong> refers to a vast set of tools for <em>understanding data</em>.</li>
+<li class="fragment">Statistical learning, or Machine learning, refers to a set of approaches for estimating <font color="#274f92"><span class="math inline">\(f\)</span></font>.</li>
+<li class="fragment">Each algorithm you will learn on this course has its own way to determine <font color="#274f92"><span class="math inline">\(\hat{f}\)</span></font> given data</li>
 </ul>
 </div>
-<aside class="notes">
-<p>Content borrowed from <a href="https://github.com/lse-me314/lectures">ME314 Day 1</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="what-is-machine-learning-1" class="slide level2">
-<h2>What is Machine Learning?</h2>
+<section id="types-of-learning" class="slide level2 smaller">
+<h2>Types of learning</h2>
+<p><br></p>
+<p>In general terms, there are two main ways to learn from data:</p>
+<div class="columns">
+<div class="column" style="width: 45%;border-style: dotted;border-width: 1px;border-color: &quot;#fefefe&quot;; margin-right:0.5%;padding:1%;">
+<h3 style="margin: 0em;" id="supervised-learning">Supervised Learning</h3>
 <ul>
-<li><strong>Machine learning</strong> refers to a vast set of tools for <em>understanding data</em>.</li>
-<li>For a quantitative response <span class="math inline">\(Y\)</span> and a set of predictors <span class="math inline">\(X\)</span>: <span class="math display">\[
-Y = f(X) + \epsilon
-\]</span> ::: {.incremental}</li>
-<li>Here, <span class="math inline">\(f\)</span> represents the <em>systematic</em> information that <span class="math inline">\(X\)</span> provides about <span class="math inline">\(Y\)</span>.</li>
-<li>Statistical learning refers to a set of approaches for estimating <span class="math inline">\(f\)</span>. :::</li>
+<li>Each observation (<span class="math inline">\(x_i\)</span>) has an outcome associated with it (<span class="math inline">\(y_i\)</span>).</li>
+<li>Your goal is to find a <font color="#274f92"><span class="math inline">\(\hat{f}\)</span></font> that produces <font color="#274f92"><span class="math inline">\(\hat{Y}\)</span></font> value close to the true <font color="#274f92"><span class="math inline">\(Y\)</span></font> values.</li>
+<li>Our focus on 🗓️ Weeks 2, 3, 4 &amp; 5.</li>
 </ul>
-<aside class="notes">
-<p>Content borrowed from <a href="https://github.com/lse-me314/lectures">ME314 Day 1</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-is-machine-learning-2" class="slide level2">
-<h2>What is Machine Learning?</h2>
+</div><div class="column" style="width: 45%;border-style: dotted;border-width: 1px;border-color: &quot;#fefefe&quot;; margin-right:0.5%;padding:1%;">
+<h3 style="margin: 0em;" id="unsupervised-learning">Unsupervised Learning</h3>
 <ul>
-<li>Most of the course we’ll spend talking about different ways to estimate <span class="math inline">\(f\)</span> and how to evaluate whether we’ve done a good job with it.</li>
+<li>You have observations (<span class="math inline">\(x_i\)</span>) but there is no response variable.</li>
+<li>Your goal is to find a <font color="#274f92"><span class="math inline">\(\hat{f}\)</span></font>, focused only on <font color="#274f92"><span class="math inline">\(X\)</span></font> that <em>best</em> represents the patterns in the data.</li>
+<li>Our focus on 🗓️ Weeks 7 &amp; 8.</li>
 </ul>
-<aside class="notes">
-<p>Content borrowed from <a href="https://github.com/lse-me314/lectures">ME314 Day 1</a></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="supervised-learning" class="slide level2">
-<h2>Supervised Learning</h2>
-<p><mark class="todo">WORK IN PROGRESS</mark></p>
-</section>
-<section id="unsupervised-learning" class="slide level2">
-<h2>Unsupervised Learning</h2>
-<p><mark class="todo">WORK IN PROGRESS</mark></p>
+</div>
+</div>
 </section></section>
 <section>
+<section id="training-algorithm" class="title-slide slide level1">
+<h1>Training algorithm</h1>
+<p>Now let’s shift our attention to understanding:</p>
+<ul>
+<li>how we structure our data for supervised learning</li>
+<li>the different sources of statistical errors</li>
+</ul>
+</section>
+<section id="data-structure" class="slide level2 smaller">
+<h2>Data Structure</h2>
+<p>Let’s go back to our example:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="fragment">
+<p>Our simple sequence:</p>
+<p><font color="#4285F4"> <span class="math inline">\(6, 9, 12, 15, 18, 21, 24\)</span> </font></p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="fragment">
+<p>Becomes:</p>
+<table>
+<thead>
+<tr class="header">
+<th><font color="#274f92"><span class="math inline">\(X\)</span></font></th>
+<th><font color="#274f92"><span class="math inline">\(Y\)</span></font></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>18</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column" style="width:30%; border-left-color: coral; border-left-width: 0.2em;">
+<div class="fragment">
+<p>And for prediction:</p>
+<table>
+<colgroup>
+<col style="width: 54%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><font color="#274f92"><span class="math inline">\(X\)</span></font></th>
+<th><font color="#274f92"><span class="math inline">\(\hat{Y}\)</span></font></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>24</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p>we present the <span class="math inline">\(X\)</span> values and ask the <strong>fitted model</strong> to give us <span class="math inline">\(\hat{Y}\)</span>.</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Same data but now in tabular format</p>
+<p>a few other terms: - training data/test data - fitted model</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-ground-truth" class="slide level2">
+<h2>The ground truth</h2>
+<p>Let’s create a dataframe to illustrate the process of training an algorithm:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>df <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">X=</span><span class="fu">as.integer</span>(<span class="fu">seq</span>(<span class="dv">6</span>, <span class="dv">21</span>, <span class="dv">3</span>)),</span>
+<span id="cb1-4"><a href="#cb1-4"></a>            <span class="at">Y=</span><span class="fu">as.integer</span>(<span class="fu">seq</span>(<span class="dv">6</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">21</span><span class="sc">+</span><span class="dv">3</span>, <span class="dv">3</span>)))</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+      X     Y
+  &lt;int&gt; &lt;int&gt;
+1     6     9
+2     9    12
+3    12    15
+4    15    18
+5    18    21
+6    21    24</code></pre>
+</div>
+</div>
+</section>
+<section id="adding-noise" class="slide level2 smaller">
+<h2>Adding noise</h2>
+<p>Let’s simulate the introduction of some random error:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Let's simulate some noise</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>gaussian_noise <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="at">n=</span><span class="fu">nrow</span>(df), <span class="at">mean=</span><span class="dv">0</span>, <span class="at">sd=</span><span class="fl">1.5</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Call it "observed Y"</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>df<span class="sc">$</span>obsY <span class="ot">=</span> df<span class="sc">$</span>Y <span class="sc">+</span> gaussian_noise</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+      X     Y  obsY
+  &lt;int&gt; &lt;int&gt; &lt;dbl&gt;
+1     6     9  9.96
+2     9    12 11.0 
+3    12    15 16.4 
+4    15    18 19.0 
+5    18    21 19.4 
+6    21    24 21.0 </code></pre>
+</div>
+</div>
+</section>
+<section id="visualizing-the-data" class="slide level2">
+<h2>Visualizing the data</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="week01_slides_part2_files/figure-revealjs/unnamed-chunk-6-1.png" style="width:90.0%;height:40.0%"></p>
+</div>
+</div>
+</section>
+<section id="visualizing-the-data-w-noise" class="slide level2">
+<h2>Visualizing the data (w/ noise)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="week01_slides_part2_files/figure-revealjs/unnamed-chunk-7-1.png" style="width:90.0%;height:40.0%"></p>
+</div>
+</div>
+</section>
+<section id="visualizing-the-data-w-noise-1" class="slide level2">
+<h2>Visualizing the data (w/ noise)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="week01_slides_part2_files/figure-revealjs/unnamed-chunk-8-1.png" style="width:90.0%;height:40.0%"></p>
+</div>
+</div>
+
+<aside><div>
+<p>Which line is closer to the “truth”?</p>
+</div></aside></section>
+<section id="visualizing-the-data-w-noise-2" class="slide level2">
+<h2>Visualizing the data (w/ noise)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="week01_slides_part2_files/figure-revealjs/unnamed-chunk-9-1.png" style="width:90.0%;height:40.0%"></p>
+</div>
+</div>
+
+<aside><div>
+<p>How much error can we accept?</p>
+</div></aside></section>
+<section id="assessing-error" class="slide level2 smaller">
+<h2>Assessing error</h2>
+<p>How much error was introduced by <font color="#274f92"><span class="math inline">\(\epsilon\)</span></font> per sample?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|1|2"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df<span class="sc">$</span>error    <span class="ot">&lt;-</span> df<span class="sc">$</span>Y <span class="sc">-</span> df<span class="sc">$</span>obsY  <span class="co"># Calculate the error</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>df<span class="sc">$</span>absError <span class="ot">&lt;-</span> <span class="fu">abs</span>(df<span class="sc">$</span>error)   <span class="co"># Ignore the sign of error</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+      X     Y  obsY  error absError
+  &lt;int&gt; &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+1     6     9  9.96 -0.959    0.959
+2     9    12 11.0   1.03     1.03 
+3    12    15 16.4  -1.39     1.39 
+4    15    18 19.0  -0.957    0.957
+5    18    21 19.4   1.61     1.61 
+6    21    24 21.0   3.04     3.04 </code></pre>
+</div>
+</div>
+<div class="fragment">
+<p>On average, what is the error?</p>
+<div class="cell" data-output-location="fragment">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>absError)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.496301</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>This measure is called the <a href="https://www.wikiwand.com/en/Mean_absolute_error"><strong>M</strong>ean <strong>A</strong>bsolute <strong>E</strong>rror</a>.</p>
+</div>
+</section>
+<section id="measures-of-error" class="slide level2 smaller">
+<h2>Measures of error</h2>
+<p>This is what we computed:</p>
+<p><span class="math display">\[
+\operatorname{MAE} = \frac{\sum_{i=1}^n{|(y_i + \epsilon) - y_i|}}{n}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">We were able to compute this error because we <strong>knew</strong> what the ground truth <font color="#274f92"><span class="math inline">\(Y\)</span></font>, we knew what its <em>real</em> value was.</li>
+<li class="fragment">It was only possible because it was a simulation, not real data.</li>
+<li class="fragment">In practice, we will almost never be able to assess the impact of <font color="#274f92"><span class="math inline">\(\epsilon\)</span></font>.</li>
+<li class="fragment">We will use this same way of thinking to assess how good and accurate our models are. 🔜</li>
+</ul>
+</div>
+</section></section>
 <section id="whats-next" class="title-slide slide level1">
 <h1>What’s Next?</h1>
+<div class="r-fit-text">
 <ul>
-<li><mark class="todo"> Indicate recommended reading prior to next week’s class </mark></li>
+<li class="fragment">We will introduce different measures of error and goodness-of-fit throughout this course.</li>
+<li class="fragment">Next week we will cover <strong>Simple and Multiple Linear Regression</strong></li>
+<li class="fragment">Join our <img data-src="../figures/logos/slack_logo_simple.svg" style="height:1em"> <a href="../main/communication.qmd">Slack group</a> if you haven’t done so yet.</li>
+<li class="fragment">Use the time before our first lab to revisit basic R programming skills.</li>
+<li class="fragment">Head over to the 🔖 <a href="../weeks/week01/appendix.qmd">Week 01 - Appendix</a> page for:
+<ul>
+<li class="fragment">Indicative &amp; recommended reading</li>
+<li class="fragment">Programming Resources</li>
+</ul></li>
 </ul>
+</div>
+</section>
+
+<section>
+<section id="thank-you" class="title-slide slide level1">
+<h1>Thank you</h1>
+
 </section>
 <section id="references" class="slide level2 smaller scrollable" style="word-break:break-all;">
 <h2>References</h2>
@@ -870,6 +1213,9 @@ Schutt, Rachel, and Cathy O’Neil. 2013. <em>Doing Data Science</em>. First edi
 </div>
 <div id="ref-shah_hands-introduction_2020" class="csl-entry" role="doc-biblioentry">
 Shah, Chirag. 2020. <em>A Hands-on Introduction to Data Science</em>. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. <a href="https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907">https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907</a>.
+</div>
+<div id="ref-shmueli_explain_2010" class="csl-entry" role="doc-biblioentry">
+Shmueli, Galit. 2010. <span>“To <span>Explain</span> or to <span>Predict</span>?”</span> <em>Statistical Science</em> 25 (3). <a href="https://doi.org/10.1214/10-STS330">https://doi.org/10.1214/10-STS330</a>.
 </div>
 </div>
 
@@ -906,7 +1252,7 @@ Shah, Chirag. 2020. <em>A Hands-on Introduction to Data Science</em>. Cambridge,
 'controlsAuto': true,
 'previewLinksAuto': true,
 'smaller': false,
-'pdfSeparateFragments': false,
+'pdfSeparateFragments': true,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
@@ -1091,6 +1437,48 @@ Shah, Chirag. 2020. <em>A Hands-on Introduction to Data Science</em>. Cambridge,
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
