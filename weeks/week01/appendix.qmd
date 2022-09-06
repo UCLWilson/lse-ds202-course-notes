@@ -1,6 +1,5 @@
 ---
 title: "🔖 Week 01 - Appendix"
-subtitle: "Data Science - Key Concepts"
 date: 5 September 2022
 date-meta: 5 September 2022
 ---

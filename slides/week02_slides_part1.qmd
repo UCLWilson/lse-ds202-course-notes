@@ -1,30 +1,46 @@
 ---
-title: "**DS202 </br> Data Science for Social Scientists**"
+title: "DS202 Data Science for Social Scientists"
 subtitle: "🗓️ Week 02: Linear Regression — a predictive approach, motivation, and examples"
 author: Dr. [Jon Cardoso Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
 institute: '[LSE Data Science Institute](https://twitter.com/lsedatascience)'
 toc: true
-toc-depth: 2
+toc-depth: 1
 toc-title: "What we will cover today"
+center-title-slide: false
 from: markdown+emoji
 format:
   revealjs: 
+    pdf-separate-fragments: true
+    code-fold: true
+    theme: simple
     slide-number: true
+    mouse-wheel: true
     chalkboard: 
       buttons: true
     preview-links: auto
-    logo: /figures/LSE Data Science Institute.png
+    background-color: '#ededed'
+    logo: /figures/logos/LSE Data Science Institute.png
     css: /css/styles_slides.css
-    footer: 'DS202 - Data Science for Social Scientists :unicorn: :juggling_person:'
+    footer: 'DS202 - Data Science for Social Scientists :robot: :juggling_person:'
 ---
 
-----
+# Simple Linear Regression
 
-## Simple Linear Regression: Context
+## The basics
 
-- Linear regression is a simple approach to supervised learning. It assumes that the dependence of $Y$ on $X_1, X_2, \dots, X_p$ is linear.
+::: incremental
+- Linear regression is a simple approach to supervised learning. 
+- It assumes that the dependence between input and output is linear: <br/> $Y \Leftrightarrow X_1, X_2, \dots, X_p$
+:::
+
+::: {.fragment}
+
+:::{.callout-warning}
 - True regression functions are never linear!
 - Although it may seem overly simplistic, linear regression is extremely useful both conceptually and practically.
+::: 
+
+:::
 
 ::: {.notes}
 - See [📺 Regression: Crash Course Statistics on YouTube](https://www.youtube.com/watch?v=WWqE7YHR4Jc&ab_channel=CrashCourse) for inspiration on how to present linear regression to students.
@@ -34,6 +50,4 @@ format:
 
 :::
 
-----
 
-## 
