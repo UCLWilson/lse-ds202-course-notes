@@ -14,11 +14,11 @@ mark:before {
     content: '⚠️ revise '
 }
 
-.todo:before{
+mark.todo:before{
     content: '🚧 This section is being updated. Come back later for the final version.'
 }
 
-.todo{
+mark.todo{
     color: #4682B4;
     /* color: #fcfcfc; */
     padding: 0.3em;
@@ -26,22 +26,22 @@ mark:before {
     display:inline-block;
 }
 
-.idea:before{
+mark.idea:before{
     content: '💡 Idea: '
 
 }
 
-.idea{
+mark.idea{
     background-color: #8FBC8F;
     color: #fcfcfc;
     padding-right: 0.3em;
 }
 
-.remove:before{
+mark.remove:before{
     content: ''
 }
 
-.remove{
+mark.remove{
     text-decoration:line-through;
     padding-bottom: 0.1em;
 }

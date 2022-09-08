@@ -24,15 +24,77 @@ format:
     footer: 'DS202 - Data Science for Social Scientists :robot: :juggling_person:'
 ---
 
-# Simple Linear Regression
+# What is Linear Regression
 
-## The basics
+## The basic models {.smaller}
 
-::: incremental
-- Linear regression is a simple approach to supervised learning. 
-- It assumes that the dependence between input and output is linear: <br/> $Y \Leftrightarrow X_1, X_2, \dots, X_p$
+::: {.fragment}
+Linear regression is a simple approach to supervised learning. 
 :::
 
+::: columns
+::: {.column style="width: 29%;margin-right:0.5%;padding:1%;"}
+::: {.fragment .fade-in-then-semi-out}
+The generic supervised model:
+
+$$
+Y = \operatorname{f}(X) + \epsilon
+$$
+
+is defined more explicitly as follows ➡️
+
+:::
+:::
+
+::: {.column style="width: 31%;margin-right:0.5%;padding:1%;"}
+::: {.fragment}
+#### Simple linear regression
+
+<mark class="math">
+
+$$
+\begin{align}
+Y = \beta_0 +& \beta_1 X + \epsilon, \\ 
+\\ 
+\\
+\end{align}
+$$
+</mark>
+
+when we use a single predictor, $X$.
+
+:::
+:::
+
+::: {.column style="width: 32%;margin-right:0.5%;padding:1%;"}
+::: {.fragment}
+#### Multiple linear regression
+
+<mark class="math">
+
+$$ 
+\begin{align}
+Y = \beta_0 &+ \beta_1 X_1 + \beta_2 X_2 \\
+   &+ \dots \\
+   &+ \beta_p X_p + \epsilon
+\end{align}
+$$
+
+</mark>
+
+when there are multiple predictors, $X_p$.
+:::
+:::
+
+:::
+
+::: columns
+
+::: {.column style="width: 29%;margin-right:0.5%;padding:1%;"}
+<!-- Ghost column -->
+:::
+
+::: {.column style="width: 65%;margin-right:0.5%;padding:1%;"}
 ::: {.fragment}
 
 :::{.callout-warning}
@@ -41,13 +103,431 @@ format:
 ::: 
 
 :::
+:::
+::: 
 
 ::: {.notes}
 - See [📺 Regression: Crash Course Statistics on YouTube](https://www.youtube.com/watch?v=WWqE7YHR4Jc&ab_channel=CrashCourse) for inspiration on how to present linear regression to students.
 <video src="https://www.youtube.com/watch?v=WWqE7YHR4Jc&ab_channel=CrashCourse"> </video>
 
-- Content borrowed from [ME314 Day 4](https://github.com/lse-me314/lectures)
+- We will talk about both types of models, how we can estimate the values of all $\beta$ and assess how good our models are.
+
+:::
+
+# Linear Regression with a single predictor $X$
+
+
+## Linear Regression with a single predictor {.smaller}
+
+::: columns
+
+::: {.column style="width: 31%;margin-right:0.5%;padding:1%;"}
+
+We assume a model:
+
+<mark class="math">
+
+$$
+Y = \beta_0 + \beta_1 X + \epsilon ,
+$$
+
+</mark>
+:::
+
+::: {.column style="width: 40%;margin-left:20%;padding:0%;"}
+```{r dpi=300}
+# | data-id=1
+library(ggplot2)
+
+g <- 
+  ggplot() + 
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank(),
+        aspect.ratio=3/10) +
+  scale_x_continuous(name="X", limits=c(0, 10), breaks=seq(-1,10,1)) +
+  scale_y_continuous(name="Y", limits=c(0, 3), breaks=seq(-1,4,1)) +
+  geom_abline(intercept=1, slope=0.15, size=1.5, color="#E69F25", alpha=1.0) +
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  annotate(geom="text", x=2.1, y=2.25, label="Y = 1 + 0.15 X", color="#E69F25", size=11)
+g
+```
+:::
+
+:::
+
+::: {.incremental .r-fit-text}
+where:
+
+- <mark class="math">$\beta_0$</mark>: an unknown constant that represents the **intercept** of the line.
+- <mark class="math">$\beta_1$</mark>: an unknown constant that represents the **slope** of the line
+- <mark class="math">$\epsilon$</mark>: the random error term (irreducible)
+:::
+
+::: aside
+::: {.fragment}
+$\beta_0$ and $\beta_1$ are also known as **coefficients** or **parameters** of the model.
+:::
+:::
+
+## Linear Regression with a single predictor {.smaller}
+
+::: columns
+
+::: {.column style="width: 31%;margin-right:0.5%;padding:1%;"}
+
+We want to estimate:
+
+$$
+\hat{y} = \hat{\beta_0} + \hat{\beta_1} x
+$$
+
+:::
+
+::: {.column style="width: 40%;margin-left:20%;padding:0%;"}
+```{r dpi=300}
+# | data-id=1
+
+library(ggplot2)
+
+g <- 
+  ggplot() + 
+
+  # TRUE LINE
+  geom_abline(intercept=1, slope=0.15, size=1.5, color="#E69F25", alpha=0.7) +
+  # ESTIMATE
+  geom_abline(intercept=0.90, slope=0.17, size=1.4, color="#585858", alpha=0.9) +
+
+  # TEXT
+  annotate(geom="text", x=2.1, y=2.35, color="#585858", size=11,
+           label=expression(hat(y) == hat(beta)[0] + hat(beta)[1] * x)) +
+  
+  # EXTRA
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  # THEMING
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank(),
+        aspect.ratio=3/10) +
+  scale_x_continuous(name="X", limits=c(0, 10), breaks=seq(-1,10,1)) +
+  scale_y_continuous(name="Y", limits=c(0, 3), breaks=seq(-1,4,1))
+
+
+g
+```
+:::
+
+:::
+
+::: {.incremental}
+where:
+
+- <mark class="math">$\hat{y}$</mark>: is a prediction of $Y$ on the basis of $X = x$.
+- <mark class="math">$\hat{\beta_0}$</mark>: is an estimate of the "true" $\beta_0$.
+- <mark class="math">$\hat{\beta_1}$</mark>: is an estimate of the "true" $\beta_1$.
+
+:::
+
+::: aside
+::: {.fragment}
+The <mark>hat</mark> symbol denotes an estimated value.
+:::
+:::
+
+----------------------------
+
+
+## Different estimators, different equations {.smaller}
+
+
+::: columns
+
+::: {.column width="55%"}
+
+::: {.incremental .r-fit-text}
+There are multiple ways to estimate the coefficients. 
+
+- If you use different techniques, you might get different equations
+- The most common algorithm is called <br/> <mark>Ordinary Least Squares (OLS)</mark>
+- Just to name a few other estimators [@karafiath_is_2009]:
+  - Least Absolute Deviation (LAD)
+  - Weighted Least Squares (WLS)
+  - Generalized Least Squares (GLS)
+  - Heteroskedastic-Consistent (HC) variants
+:::
 
 :::
 
 
+::: {.column style="width: 40%;margin-left:0%;padding:0%;"}
+
+```{r out.height="100%", dpi=300}
+# | data-id=1
+
+library(ggplot2)
+
+g <- 
+  ggplot() + 
+
+  # TRUE LINE
+  geom_abline(intercept=1, slope=0.15, size=1.5, color="#E69F25", alpha=1.0) +
+  # ESTIMATES
+  geom_abline(intercept=0.80, slope=0.17, size=1, color="#585858", alpha=0.4) +
+  geom_abline(intercept=0.90, slope=0.13, size=1, color="#585858", alpha=0.4) +
+  geom_abline(intercept=0.95, slope=0.20, size=1, color="#585858", alpha=0.4) +
+  geom_abline(intercept=1.10, slope=0.13, size=1, color="#585858", alpha=0.4) +
+  geom_abline(intercept=1.05, slope=0.17, size=1, color="#585858", alpha=0.4) +
+  geom_abline(intercept=1.07, slope=0.15, size=1, color="#585858", alpha=0.4) +
+
+  # TEXT
+  annotate(geom="text", x=1.4, y=0.55, color="#585858", size=11, hjust=0,
+           label=expression(hat(y) == hat(beta)[0] + hat(beta)[1] * ~~~~~x)) +
+  annotate(geom="text", x=1.4, y=0.25, color="#E69F25", size=11, hjust=0,
+           label=expression(Y == ~1 + 0.15 * ~X)) +
+
+  # EXTRA
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  # THEMING
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank()) +
+  scale_x_continuous(name="X", limits=c(0, 3), breaks=seq(-1,10,0.5)) +
+  scale_y_continuous(name="Y", limits=c(0, 2), breaks=seq(-1,4,0.5))
+
+
+
+
+g
+```
+:::
+
+
+:::
+
+::: aside
+::: {.fragment}
+We will only cover <mark>OLS</mark> in this course.
+:::
+:::
+
+# Ordinary Least Squares
+
+How does it work?
+
+## The concept of <mark style="color:#c9594c;">residuals</mark>
+
+```{r out.height="100%", dpi=300}
+# | data-id=1
+
+library(ggplot2)
+
+set.seed(10)
+x <- rnorm(100, mean=1.5, sd=1.5)
+y_true <- 0.9 + 0.17*x
+y_real <- y_true + rnorm(100, mean=0, sd=0.25)
+
+df <- data.frame(x=x, y_true=y_true, y_real=y_real)
+
+g <- 
+  ggplot(df, aes(x=x, y=y_real)) + 
+
+  geom_point(shape=21, size=5, fill="#274f92", alpha=0.5) +
+
+
+  # EXTRA
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  # THEMING
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank()) +
+  scale_x_continuous(name="x", limits=c(0, 3), breaks=seq(-1,10,0.5)) +
+  scale_y_continuous(name=expression(paste("Estimated Y (", hat(y), ")")), limits=c(0, 2), breaks=seq(-1,4,0.5))
+
+
+
+
+g
+```
+
+
+## The concept of <mark style="color:#c9594c;">residuals</mark>
+
+```{r out.height="100%", dpi=300}
+# | data-id=1
+
+library(ggplot2)
+
+set.seed(10)
+x <- rnorm(100, mean=1.5, sd=1.5)
+y_true <- 0.9 + 0.17*x
+y_real <- y_true + rnorm(100, mean=0, sd=0.25)
+
+df <- data.frame(x=x, y_true=y_true, y_real=y_real)
+
+g <- 
+  ggplot(df, aes(x=x, y=y_real)) + 
+  geom_point(shape=21, size=5, fill="#274f92", alpha=0.5) +
+ 
+
+  # ESTIMATES
+  geom_abline(intercept=0.90, slope=0.17, size=1.4, color="#585858", alpha=0.8) +
+
+
+  annotate(geom="text", x=1.51, y=0.25, color="#585858", size=7, hjust=0,
+           label=expression(paste("Fitted line: ", hat(y) == ~0.90 + 0.17 * ~X))) +
+
+  # EXTRA
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  # THEMING
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank()) +
+  scale_x_continuous(name="x", limits=c(0, 3), breaks=seq(-1,10,0.5)) +
+  scale_y_continuous(name=expression(paste("Estimated Y (", hat(y), ")")), limits=c(0, 2), breaks=seq(-1,4,0.5))
+
+
+
+
+g
+```
+
+
+## The concept of <mark style="color:#c9594c;">residuals</mark>
+
+```{r out.height="100%", dpi=300}
+# | data-id=1
+
+library(ggplot2)
+
+set.seed(10)
+x <- rnorm(100, mean=1.5, sd=1.5)
+y_true <- 0.9 + 0.17*x
+y_real <- y_true + rnorm(100, mean=0, sd=0.25)
+
+df <- data.frame(x=x, y_true=y_true, y_real=y_real)
+
+g <- 
+  ggplot(df, aes(x=x, y=y_real)) + 
+
+  geom_segment(aes(x=x, xend=x, y=y_true, yend=y_real), alpha=0.6, color="#c9594c") +
+  geom_point(shape=21, size=5, fill="#274f92", alpha=0.5) +
+ 
+
+  # ESTIMATES
+  geom_abline(intercept=0.90, slope=0.17, size=1.4, color="#585858", alpha=0.8) +
+
+
+  annotate(geom="text", x=1.51, y=0.25, color="#585858", size=7, hjust=0,
+           label=expression(paste("Fitted line: ", hat(y) == ~0.90 + 0.17 * ~X))) +
+
+  # EXTRA
+  geom_vline(xintercept = 0, linetype="dashed") +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  # THEMING
+  theme_bw() +
+	theme(legend.position = "bottom",
+        legend.text = element_text(size=16),
+        axis.title.x = element_text(size=25),
+        axis.title.y = element_text(size=25),
+        axis.text.x = element_text(size=20),
+        axis.text.y = element_text(size=20),
+        panel.grid.minor = element_blank()) +
+  scale_x_continuous(name="x", limits=c(0, 3), breaks=seq(-1,10,0.5)) +
+  scale_y_continuous(name=expression(paste("Estimated Y (", hat(y), ")")), limits=c(0, 2), breaks=seq(-1,4,0.5))
+
+
+
+
+g
+```
+
+::: aside
+<mark style="color:#c9594c;">$e_i$</mark>$=y_i-\hat{y}_i$ represents the $i$th <mark style="color:#c9594c;">residual</mark>
+:::
+
+
+## Residual sum of squares (RSS) {.smaller}
+<br/>
+From this, we can define the <mark> residual sum of squares </mark> (RSS) as 
+
+$$
+\mathrm{RSS}= e_1^2 + e_2^2 + \dots + e_n^2,
+$$ 
+
+::: {.fragment}
+or equivalently as
+
+$$
+\mathrm{RSS}= (y_1 - \hat{\beta}_0 - \hat{\beta}_1 x_1)^2 + (y_2 - \hat{\beta}_0 - \hat{\beta}_1 x_2)^2 + \dots + (y_n - \hat{\beta}_0 - \hat{\beta}_1 x_n)^2.
+$$ 
+:::
+
+<br/></br>
+
+::: {.fragment}
+
+::: {.callout-note}
+The (ordinary) least squares approach chooses $\hat{\beta}_0$ and $\hat{\beta}_1$ to minimize the RSS.
+:::
+
+:::
+
+## Residual sum of squares (RSS)
+
+::: columns
+::: {.column width="70%"}
+![](/figures/week01/dalle_robot_holding_question_mark.png){.absolute height="80%"}
+:::
+
+::: {.column width="30%"}
+
+Why the squares and not, say, just the sum of residuals?
+
+:::
+
+::: footer
+[Image created with the [DALL·E](https://openai.com/blog/dall-e/) algorithm using the prompt: *'35mm macro photography of a robot holding a question mark card, white background'*]{style="font-size:0.6em;"}
+:::
+:::
+
+::: {.notes}
+- Explain that the sum penalizes individual large errors a lot more
+:::
+
+# Thank you
+
+---
+## References {style="word-break:break-all;"}
+
+::: {#refs .r-fit-text}
+:::
