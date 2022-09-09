@@ -11,7 +11,7 @@ from: markdown+emoji
 format:
   revealjs: 
     pdf-separate-fragments: true
-    code-fold: true
+    code-fold: false
     theme: simple
     slide-number: true
     mouse-wheel: true
@@ -114,7 +114,7 @@ when there are multiple predictors, $X_p$.
 
 :::
 
-# Linear Regression with a single predictor $X$
+# Regression coefficients
 
 
 ## Linear Regression with a single predictor {.smaller}
@@ -172,9 +172,10 @@ where:
 
 ::: aside
 ::: {.fragment}
-$\beta_0$ and $\beta_1$ are also known as **coefficients** or **parameters** of the model.
+$\beta_0$ and $\beta_1$ are also known as <mark>coefficients</mark> or <mark>parameters</mark> of the model.
 :::
 :::
+
 
 ## Linear Regression with a single predictor {.smaller}
 
@@ -245,8 +246,6 @@ where:
 The <mark>hat</mark> symbol denotes an estimated value.
 :::
 :::
-
-----------------------------
 
 
 ## Different estimators, different equations {.smaller}
@@ -328,13 +327,15 @@ We will only cover <mark>OLS</mark> in this course.
 :::
 :::
 
-# Ordinary Least Squares
+# Residual errors
 
-How does it work?
+To understand Ordinary Least square, we first need to understand the concept of residuals.
 
 ## The concept of <mark style="color:#c9594c;">residuals</mark>
 
-```{r out.height="100%", dpi=300}
+Suppose you came across some data:
+
+```{r fig.height=4, dpi=300}
 # | data-id=1
 
 library(ggplot2)
@@ -365,7 +366,8 @@ g <-
         axis.text.y = element_text(size=20),
         panel.grid.minor = element_blank()) +
   scale_x_continuous(name="x", limits=c(0, 3), breaks=seq(-1,10,0.5)) +
-  scale_y_continuous(name=expression(paste("Estimated Y (", hat(y), ")")), limits=c(0, 2), breaks=seq(-1,4,0.5))
+  scale_y_continuous(name=expression(paste("Estimated Y (", hat(y), ")")), 
+                     limits=c(0, 2), breaks=seq(-1,4,0.5))
 
 
 
@@ -373,10 +375,19 @@ g <-
 g
 ```
 
+::: aside
+_And you suspect there is a linear relationship between X and Y._
+:::
+
+::: notes
+First, let's think of the concept of residuals...
+:::
 
 ## The concept of <mark style="color:#c9594c;">residuals</mark>
 
-```{r out.height="100%", dpi=300}
+So, you decide to fit a line to it.
+
+```{r fig.height=4, dpi=300}
 # | data-id=1
 
 library(ggplot2)
@@ -421,10 +432,17 @@ g <-
 g
 ```
 
+::: aside
+_A line that goes right through the middle of the cloud of data._
+:::
 
 ## The concept of <mark style="color:#c9594c;">residuals</mark>
 
-```{r out.height="100%", dpi=300}
+<!-- <p class="r-fit-text"> -->
+<mark style="color:#c9594c;">Residuals</mark> are the distances from each data point to this line.
+<!-- </p> -->
+
+```{r fig.height=4, dpi=300}
 # | data-id=1
 
 library(ggplot2)
@@ -475,10 +493,9 @@ g
 <mark style="color:#c9594c;">$e_i$</mark>$=y_i-\hat{y}_i$ represents the $i$th <mark style="color:#c9594c;">residual</mark>
 :::
 
+## Residual Sum of Squares (RSS) {.smaller}
 
-## Residual sum of squares (RSS) {.smaller}
-<br/>
-From this, we can define the <mark> residual sum of squares </mark> (RSS) as 
+From this, we can define the <mark> Residual Sum of Squares </mark> (RSS) as 
 
 $$
 \mathrm{RSS}= e_1^2 + e_2^2 + \dots + e_n^2,
@@ -502,7 +519,11 @@ The (ordinary) least squares approach chooses $\hat{\beta}_0$ and $\hat{\beta}_1
 
 :::
 
-## Residual sum of squares (RSS)
+::: notes
+That is how it does its job.
+:::
+
+## A question for you
 
 ::: columns
 ::: {.column width="70%"}
@@ -522,9 +543,484 @@ Why the squares and not, say, just the sum of residuals?
 
 ::: {.notes}
 - Explain that the sum penalizes individual large errors a lot more
+<mark class="idea">Consider adding a visualisation to illustrate this point.</mark>
 :::
 
-# Thank you
+
+# Ordinary Least Squares
+
+How do we estimate the coefficients using the ordinary least squares algorithm?
+
+## The objective function {.smaller}
+
+We treat this as an optimisation problem. We want to minimize RSS:
+$$
+\begin{align}
+\min \mathrm{RSS} =& \sum_i^n{e_i^2} \\
+             =& \sum_i^n{\left(y_i - \hat{y}_i\right)^2} \\
+             =& \sum_i^n{\left(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i\right)^2}
+\end{align}
+$$
+
+## Estimating $\hat{\beta}_0$ {.smaller}
+
+To find $\hat{\beta}_0$, we have to solve the following partial derivative:
+
+$$
+\frac{\partial ~\mathrm{RSS}}{\partial \hat{\beta}_0}{\sum_i^n{(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2}} = 0
+$$
+
+::: {.fragment}
+...
+which will lead you to:
+:::
+
+::: {.fragment}
+$$
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x},
+$$
+:::
+
+::: {.fragment}
+where we made use of the sample means:
+
+- $\bar{y} \equiv \frac{1}{n} \sum_{i=1}^n y_i$
+- $\bar{x} \equiv \frac{1}{n} \sum_{i=1}^n x_i$ 
+
+:::
+
+
+::: {.aside}
+
+::: {.fragment}
+📝 Give it a go! Pretend $\hat{\beta}_1$ is constant and use the [power rule](https://brilliant.org/wiki/derivatives-of-polynomials/) to solve the equation and reach the same result.
+:::
+:::
+
+::: notes
+Full derivation if needed:
+
+$$
+\begin{align}
+0 &= \frac{\partial ~\mathrm{RSS}}{\partial \hat{\beta}_0}{\sum_i^n{(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2}} & (\text{chain rule})\\
+0 &= \sum_i^n{-2 (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)} & (\text{take $-2$ out})\\
+0 &= -2 \sum_i^n{ (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)}  & (\div -2) \\
+0 &=\sum_i^n{ (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)}  & (\text{sep. sums}) \\
+0 &=\sum_i^n{y_i} - \sum_i^n{\hat{\beta}_0} - \sum_i^n{\hat{\beta}_1 x_i}  & (\text{simplify}) \\
+0 &=\sum_i^n{y_i} - n\hat{\beta}_0 - \hat{\beta}_1\sum_i^n{ x_i}  & (+ n\hat{\beta}_0) \\
+n\hat{\beta}_0 &= \sum_i^n{y_i} - \hat{\beta}_1\sum_i^n{ x_i} & (\text{isolate }\hat{\beta}_0 ) \\
+\hat{\beta}_0 &= \frac{\sum_i^n{y_i} - \hat{\beta}_1\sum_i^n{ x_i}}{n} & (\text{rearranging}) \\
+\hat{\beta}_0 &= \frac{\sum_i^n{y_i}}{n} - \hat{\beta}_1\frac{\sum_i^n{x_i}}{n} & (\text{or simply}) \\
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x} & \blacksquare
+\end{align} 
+$$
+
+:::
+
+## Estimating $\hat{\beta}_1$ 
+
+Similarly, to find $\hat{\beta}_1$ we solve:
+
+$$
+\frac{\partial ~\mathrm{RSS}}{\partial \hat{\beta}_1}{[\sum_i^n{y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i}]} = 0
+$$
+
+::: {.fragment}
+...
+which will lead you to:
+:::
+
+::: {.fragment}
+$$
+\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i-\bar{x})^2}
+$$
+:::
+
+::: {.aside}
+
+::: {.fragment style="font-size:1rem;"}
+📝 Give it a go! Use the same method as before to solve the equation and isolate $\hat{\beta}_1$. Tip: Use the previous formula to substitute $\hat{\beta}_0$.
+:::
+:::
+
+::: notes
+Full derivation if needed:
+
+$$
+\begin{align}
+0 &= \frac{\partial ~\mathrm{RSS}}{\partial \hat{\beta}_1}{\sum_i^n{(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2}} & (\text{chain rule})\\
+0 &= \sum_i^n{\left(-2x_i~ (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)\right)} & (\text{take $-2$ out})\\
+0 &= -2\sum_i^n{\left( x_i~ (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)\right)} & (\div -2) \\
+0 &= \sum_i^n{\left(x_i~ (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)\right)} & (\text{distribute } x_i) \\
+0 &= \sum_i^n{\left(y_ix_i - \hat{\beta}_0x_i - \hat{\beta}_1 x_i^2\right)} & (\text{replace } \hat{\beta}_0) \\
+0 &= \sum_i^n{\left(y_ix_i - (\bar{y} - \hat{\beta}_1 \bar{x})x_i - \hat{\beta}_1 x_i^2\right)} & (\text{rearrange}) \\
+0 &= \sum_i^n{\left(y_ix_i - \bar{y}x_i + \hat{\beta}_1 \bar{x}x_i - \hat{\beta}_1 x_i^2\right)} & (\text{separate sums}) \\
+0 &= \sum_i^n{\left(y_ix_i - \bar{y}x_i\right)} + \sum_i^n{\left(\hat{\beta}_1 \bar{x}x_i - \hat{\beta}_1 x_i^2\right)} & (\text{take $\hat{\beta}_1$ out}) \\
+0 &= \sum_i^n{\left(y_ix_i - \bar{y}x_i\right)} + \hat{\beta}_1\sum_i^n{\left(\bar{x}x_i - x_i^2\right)} & (\text{isolate}) \\
+\hat{\beta}_1 &= \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i-\bar{x})^2}
+\end{align} 
+$$
+
+:::
+
+## Parameter Estimation (OLS)
+
+And that is how OLS works!
+
+$$
+\begin{align}
+\hat{\beta}_1 &= \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i-\bar{x})^2} \\
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x}
+\end{align}
+$$
+
+## Estimates for Multiple Regression {.smaller}
+
+::: {.fragment .r-fit-text}
+The process of estimation is similar when we have more than one predictor. To estimate:
+
+$$
+\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2 + \dots + \hat{\beta}_p x_p.
+$$
+
+:::
+
+::: {.fragment .r-fit-text}
+We aim to minimize Residual Sum of Squares as before:
+
+$$
+\min \mathrm{RSS} = \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_{i1} - \hat{\beta}_2 x_{i2} - \dots - \hat{\beta}_p x_{ip})^2.
+$$
+
+This is done using standard statistical software — you need a good linear algebra solver. 
+:::
+
+::: {.fragment .r-fit-text}
+The values $\hat{\beta}_0, \hat{\beta}_1, \dots, \hat{\beta}_p$ that minimize RSS are the multiple least squares regression coefficient estimates.
+:::
+
+# Example: Advertising data
+
+::: columns
+
+::: {.column width="45%"}
+A sample of the data:
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+library(tidyverse)
+
+file = "https://www.statlearning.com/s/Advertising.csv"
+advertising <- read_csv(file) %>% select(-1)
+head(advertising, 11)
+```
+:::
+
+::: {.column style="width:50%;margin-left:5%;"}
+
+How the data is spread:
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+summary(advertising$TV)
+```
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+summary(advertising$radio)
+```
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+summary(advertising$newspaper)
+```
+
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+summary(advertising$sales)
+```
+:::
+
+:::
+
+## Relationship: advertising budget and sales {.smaller}
+
+Is advertising spending related to sales?
+
+```{r out.width="100%"}
+#| echo: false
+#| eval: true
+#| code-fold: show
+#| code-overflow: wrap
+
+plot_df <- 
+  advertising %>% 
+  gather("source", "investment", -sales)
+
+plot_df$source <- 
+  sub('^(\\w?)', '\\U\\1', plot_df$source, perl=T)
+
+plot_df$source <-
+  factor(plot_df$source, ordered=TRUE,
+         levels=c("TV", "Radio", "Newspaper"))
+
+g <- 
+  # AES  
+  ggplot(plot_df, aes(x=investment, y=sales)) + 
+  geom_point(size=2.5, shape=21, 
+             fill="#c9594c", alpha=0.6) +
+
+  geom_smooth(size=1.3, method="lm", color="#1e90ff", 
+              se = FALSE, show.legend = FALSE) +
+
+  # Faceting
+  facet_grid(~ source, scales = "free") +
+
+  # CUSTOMIZING
+  scale_x_continuous(name="Investment in the media channel (in 1,000 $)") +
+  scale_y_continuous(name="Sales (in 1,000 units)") +
+
+  # THEMING
+  theme_bw() +
+	theme(
+        axis.title.x = element_text(size=14, margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, margin = margin(t = 0,  r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        panel.grid.minor = element_blank(),
+        aspect.ratio = 1)
+
+g
+```
+
+::: aside
+This is the plot you see in the book
+:::
+
+## Relationship: advertising budget and sales {.smaller}
+
+Is advertising spending related to sales?
+
+```{r out.width="100%"}
+#| echo: false
+#| eval: true
+#| code-fold: show
+#| code-overflow: wrap
+
+plot_df <- 
+  advertising %>% 
+  gather("source", "investment", -sales)
+
+plot_df$source <- 
+  sub('^(\\w?)', '\\U\\1', plot_df$source, perl=T)
+
+plot_df$source <-
+  factor(plot_df$source, ordered=TRUE,
+         levels=c("TV", "Radio", "Newspaper"))
+
+g <- 
+  # AES  
+  ggplot(plot_df, aes(x=investment, y=sales)) + 
+  geom_point(size=2.5, shape=21, 
+             fill="#c9594c", alpha=0.6) +
+
+  geom_smooth(size=1.3, method="lm", color="#1e90ff", 
+              se = FALSE, show.legend = FALSE) +
+
+  # Faceting
+  facet_grid(~ source) +
+
+  # CUSTOMIZING
+  scale_x_continuous(name="Investment in the media channel (in 1,000 $)") +
+  scale_y_continuous(name="Sales (in 1,000 units)") +
+
+  # THEMING
+  theme_bw() +
+	theme(
+        axis.title.x = element_text(size=14, margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, margin = margin(t = 0,  r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12),
+        panel.grid.minor = element_blank(),
+        aspect.ratio = 1)
+
+g
+```
+
+::: aside
+This is the same plot but now all scales match
+:::
+
+## Simple linear regression models
+
+
+::: columns
+
+::: {.column width="50%"}
+
+- **TV**
+```{r}
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+tv_model <- lm(sales ~ TV, data=advertising)
+cat(sprintf("Sales (1k units) = %.4f %+.4f TV ($ 1k)\n", 
+            tv_model$coefficients["(Intercept)"], 
+            tv_model$coefficients["TV"]))
+```
+
+- **Radio**
+```{r}
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+tv_model <- lm(sales ~ radio, data=advertising)
+cat(sprintf("Sales (1k units) = %.4f %+.4f Radio ($ 1k)\n", 
+            tv_model$coefficients["(Intercept)"], 
+            tv_model$coefficients["radio"]))
+```
+
+:::
+
+::: {.column width="50%"}
+- **Newspaper**
+```{r}
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+tv_model <- lm(sales ~ newspaper, data=advertising)
+cat(sprintf("Sales (1k units) = %.4f %+.4f Newspaper ($ 1k)\n", 
+            tv_model$coefficients["(Intercept)"], 
+            tv_model$coefficients["newspaper"]))
+```
+
+:::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:20%;"}
+
+🗨️ How should we interpret these models?
+:::
+
+:::
+
+:::
+
+
+::: notes
+- Gather answers from students.
+- For every 1k dollars spent in advertising on a particular media channel, we expect more $\hat{\beta}_1$ thousand units of the product to be sold.
+- Why don't the models agree about the intercept?
+:::
+
+# Assessing the quality of models
+
+- How well does my model fit the data?
+- What is the confidence interval of the estimates?
+
+## Confidence Intervals {.smaller}
+
+::: columns
+
+::: {.column width="60%"}
+
+::: {.callout-note appearance="simple"}
+
+## Remember
+
+If we were to fit a linear model from repeated samples of the data, we would get different coefficients every time.
+:::
+
+:::
+:::
+
+::: columns
+
+::: {.column width="60%"}
+- According to the [Central Limit Theorem](https://statisticsbyjim.com/basics/central-limit-theorem/), the mean of this sampling distribution can be approximated by a Normal distribution.
+- We know from Normal theory that 95% of the distribution lies in $[-1.96, 1.96]$
+
+:::
+
+::: {.column style="width:30%;margin-left:10%;"}
+![](/figures/week02/NormalDist1.96.png){width="100%"}
+:::
+:::
+
+
+
+----------------------
+
+::: {.fragment}
+- The <mark>standard error</mark> of an estimator reflects how it varies under repeated sampling.
+:::
+
+::: {.fragment}
+We have:
+
+$$
+\begin{align}
+  \mathrm{SE}(\hat{\beta}_1)^2 &= \frac{\sigma^2}{\sum_{i=1}^n (x_i - \bar{x})^2}, \\
+  \mathrm{SE}(\hat{\beta}_0)^2 &= \sigma^2 \biggl[ \frac{1}{n} +  \frac{\bar{x}^2}{\sum_{i=1}^n (x_i - \bar{x})^2} \biggr],
+\end{align}
+$$
+
+where $\sigma^2 = \mathrm{Var}(\epsilon)$
+- These standard errors can be used to compute <mark>confidence intervals</mark>. 
+:::
+
+## Confidence Intervals {.smaller}
+
+
+
+-----------------------
+
+- A 95% confidence interval is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter. 
+- It has the form:
+$$
+\hat{\beta}_1 \pm 2 \times \mathrm{SE}(\hat{\beta}_1).
+$$
+- That is, there is approximately a 95\% chance that the interval
+$$
+\biggl[ \hat{\beta}_1 - 2 \times \mathrm{SE}(\hat{\beta}_1), \hat{\beta}_1 + 2 \times \mathrm{SE}(\hat{\beta}_1) \biggr]
+$$
+will contain the true value of $\beta_1$ (under a scenario where we got repeated samples like the present sample). 
+
+
+# What's Next
+
+After our 10-min break ☕:
+
+- Multiple Linear Regression 📈
+  - How to interpret coefficients
+  - Interaction effects
+  - Collinearity
+- What will happen in our 💻 labs this week?
 
 ---
 ## References {style="word-break:break-all;"}
