@@ -56,6 +56,20 @@
     "text": "Links\n\n👨‍🏫 Lecture slides\n📒 Preparing for next week’s lab\n🔖 Appendix"
   },
   {
+    "objectID": "weeks/week02.html",
+    "href": "weeks/week02.html",
+    "title": "🗓️ Week 02 - Simple and Multiple Linear Regression",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments and how we will interact throughout this course.\nWe will also cover some of the basics: what do we mean by data science & machine learning, and what do you need to do to get the most of this course?"
+  },
+  {
+    "objectID": "weeks/week02.html#links",
+    "href": "weeks/week02.html#links",
+    "title": "🗓️ Week 02 - Simple and Multiple Linear Regression",
+    "section": "Links",
+    "text": "Links\n\n👨‍🏫 Lecture slides"
+  },
+  {
     "objectID": "weeks/week06.html",
     "href": "weeks/week06.html",
     "title": "🗓️ Week 06 - Reading Week",
@@ -88,7 +102,7 @@
     "href": "weeks/week01/appendix.html#other-resources",
     "title": "🔖 Week 01 - Appendix",
     "section": "Other resources",
-    "text": "Other resources\n\nCheckout this summer’s LSE Careers Skill Accelerator programme. Some of the self-paced courses will remain open to LSE students until the end of the year.\n\n\n\nReady to develop the key skills employers are looking for in 2022?Join this summer's LSE Careers Skills Accelerator programme to expand your skillset!⭐Apply on CareerHub by 11.59pm, Wed 15 June for your chance to join the programme⭐https://t.co/J5sI1NRaMA\n\n— LSE Careers ((LSECareers?)) June 9, 2022\n\n\n\nThe book R for Data Science is free to read online and is a great resource to advance your R skills."
+    "text": "Other resources\n\nCheckout this summer’s LSE Careers Skill Accelerator programme. Some of the self-paced courses will remain open to LSE students until the end of the year.\n\n\n\nReady to develop the key skills employers are looking for in 2022?Join this summer's LSE Careers Skills Accelerator programme to expand your skillset!⭐Apply on CareerHub by 11.59pm, Wed 15 June for your chance to join the programme⭐https://t.co/J5sI1NRaMA\n\n— LSE Careers (@LSECareers) June 9, 2022\n\n\n\nThe book R for Data Science is free to read online and is a great resource to advance your R skills."
   },
   {
     "objectID": "weeks/week01/lecture.html",
@@ -117,6 +131,13 @@
     "title": "📒 Week 01 - Preparing for next week’s lab",
     "section": "🔖 Recommended reading & other resources",
     "text": "🔖 Recommended reading & other resources\nCheck out the Appendix page."
+  },
+  {
+    "objectID": "weeks/week02/lecture.html",
+    "href": "weeks/week02/lecture.html",
+    "title": "👨‍🏫 Week 02 - Slides",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
   },
   {
     "objectID": "slides/week01_slides_part1.html#the-data-science-institute",
@@ -445,7 +466,7 @@
     "href": "slides/week01_slides_part2.html#adding-noise",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Adding noise",
-    "text": "Adding noise\nLet’s simulate the introduction of some random error:\n\n# Let's simulate some noise\ngaussian_noise = rnorm(n=nrow(df), mean=0, sd=1.5)\n\n# Call it \"observed Y\"\ndf$obsY = df$Y + gaussian_noise\nprint(df)\n\n\n\n# A tibble: 6 × 3\n      X     Y  obsY\n  <int> <int> <dbl>\n1     6     9  8.68\n2     9    12 11.4 \n3    12    15 14.8 \n4    15    18 18.0 \n5    18    21 21.6 \n6    21    24 24.1"
+    "text": "Adding noise\nLet’s simulate the introduction of some random error:\n\n# Let's simulate some noise\ngaussian_noise = rnorm(n=nrow(df), mean=0, sd=1.5)\n\n# Call it \"observed Y\"\ndf$obsY = df$Y + gaussian_noise\nprint(df)\n\n\n\n# A tibble: 6 × 3\n      X     Y  obsY\n  <int> <int> <dbl>\n1     6     9  9.11\n2     9    12 11.8 \n3    12    15 14.3 \n4    15    18 21.1 \n5    18    21 19.8 \n6    21    24 24.1"
   },
   {
     "objectID": "slides/week01_slides_part2.html#visualizing-the-data",
@@ -480,7 +501,7 @@
     "href": "slides/week01_slides_part2.html#assessing-error",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Assessing error",
-    "text": "Assessing error\nHow much error was introduced by \\(\\epsilon\\) per sample?\n\ndf$error    <- df$Y - df$obsY  # Calculate the error\ndf$absError <- abs(df$error)   # Ignore the sign of error\ndf\n\n\n\n# A tibble: 6 × 5\n      X     Y  obsY    error absError\n  <int> <int> <dbl>    <dbl>    <dbl>\n1     6     9  8.68  0.319    0.319  \n2     9    12 11.4   0.609    0.609  \n3    12    15 14.8   0.223    0.223  \n4    15    18 18.0  -0.00934  0.00934\n5    18    21 21.6  -0.645    0.645  \n6    21    24 24.1  -0.133    0.133  \n\n\n\nOn average, what is the error?\n\nmean(df$absError)\n\n[1] 0.3229853\n\n\n\n\nThis measure is called the Mean Absolute Error."
+    "text": "Assessing error\nHow much error was introduced by \\(\\epsilon\\) per sample?\n\ndf$error    <- df$Y - df$obsY  # Calculate the error\ndf$absError <- abs(df$error)   # Ignore the sign of error\ndf\n\n\n\n# A tibble: 6 × 5\n      X     Y  obsY  error absError\n  <int> <int> <dbl>  <dbl>    <dbl>\n1     6     9  9.11 -0.105    0.105\n2     9    12 11.8   0.221    0.221\n3    12    15 14.3   0.651    0.651\n4    15    18 21.1  -3.10     3.10 \n5    18    21 19.8   1.20     1.20 \n6    21    24 24.1  -0.107    0.107\n\n\n\nOn average, what is the error?\n\nmean(df$absError)\n\n[1] 0.8979669\n\n\n\n\nThis measure is called the Mean Absolute Error."
   },
   {
     "objectID": "slides/week01_slides_part2.html#measures-of-error",
@@ -497,17 +518,157 @@
     "text": "References\n\n\nDavenport, Thomas. 2020. “Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists.” Harvard Data Science Review 2 (2). https://doi.org/10.1162/99608f92.55546b4a.\n\n\nSchutt, Rachel, and Cathy O’Neil. 2013. Doing Data Science. First edition. Beijing ; Sebastopol: O’Reilly Media. https://ebookcentral.proquest.com/lib/londonschoolecons/detail.action?docID=1465965.\n\n\nShah, Chirag. 2020. A Hands-on Introduction to Data Science. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press. https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907.\n\n\nShmueli, Galit. 2010. “To Explain or to Predict?” Statistical Science 25 (3). https://doi.org/10.1214/10-STS330.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
   },
   {
-    "objectID": "slides/week02_slides.html#simple-linear-regression-context",
-    "href": "slides/week02_slides.html#simple-linear-regression-context",
-    "title": "DS202  Data Science for Social Scientists",
-    "section": "Simple Linear Regression: Context",
-    "text": "Simple Linear Regression: Context\n\nLinear regression is a simple approach to supervised learning. It assumes that the dependence of \\(Y\\) on \\(X_1, X_2, \\dots, X_p\\) is linear.\nTrue regression functions are never linear!\nAlthough it may seem overly simplistic, linear regression is extremely useful both conceptually and practically.\n\n\n\nSee 📺 Regression: Crash Course Statistics on YouTube for inspiration on how to present linear regression to students.  \nContent borrowed from ME314 Day 4"
+    "objectID": "slides/week02_slides_part1.html#the-basic-models",
+    "href": "slides/week02_slides_part1.html#the-basic-models",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "The basic models",
+    "text": "The basic models\n\nLinear regression is a simple approach to supervised learning.\n\n\n\n\nThe generic supervised model:\n\\[\nY = \\operatorname{f}(X) + \\epsilon\n\\]\nis defined more explicitly as follows ➡️\n\n\n\n\nSimple linear regression\n\n\\[\n\\begin{align}\nY = \\beta_0 +& \\beta_1 X + \\epsilon, \\\\\n\\\\\n\\\\\n\\end{align}\n\\] \nwhen we use a single predictor, \\(X\\).\n\n\n\n\nMultiple linear regression\n\n\\[\n\\begin{align}\nY = \\beta_0 &+ \\beta_1 X_1 + \\beta_2 X_2 \\\\\n   &+ \\dots \\\\\n   &+ \\beta_p X_p + \\epsilon\n\\end{align}\n\\]\n\nwhen there are multiple predictors, \\(X_p\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nTrue regression functions are never linear!\nAlthough it may seem overly simplistic, linear regression is extremely useful both conceptually and practically.\n\n\n\n\n\n\n\n\n\nSee 📺 Regression: Crash Course Statistics on YouTube for inspiration on how to present linear regression to students.  \nWe will talk about both types of models, how we can estimate the values of all \\(\\beta\\) and assess how good our models are."
   },
   {
-    "objectID": "slides/week02_slides.html#section",
-    "href": "slides/week02_slides.html#section",
-    "title": "DS202  Data Science for Social Scientists",
-    "section": "",
-    "text": "DS202 - Data Science for Social Scientists 🦄 🤹"
+    "objectID": "slides/week02_slides_part1.html#linear-regression-with-a-single-predictor",
+    "href": "slides/week02_slides_part1.html#linear-regression-with-a-single-predictor",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Linear Regression with a single predictor",
+    "text": "Linear Regression with a single predictor\n\n\nWe assume a model:\n\n\\[\nY = \\beta_0 + \\beta_1 X + \\epsilon ,\n\\]\n\n\n\n\n\n\n\n\n\n\nwhere:\n\n\\(\\beta_0\\): an unknown constant that represents the intercept of the line.\n\\(\\beta_1\\): an unknown constant that represents the slope of the line\n\\(\\epsilon\\): the random error term (irreducible)\n\n\n\n\n\n\\(\\beta_0\\) and \\(\\beta_1\\) are also known as coefficients or parameters of the model."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#linear-regression-with-a-single-predictor-1",
+    "href": "slides/week02_slides_part1.html#linear-regression-with-a-single-predictor-1",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Linear Regression with a single predictor",
+    "text": "Linear Regression with a single predictor\n\n\nWe want to estimate:\n\\[\n\\hat{y} = \\hat{\\beta_0} + \\hat{\\beta_1} x\n\\]\n\n\n\n\n\n\n\n\n\nwhere:\n\n\\(\\hat{y}\\): is a prediction of \\(Y\\) on the basis of \\(X = x\\).\n\\(\\hat{\\beta_0}\\): is an estimate of the “true” \\(\\beta_0\\).\n\\(\\hat{\\beta_1}\\): is an estimate of the “true” \\(\\beta_1\\).\n\n\n\n\n\nThe hat symbol denotes an estimated value."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#different-estimators-different-equations",
+    "href": "slides/week02_slides_part1.html#different-estimators-different-equations",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Different estimators, different equations",
+    "text": "Different estimators, different equations\n\n\n\nThere are multiple ways to estimate the coefficients.\n\nIf you use different techniques, you might get different equations\nThe most common algorithm is called  Ordinary Least Squares (OLS)\nJust to name a few other estimators (Karafiath 2009):\n\nLeast Absolute Deviation (LAD)\nWeighted Least Squares (WLS)\nGeneralized Least Squares (GLS)\nHeteroskedastic-Consistent (HC) variants\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe will only cover OLS in this course."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#the-concept-of-residuals",
+    "href": "slides/week02_slides_part1.html#the-concept-of-residuals",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "The concept of residuals",
+    "text": "The concept of residuals\nSuppose you came across some data:\n\n\n\n\n\n\n\nFirst, let’s think of the concept of residuals…\n\n\nAnd you suspect there is a linear relationship between X and Y."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#the-concept-of-residuals-1",
+    "href": "slides/week02_slides_part1.html#the-concept-of-residuals-1",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "The concept of residuals",
+    "text": "The concept of residuals\nSo, you decide to fit a line to it.\n\n\n\n\n\n\n\nA line that goes right through the middle of the cloud of data."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#the-concept-of-residuals-2",
+    "href": "slides/week02_slides_part1.html#the-concept-of-residuals-2",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "The concept of residuals",
+    "text": "The concept of residuals\n\nResiduals are the distances from each data point to this line. \n\n\n\n\n\n\n\n\\(e_i\\)\\(=y_i-\\hat{y}_i\\) represents the \\(i\\)th residual"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#residual-sum-of-squares-rss",
+    "href": "slides/week02_slides_part1.html#residual-sum-of-squares-rss",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Residual Sum of Squares (RSS)",
+    "text": "Residual Sum of Squares (RSS)\nFrom this, we can define the  Residual Sum of Squares  (RSS) as\n\\[\n\\mathrm{RSS}= e_1^2 + e_2^2 + \\dots + e_n^2,\n\\]\n\nor equivalently as\n\\[\n\\mathrm{RSS}= (y_1 - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_1)^2 + (y_2 - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_2)^2 + \\dots + (y_n - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_n)^2.\n\\]\n\n\n\n\n\n\n\n\n\nNote\n\n\nThe (ordinary) least squares approach chooses \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\) to minimize the RSS.\n\n\n\n\n\nThat is how it does its job."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#a-question-for-you",
+    "href": "slides/week02_slides_part1.html#a-question-for-you",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "A question for you",
+    "text": "A question for you\n\n\n\n\nWhy the squares and not, say, just the sum of residuals?\n\nImage created with the DALL·E algorithm using the prompt: ‘35mm macro photography of a robot holding a question mark card, white background’\n\n\n\n\nExplain that the sum penalizes individual large errors a lot more Consider adding a visualisation to illustrate this point."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#the-objective-function",
+    "href": "slides/week02_slides_part1.html#the-objective-function",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "The objective function",
+    "text": "The objective function\nWe treat this as an optimisation problem. We want to minimize RSS: \\[\n\\begin{align}\n\\min \\mathrm{RSS} =& \\sum_i^n{e_i^2} \\\\\n             =& \\sum_i^n{\\left(y_i - \\hat{y}_i\\right)^2} \\\\\n             =& \\sum_i^n{\\left(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i\\right)^2}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#estimating-hatbeta_0",
+    "href": "slides/week02_slides_part1.html#estimating-hatbeta_0",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Estimating \\(\\hat{\\beta}_0\\)",
+    "text": "Estimating \\(\\hat{\\beta}_0\\)\nTo find \\(\\hat{\\beta}_0\\), we have to solve the following partial derivative:\n\\[\n\\frac{\\partial ~\\mathrm{RSS}}{\\partial \\hat{\\beta}_0}{\\sum_i^n{(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)^2}} = 0\n\\]\n\n… which will lead you to:\n\n\n\\[\n\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x},\n\\]\n\n\nwhere we made use of the sample means:\n\n\\(\\bar{y} \\equiv \\frac{1}{n} \\sum_{i=1}^n y_i\\)\n\\(\\bar{x} \\equiv \\frac{1}{n} \\sum_{i=1}^n x_i\\)\n\n\n\n\nFull derivation if needed:\n\\[\n\\begin{align}\n0 &= \\frac{\\partial ~\\mathrm{RSS}}{\\partial \\hat{\\beta}_0}{\\sum_i^n{(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)^2}} & (\\text{chain rule})\\\\\n0 &= \\sum_i^n{-2 (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)} & (\\text{take $-2$ out})\\\\\n0 &= -2 \\sum_i^n{ (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)}  & (\\div -2) \\\\\n0 &=\\sum_i^n{ (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)}  & (\\text{sep. sums}) \\\\\n0 &=\\sum_i^n{y_i} - \\sum_i^n{\\hat{\\beta}_0} - \\sum_i^n{\\hat{\\beta}_1 x_i}  & (\\text{simplify}) \\\\\n0 &=\\sum_i^n{y_i} - n\\hat{\\beta}_0 - \\hat{\\beta}_1\\sum_i^n{ x_i}  & (+ n\\hat{\\beta}_0) \\\\\nn\\hat{\\beta}_0 &= \\sum_i^n{y_i} - \\hat{\\beta}_1\\sum_i^n{ x_i} & (\\text{isolate }\\hat{\\beta}_0 ) \\\\\n\\hat{\\beta}_0 &= \\frac{\\sum_i^n{y_i} - \\hat{\\beta}_1\\sum_i^n{ x_i}}{n} & (\\text{rearranging}) \\\\\n\\hat{\\beta}_0 &= \\frac{\\sum_i^n{y_i}}{n} - \\hat{\\beta}_1\\frac{\\sum_i^n{x_i}}{n} & (\\text{or simply}) \\\\\n\\hat{\\beta}_0 &= \\bar{y} - \\hat{\\beta}_1 \\bar{x} & \\blacksquare\n\\end{align}\n\\]\n\n\n\n📝 Give it a go! Pretend \\(\\hat{\\beta}_1\\) is constant and use the power rule to solve the equation and reach the same result."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#estimating-hatbeta_1",
+    "href": "slides/week02_slides_part1.html#estimating-hatbeta_1",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Estimating \\(\\hat{\\beta}_1\\)",
+    "text": "Estimating \\(\\hat{\\beta}_1\\)\nSimilarly, to find \\(\\hat{\\beta}_1\\) we solve:\n\\[\n\\frac{\\partial ~\\mathrm{RSS}}{\\partial \\hat{\\beta}_1}{[\\sum_i^n{y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i}]} = 0\n\\]\n\n… which will lead you to:\n\n\n\\[\n\\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i-\\bar{x})^2}\n\\]\n\n\n\nFull derivation if needed:\n\\[\n\\begin{align}\n0 &= \\frac{\\partial ~\\mathrm{RSS}}{\\partial \\hat{\\beta}_1}{\\sum_i^n{(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)^2}} & (\\text{chain rule})\\\\\n0 &= \\sum_i^n{\\left(-2x_i~ (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\\right)} & (\\text{take $-2$ out})\\\\\n0 &= -2\\sum_i^n{\\left( x_i~ (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\\right)} & (\\div -2) \\\\\n0 &= \\sum_i^n{\\left(x_i~ (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)\\right)} & (\\text{distribute } x_i) \\\\\n0 &= \\sum_i^n{\\left(y_ix_i - \\hat{\\beta}_0x_i - \\hat{\\beta}_1 x_i^2\\right)} & (\\text{replace } \\hat{\\beta}_0) \\\\\n0 &= \\sum_i^n{\\left(y_ix_i - (\\bar{y} - \\hat{\\beta}_1 \\bar{x})x_i - \\hat{\\beta}_1 x_i^2\\right)} & (\\text{rearrange}) \\\\\n0 &= \\sum_i^n{\\left(y_ix_i - \\bar{y}x_i + \\hat{\\beta}_1 \\bar{x}x_i - \\hat{\\beta}_1 x_i^2\\right)} & (\\text{separate sums}) \\\\\n0 &= \\sum_i^n{\\left(y_ix_i - \\bar{y}x_i\\right)} + \\sum_i^n{\\left(\\hat{\\beta}_1 \\bar{x}x_i - \\hat{\\beta}_1 x_i^2\\right)} & (\\text{take $\\hat{\\beta}_1$ out}) \\\\\n0 &= \\sum_i^n{\\left(y_ix_i - \\bar{y}x_i\\right)} + \\hat{\\beta}_1\\sum_i^n{\\left(\\bar{x}x_i - x_i^2\\right)} & (\\text{isolate}) \\\\\n\\hat{\\beta}_1 &= \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i-\\bar{x})^2}\n\\end{align}\n\\]\n\n\n\n📝 Give it a go! Use the same method as before to solve the equation and isolate \\(\\hat{\\beta}_1\\). Tip: Use the previous formula to substitute \\(\\hat{\\beta}_0\\)."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#parameter-estimation-ols",
+    "href": "slides/week02_slides_part1.html#parameter-estimation-ols",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Parameter Estimation (OLS)",
+    "text": "Parameter Estimation (OLS)\nAnd that is how OLS works!\n\\[\n\\begin{align}\n\\hat{\\beta}_1 &= \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^n (x_i-\\bar{x})^2} \\\\\n\\hat{\\beta}_0 &= \\bar{y} - \\hat{\\beta}_1 \\bar{x}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#estimates-for-multiple-regression",
+    "href": "slides/week02_slides_part1.html#estimates-for-multiple-regression",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Estimates for Multiple Regression",
+    "text": "Estimates for Multiple Regression\n\nThe process of estimation is similar when we have more than one predictor. To estimate:\n\\[\n\\hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_1 + \\hat{\\beta}_2 x_2 + \\dots + \\hat{\\beta}_p x_p.\n\\]\n\n\nWe aim to minimize Residual Sum of Squares as before:\n\\[\n\\min \\mathrm{RSS} = \\sum_{i=1}^n (y_i - \\hat{y}_i)^2 = \\sum_{i=1}^n (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_{i1} - \\hat{\\beta}_2 x_{i2} - \\dots - \\hat{\\beta}_p x_{ip})^2.\n\\]\nThis is done using standard statistical software — you need a good linear algebra solver.\n\n\nThe values \\(\\hat{\\beta}_0, \\hat{\\beta}_1, \\dots, \\hat{\\beta}_p\\) that minimize RSS are the multiple least squares regression coefficient estimates."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#example-advertising-data",
+    "href": "slides/week02_slides_part1.html#example-advertising-data",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Example: Advertising data",
+    "text": "Example: Advertising data\n\n\nA sample of the data:\n\nlibrary(tidyverse)\n\nfile = \"https://www.statlearning.com/s/Advertising.csv\"\nadvertising <- read_csv(file) %>% select(-1)\nhead(advertising, 11)\n\n# A tibble: 11 × 4\n      TV radio newspaper sales\n   <dbl> <dbl>     <dbl> <dbl>\n 1 230.   37.8      69.2  22.1\n 2  44.5  39.3      45.1  10.4\n 3  17.2  45.9      69.3   9.3\n 4 152.   41.3      58.5  18.5\n 5 181.   10.8      58.4  12.9\n 6   8.7  48.9      75     7.2\n 7  57.5  32.8      23.5  11.8\n 8 120.   19.6      11.6  13.2\n 9   8.6   2.1       1     4.8\n10 200.    2.6      21.2  10.6\n11  66.1   5.8      24.2   8.6\n\n\n\nHow the data is spread:\n\nsummary(advertising$TV)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   0.70   74.38  149.75  147.04  218.82  296.40 \n\n\n\nsummary(advertising$radio)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  0.000   9.975  22.900  23.264  36.525  49.600 \n\n\n\nsummary(advertising$newspaper)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   0.30   12.75   25.75   30.55   45.10  114.00 \n\n\n\nsummary(advertising$sales)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.60   10.38   12.90   14.02   17.40   27.00"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#simple-linear-regression-models",
+    "href": "slides/week02_slides_part1.html#simple-linear-regression-models",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Simple linear regression models",
+    "text": "Simple linear regression models\n\n\n\nTV 📺\n\n\ntv_model <- lm(sales ~ TV, data=advertising)\ncat(sprintf(\"Sales (1k units) = %.4f %+.4f TV ($ 1k)\\n\", \n            tv_model$coefficients[\"(Intercept)\"], \n            tv_model$coefficients[\"TV\"]))\n\nSales (1k units) = 7.0326 +0.0475 TV ($ 1k)\n\n\n\nRadio 📻\n\n\nradio_model <- lm(sales ~ radio, data=advertising)\ncat(sprintf(\"Sales (1k units) = %.4f %+.4f Radio ($ 1k)\\n\", \n            radio_model$coefficients[\"(Intercept)\"], \n            radio_model$coefficients[\"radio\"]))\n\nSales (1k units) = 9.3116 +0.2025 Radio ($ 1k)\n\n\n\n\nNewspaper 📰\n\n\nnewspaper_model <- lm(sales ~ newspaper, data=advertising)\ncat(sprintf(\"Sales (1k units) = %.4f %+.4f Newspaper ($ 1k)\\n\", \n            newspaper_model$coefficients[\"(Intercept)\"], \n            newspaper_model$coefficients[\"newspaper\"]))\n\nSales (1k units) = 12.3514 +0.0547 Newspaper ($ 1k)\n\n\n\n🗨️ How should we interpret these models?\n\n\n\n\n\nGather answers from students.\nFor every 1k dollars spent in advertising on a particular media channel, we expect more \\(\\hat{\\beta}_1\\) thousand units of the product to be sold.\nWhy don’t the models agree about the intercept?"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#confidence-interval-of-coefficients",
+    "href": "slides/week02_slides_part1.html#confidence-interval-of-coefficients",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Confidence Interval of coefficients",
+    "text": "Confidence Interval of coefficients\n\n\n\nThe confidence interval of an estimate has the form: \\[\n\\hat{\\beta}_1 \\pm 2 \\times \\mathrm{SE}(\\hat{\\beta}_1).\n\\] where \\(SE\\) is the standard error and reflects how the estimate varies under repeated sampling.\n\n\n\n\nThat is, there is approximately a 95% chance that the interval \\[\n\\biggl[ \\hat{\\beta}_1 - 2 \\times \\mathrm{SE}(\\hat{\\beta}_1), \\hat{\\beta}_1 + 2 \\times \\mathrm{SE}(\\hat{\\beta}_1) \\biggr]\n\\] will contain the true value of \\(\\beta_1\\).\n\n\n\nHow SE differs from STD? See (Altman and Bland 2005)"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#standard-errors",
+    "href": "slides/week02_slides_part1.html#standard-errors",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Standard Errors",
+    "text": "Standard Errors\n\n\nThe standard error of \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\) is shown below:\n\\[\n\\begin{align}\n  \\mathrm{SE}(\\hat{\\beta}_1)^2 &= \\frac{\\sigma^2}{\\sum_{i=1}^n (x_i - \\bar{x})^2}, \\\\\n  \\mathrm{SE}(\\hat{\\beta}_0)^2 &= \\sigma^2 \\biggl[ \\frac{1}{n} +  \\frac{\\bar{x}^2}{\\sum_{i=1}^n (x_i - \\bar{x})^2} \\biggr],\n\\end{align}\n\\]\nwhere \\(\\sigma^2 = \\operatorname{Var}(\\epsilon)\\).\n\n\n\nBut, wait, we don’t know \\(\\epsilon\\)! How would we compute \\(\\sigma^2\\)?\nIn practice, we aproximate \\(\\sigma^2 \\approx \\mathrm{RSE} = \\sqrt{\\mathrm{RSS}/(n-2)}\\).\n\n\n\n\n\n\n\n\n\nImportant\n\n\n💡 Standard errors are a type of standard deviation but are not the same! See (Altman and Bland 2005) for more on this.\n\n\n\n\n\n\nThese formulas are only valid if we assume the errors \\(\\epsilon_i\\) have common variance \\(\\sigma^2\\) and are uncorrelated.\nRSE makes a comeback in Section 3.1.3"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#back-to-our-advertising-linear-models",
+    "href": "slides/week02_slides_part1.html#back-to-our-advertising-linear-models",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Back to our Advertising linear models",
+    "text": "Back to our Advertising linear models\nWhat are the confidence intervals of our independent linear models?\n\n\n\nTV 📺\n\n\nconfint(tv_model)\n\n                 2.5 %     97.5 %\n(Intercept) 6.12971927 7.93546783\nTV          0.04223072 0.05284256\n\n\n\nRadio 📻\n\n\nconfint(radio_model)\n\n                2.5 %     97.5 %\n(Intercept) 8.2015885 10.4216877\nradio       0.1622443  0.2427472\n\n\n\n\nNewspaper 📰\n\n\nconfint(newspaper_model)\n\n                  2.5 %      97.5 %\n(Intercept) 11.12595560 13.57685854\nnewspaper    0.02200549  0.08738071\n\n\n\n🗨️ What does it mean?\n\n\n\n\n\n\nFor every additional $1000 invested in Radio, we can expect an increase in sales of between 162 and 242 units.\n\n\n\nUse the function confint to compute confidence intervals in R."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#p-values",
+    "href": "slides/week02_slides_part1.html#p-values",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "p-values",
+    "text": "p-values\n\nTo test the null hypothesis, we compute a t-statistic, given by \\[\nt = \\frac{\\hat{\\beta}_1 - 0}{\\mathrm{SE}(\\hat{\\beta}_1)},\n\\] ::: incremental\nThis will have a t-distribution1 with \\(n - 2\\) degrees of freedom, assuming \\(\\beta_1 = 0\\).\nUsing statistical software, it is easy to compute the probability of observing any value equal to \\(\\mid t \\mid\\) or larger.\nWe call this probability the p-value. :::\n\n🤔 How are the t-distribution and the Normal distribution related? Check this link to find out."
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#back-to-our-advertising-linear-models-1",
+    "href": "slides/week02_slides_part1.html#back-to-our-advertising-linear-models-1",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "Back to our Advertising linear models",
+    "text": "Back to our Advertising linear models\nHow significant are the linear models?\n\n\n\nTV 📺\n\n\nout <- capture.output(summary(tv_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 7.032594   0.457843   15.36   <2e-16 ***\nTV          0.047537   0.002691   17.67   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nRadio 📻\n\n\nout <- capture.output(summary(radio_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  9.31164    0.56290  16.542   <2e-16 ***\nradio        0.20250    0.02041   9.921   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nNewspaper 📰\n\n\nout <- capture.output(summary(newspaper_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 12.35141    0.62142   19.88  < 2e-16 ***\nnewspaper    0.05469    0.01658    3.30  0.00115 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n🗨️ What does it mean?"
+  },
+  {
+    "objectID": "slides/week02_slides_part1.html#references",
+    "href": "slides/week02_slides_part1.html#references",
+    "title": "🗓️ Week 02: Linear Regression",
+    "section": "References",
+    "text": "References\n\n\nAltman, Douglas G, and J Martin Bland. 2005. “Standard Deviations and Standard Errors.” BMJ 331 (7521): 903. https://doi.org/10.1136/bmj.331.7521.903.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\nKarafiath, Imre. 2009. “Is There a Viable Alternative to Ordinary Least Squares Regression When Security Abnormal Returns Are the Dependent Variable?” Review of Quantitative Finance and Accounting 32 (1): 17–31. https://doi.org/10.1007/s11156-007-0079-y.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
   }
 ]
