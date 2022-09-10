@@ -82,12 +82,20 @@ Similar to what was reported here: https://github.com/quarto-dev/quarto-cli/issu
     margin-top: 0.3rem;
 }
 
+.reveal .callout.callout-style-simple .callout-icon::before {
+    margin-top: 0.6rem;
+}
+
+.reveal .callout.callout-style-default .callout-icon::before, .reveal .callout.callout-style-simple .callout-icon::before {
+    background-size: 1.5rem 1.5rem;
+}
+
 .reveal div.sourceCode{
     font-size: 1.4rem;
 }
 
 .reveal div.cell-output pre {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }

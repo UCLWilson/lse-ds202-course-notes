@@ -699,7 +699,7 @@ This is done using standard statistical software — you need a good linear alge
 The values $\hat{\beta}_0, \hat{\beta}_1, \dots, \hat{\beta}_p$ that minimize RSS are the multiple least squares regression coefficient estimates.
 :::
 
-# Example: Advertising data
+## Example: Advertising data
 
 ::: columns
 
@@ -765,7 +765,9 @@ summary(advertising$sales)
 
 :::
 
-## Relationship: advertising budget and sales {.smaller}
+---------------------------------
+
+### Relationship: advertising budget and sales
 
 Is advertising spending related to sales?
 
@@ -819,7 +821,9 @@ g
 This is the plot you see in the book
 :::
 
-## Relationship: advertising budget and sales {.smaller}
+-----------------------------------
+
+### Relationship: advertising budget and sales
 
 Is advertising spending related to sales?
 
@@ -880,7 +884,7 @@ This is the same plot but now all scales match
 
 ::: {.column width="50%"}
 
-- **TV**
+- **TV** 📺
 ```{r}
 #| echo: true
 #| eval: true
@@ -893,33 +897,33 @@ cat(sprintf("Sales (1k units) = %.4f %+.4f TV ($ 1k)\n",
             tv_model$coefficients["TV"]))
 ```
 
-- **Radio**
+- **Radio** 📻
 ```{r}
 #| echo: true
 #| eval: true
 #| code-fold: false
 #| code-overflow: wrap
 
-tv_model <- lm(sales ~ radio, data=advertising)
+radio_model <- lm(sales ~ radio, data=advertising)
 cat(sprintf("Sales (1k units) = %.4f %+.4f Radio ($ 1k)\n", 
-            tv_model$coefficients["(Intercept)"], 
-            tv_model$coefficients["radio"]))
+            radio_model$coefficients["(Intercept)"], 
+            radio_model$coefficients["radio"]))
 ```
 
 :::
 
 ::: {.column width="50%"}
-- **Newspaper**
+- **Newspaper** 📰
 ```{r}
 #| echo: true
 #| eval: true
 #| code-fold: false
 #| code-overflow: wrap
 
-tv_model <- lm(sales ~ newspaper, data=advertising)
+newspaper_model <- lm(sales ~ newspaper, data=advertising)
 cat(sprintf("Sales (1k units) = %.4f %+.4f Newspaper ($ 1k)\n", 
-            tv_model$coefficients["(Intercept)"], 
-            tv_model$coefficients["newspaper"]))
+            newspaper_model$coefficients["(Intercept)"], 
+            newspaper_model$coefficients["newspaper"]))
 ```
 
 :::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:20%;"}
@@ -938,50 +942,68 @@ cat(sprintf("Sales (1k units) = %.4f %+.4f Newspaper ($ 1k)\n",
 - Why don't the models agree about the intercept?
 :::
 
-# Assessing the quality of models
-
-- How well does my model fit the data?
-- What is the confidence interval of the estimates?
-
-## Confidence Intervals {.smaller}
+# Confidence Intervals {.smaller}
 
 ::: columns
 
 ::: {.column width="60%"}
 
-::: {.callout-note appearance="simple"}
-
-## Remember
-
-If we were to fit a linear model from repeated samples of the data, we would get different coefficients every time.
+::: {.incremental}
+- If we were to fit a linear model from repeated samples of the data, we would get different coefficients every time.
+- Because of the [Central Limit Theorem](https://statisticsbyjim.com/basics/central-limit-theorem/), we know that the **mean of this sampling distribution** can be approximated by a <mark>Normal Distribution</mark>.
+- We know from [Normal Theory](http://www.homepages.ucl.ac.uk/~ucaktwa/teaching/NormalTheory.pdf) that 95% of the distribution lies in $[\mu - 2 \sigma, \mu + 2 \sigma]$.  
 :::
 
+::: {.fragment fragment-index=5}
+> A 95% <mark>confidence interval</mark> is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter.
 :::
-:::
-
-::: columns
-
-::: {.column width="60%"}
-- According to the [Central Limit Theorem](https://statisticsbyjim.com/basics/central-limit-theorem/), the mean of this sampling distribution can be approximated by a Normal distribution.
-- We know from Normal theory that 95% of the distribution lies in $[-1.96, 1.96]$
 
 :::
 
 ::: {.column style="width:30%;margin-left:10%;"}
+
+::: {.fragment fragment-index=4}
 ![](/figures/week02/NormalDist1.96.png){width="100%"}
 :::
 :::
+:::
 
+::: notes
+- How well does my model fit the data?
+- What is the confidence interval of the estimates?
+(under a scenario where we got repeated samples like the present sample). 
+:::
 
+## Confidence Interval of coefficients {.smaller}
 
-----------------------
+<!-- .smaller does not work well when the title is H3. I often need to make manual adjustments with font-size -->
 
 ::: {.fragment}
-- The <mark>standard error</mark> of an estimator reflects how it varies under repeated sampling.
+- The confidence interval of an estimate has the form:
+$$
+\hat{\beta}_1 \pm 2 \times \mathrm{SE}(\hat{\beta}_1).
+$$
+where $SE$ is the <mark>standard error</mark> and reflects how the estimate varies under repeated sampling. 
 :::
 
 ::: {.fragment}
-We have:
+- That is, there is approximately a 95% chance that the interval
+$$
+\biggl[ \hat{\beta}_1 - 2 \times \mathrm{SE}(\hat{\beta}_1), \hat{\beta}_1 + 2 \times \mathrm{SE}(\hat{\beta}_1) \biggr]
+$$
+will contain the true value of $\beta_1$.
+:::
+
+::: notes
+How SE differs from STD? See [@altman_standard_2005]
+:::
+
+## Standard Errors {.smaller}
+<!-- .smaller does not work well when the title is H3. I often need to make manual adjustments with font-size -->
+
+::: {.fragment}
+The <mark>standard error</mark> of $\hat{\beta}_0$ and $\hat{\beta}_1$ is shown below:
+
 
 $$
 \begin{align}
@@ -990,36 +1012,193 @@ $$
 \end{align}
 $$
 
-where $\sigma^2 = \mathrm{Var}(\epsilon)$
-- These standard errors can be used to compute <mark>confidence intervals</mark>. 
+where $\sigma^2 = \operatorname{Var}(\epsilon)$.
 :::
 
-## Confidence Intervals {.smaller}
+::: {.incremental }
+- But, wait, we don't know $\epsilon$! How would we compute $\sigma^2$?
+- In practice, we aproximate $\sigma^2 \approx \mathrm{RSE} = \sqrt{\mathrm{RSS}/(n-2)}$.
+:::
+
+::: {.fragment}
+::: callout-important
+💡 Standard errors are a type of standard deviation but are not the same! See [@altman_standard_2005] for more on this.
+:::
+:::
 
 
+::: notes
+- These formulas are only valid if we assume the errors $\epsilon_i$ have common variance $\sigma^2$ and are uncorrelated.
+- RSE makes a comeback in Section 3.1.3
+:::
 
------------------------
+## Back to our Advertising linear models {.smaller}
 
-- A 95% confidence interval is defined as a range of values such that with 95% probability, the range will contain the true unknown value of the parameter. 
-- It has the form:
+What are the confidence intervals of our independent linear models?
+
+::: columns
+
+::: {.column width="50%"}
+
+- **TV** 📺
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+confint(tv_model)
+```
+
+- **Radio** 📻
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+confint(radio_model)
+```
+
+:::
+
+::: {.column width="50%"}
+- **Newspaper** 📰
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+confint(newspaper_model)
+```
+
+:::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:14%;"}
+
+🗨️ What does it mean?
+:::
+
+:::
+
+:::
+
+::: aside
+Use the function [`confint`](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/confint) to compute confidence intervals in `R`.
+::: 
+
+::: notes
+- For every additional $1000 invested in Radio, we can expect an increase in sales of between 162 and 242 units.
+:::
+
+# Hypothesis Testing {.smaller}
+
+::: incremental
+- Standard errors can also be used to perform <mark>hypothesis tests</mark> on the coefficients. 
+- The most common hypothesis test involves testing the <mark>null hypothesis</mark> of:
+  - $H_0$: There is no relationship between $X$ and $Y$ versus the \alert{alternative hypothesis}. 
+  - $H_A$: There is some relationship between $X$ and $Y$. 
+:::
+
+::: {.fragment style="margin-top:-1%;"}
+- Mathematically, this corresponds to testing:
+
 $$
-\hat{\beta}_1 \pm 2 \times \mathrm{SE}(\hat{\beta}_1).
+\begin{align}
+&~~~~H_0:&\beta_1 &= 0 \\
+&\text{vs} \\
+&~~~~H_A:& \beta_1 &\neq 0,
+\end{align}
 $$
-- That is, there is approximately a 95\% chance that the interval
-$$
-\biggl[ \hat{\beta}_1 - 2 \times \mathrm{SE}(\hat{\beta}_1), \hat{\beta}_1 + 2 \times \mathrm{SE}(\hat{\beta}_1) \biggr]
-$$
-will contain the true value of $\beta_1$ (under a scenario where we got repeated samples like the present sample). 
 
+since if $\beta_1=0$ then the model reduces to $Y = \beta_0 + \epsilon$, and $X$ and $Y$ are not associated.
+:::
+
+## p-values {.smaller}
+
+
+- To test the null hypothesis, we compute a <mark>t-statistic</mark>, given
+by
+$$
+t = \frac{\hat{\beta}_1 - 0}{\mathrm{SE}(\hat{\beta}_1)},
+$$
+::: incremental
+- This will have a t-distribution with $n - 2$ degrees of freedom, assuming $\beta_1 = 0$.
+- Using statistical software, it is easy to compute the probability of observing any value equal to $\mid t \mid$ or larger.
+- We call this probability the <mark>p-value</mark>.
+:::
+
+## Back to our Advertising linear models {.smaller}
+
+How significant are the linear models?
+
+::: columns
+
+::: {.column width="50%"}
+
+- **TV** 📺
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(tv_model))
+cat(paste(out[9:15]), sep="\n")
+```
+
+- **Radio** 📻
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(radio_model))
+cat(paste(out[9:15]), sep="\n")
+```
+
+:::
+
+::: {.column width="50%"}
+- **Newspaper** 📰
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(newspaper_model))
+cat(paste(out[9:15]), sep="\n")
+```
+
+:::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:14%;"}
+
+🗨️ What does it mean?
+:::
+
+:::
+
+:::
+
+::: notes
+
+:::
 
 # What's Next
 
 After our 10-min break ☕:
 
-- Multiple Linear Regression 📈
-  - How to interpret coefficients
-  - Interaction effects
-  - Collinearity
+- Metrics to assess goodness-of-fit
+- Interpreting Multiple Linear Regression 📈
+- Interaction effects
+- Outliers
+- Collinearity
 - What will happen in our 💻 labs this week?
 
 ---
