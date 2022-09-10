@@ -329,7 +329,7 @@ We will only cover <mark>OLS</mark> in this course.
 
 # Residual errors
 
-To understand Ordinary Least square, we first need to understand the concept of residuals.
+To understand the Ordinary Least Squares method, we first need to understand the concept of residuals.
 
 ## The concept of <mark style="color:#c9594c;">residuals</mark>
 
@@ -1125,10 +1125,12 @@ $$
 t = \frac{\hat{\beta}_1 - 0}{\mathrm{SE}(\hat{\beta}_1)},
 $$
 ::: incremental
-- This will have a t-distribution with $n - 2$ degrees of freedom, assuming $\beta_1 = 0$.
+- This will have a t-distribution[^1] with $n - 2$ degrees of freedom, assuming $\beta_1 = 0$.
 - Using statistical software, it is easy to compute the probability of observing any value equal to $\mid t \mid$ or larger.
 - We call this probability the <mark>p-value</mark>.
 :::
+
+[^1]: 🤔 How are the t-distribution and the Normal distribution related? Check [this link](https://rpsychologist.com/d3/tdist/) to find out.
 
 ## Back to our Advertising linear models {.smaller}
 
