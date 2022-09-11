@@ -100,7 +100,7 @@ Similar to what was reported here: https://github.com/quarto-dev/quarto-cli/issu
     margin-bottom: 0.5rem;
 }
 
-.reveal section#title-slide h1.title{
+/* .reveal section#title-slide h1.title{
     margin-left:15%;
     margin-right:15%;
-}
+} */
