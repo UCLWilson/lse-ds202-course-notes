@@ -1,0 +1,25 @@
+---
+title: "✅ Week 02 - Checklist"
+date: 10 September 2022
+date-meta: 10 September 2022
+from: markdown+emoji
+---
+
+
+Follow the suggested list of actions below to get the most out of this course:
+
+# Your Checklist:
+
+Reserve some time between Weeks 02 & 03 to revisit the content of this week's lecture:
+
+- :orange_book: Read [@james_introduction_2021, chapter 3]
+
+- :eyes: Browse the slides again
+
+- :memo: Take note of anything that isn't clear to you
+
+- :pager: Share your questions on `/week02` channel on Slack
+
+- :computer: Have a look at [this week's lab page](/weeks/week02/prep.qmd) and learn/revisit basic R programming skills.
+
+Following this will help you ensure you are well prepared for the Linear Regression lab of Week 03.

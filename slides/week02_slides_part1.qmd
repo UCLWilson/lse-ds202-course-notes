@@ -1151,7 +1151,7 @@ How significant are the linear models?
 #| code-overflow: wrap
 
 out <- capture.output(summary(tv_model))
-cat(paste(out[9:15]), sep="\n")
+cat(paste(out[16:16]), sep="\n")
 ```
 
 - **Radio** 📻
