@@ -1,0 +1,406 @@
+---
+subtitle: "DS202 Data Science for Social Scientists"
+title: "🗓️ Week 02:<br/>Multiple Linear Regression"
+author: Dr. [Jon Cardoso-Silva](https://www.lse.ac.uk/DSI/People/Jonathan-Cardoso-Silva)
+institute: '[\@LSEDataScience](https://twitter.com/lsedatascience)'
+date: 07 October 2022
+date-meta: 07 October 2022
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    pdf-separate-fragments: true
+    code-fold: false
+    theme: simple
+    slide-number: true
+    mouse-wheel: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    background-color: '#ededed'
+    logo: /figures/logos/LSE Data Science Institute.png
+    css: /css/styles_slides.css
+    footer: 'DS202 - Data Science for Social Scientists :robot: :juggling_person:'
+---
+
+# Assessing goodness-of-fit
+
+How well does my model fit the data?
+
+- A look at three metrics:
+    - $\mathrm{RSE}$
+    - $R^2$
+    - pearson Correlation 
+
+::: notes
+- Confidence intervals tells us how far apart we should expect coefficients to be
+- p-values informs us of whether that coefficient appears significant or not.
+
+Now, let's look at metrics that helps us assess how good our model is overall.
+:::
+
+## Residual Standard Errors (RSE)
+
+::: incremental
+- Recall the "true model": $Y = f(X) + \epsilon$
+- Even if we knew the true values of $\beta_0$ and $\beta_1$ — not just the estimates $\hat{\beta}_0$ and $\hat{\beta}_1$ — our predictions of sales might still be off.
+- By how much?
+:::
+
+## Residual Standard Errors (RSE) {.smaller}
+
+::: {.incremental}
+
+- This can be estimated by the variance of errors: $\sigma^2 = \operatorname{Var}(\epsilon)$.
+- As said earlier, this quantity can be approximated, for the **simple linear regression** case, by the <mark>Residual Standard Errors</mark> ($\mathrm{RSE}$) formula below:
+:::
+
+::: {.fragment}
+$$
+\sigma^2 \approx \mathrm{RSE} = \sqrt{\frac{\mathrm{RSS}}{(n-\mathrm{df})}}
+$$
+
+where $\mathrm{RSS} = \sum_i^n{(y_i - \hat{y}_i)^2}$ represents the residual sum of squares and $\mathrm{df}$ represents the <mark>degrees of freedom</mark> in our model.
+:::
+
+::: aside
+::: {.fragment}
+➡️ It turns out that $\mathrm{RSE}$ is a good way to assess the goodness-of-fit of a model.
+:::
+:::
+
+## Back to our Advertising linear models {.smaller}
+
+Let's compare the linear models we fitted earlier:
+
+::: columns
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+
+library(tidyverse)
+
+file = "https://www.statlearning.com/s/Advertising.csv"
+advertising <- read_csv(file) %>% select(-1)
+tv_model <- lm(sales ~ TV, data=advertising)
+radio_model <- lm(sales ~ radio, data=advertising)
+newspaper_model <- lm(sales ~ newspaper, data=advertising)
+```
+
+- **TV** 📺
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(tv_model))
+cat(paste(out[16:16]), sep="\n")
+```
+
+- **Radio** 📻
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(radio_model))
+cat(paste(out[16:16]), sep="\n")
+```
+
+:::
+
+::: {.column width="50%"}
+- **Newspaper** 📰
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(newspaper_model))
+cat(paste(out[16:16]), sep="\n")
+```
+
+:::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:15%;"}
+
+🗨️ What does it mean?
+:::
+
+:::
+
+:::
+
+## The $R^2$ statistic {.smaller}
+
+- <mark>R-squared</mark> or fraction of variance explained is defined as: 
+
+$$
+R^2 = \frac{\mathrm{TSS - RSS}}{\mathrm{TSS}} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}}
+$$
+
+where TSS = $\sum_{i=1}^n (y_i - \bar{y})^2$ is the <mark>total sum of squares</mark>.
+<br/>
+
+::: {.fragment}
+::: callout-tip
+Intuitively, $R^2$ measures the proportion of variability in $Y$ that can be explained using $X$.
+
+- $R^2$ close to 1 means that a large proportion of the variance in $Y$ is explained by the regression.
+
+- $R^2$ close to 0 means that the regression does not explain much of the variability in $Y$.
+
+:::
+:::
+
+## Sample correlation coefficient {.smaller}
+
+By the way, in the **simple linear regression** setting, it can be shown that $R^2 = (\operatorname{Cor}(X, Y))^2$, where $\operatorname{Cor}(X, Y)$ is the correlation between $X$ and $Y$:
+
+$$
+\operatorname{Cor}(X, Y) = \frac{\sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}.
+$$
+
+::: {.aside}
+📝 Give it a go! Play around with the definition of $R^2$ shown in the previous slide and verify that $R^2 = (\operatorname{Cor}(X, Y))^2$.
+:::
+
+## F-statistic {.smaller}
+
+We used t-statistic to compute p-values for the coefficients ($\hat{\beta}_0$ and $\hat{\beta}_1$).<br/>Now how do I test whether the model, as a whole, makes sense?
+
+::: columns
+
+::: {.column width="50%"}
+::: {.fragment style="font-size:0.9em;"}
+- For this, we perform the hypothesis test:
+$$
+\begin{align}
+&~~~~H_0:&\beta_1 = \beta_2 = \ldots = \beta_0 = 0 \\
+&\text{vs} \\
+&~~~~H_A:& \text{at least one} \beta_j \neq 0.
+\end{align}
+$$
+:::
+
+::: {.fragment style="font-size:0.9em;"}
+- which is performed by computing the F-_statistic_:
+$$
+F = \frac{(TSS - RSS) / p}{RSS/(n - p - 1)} \sim F_{p, n-p-1}
+$$
+:::
+:::
+
+::: {.column width="50%"}
+::: {.incremental style="font-size:0.9em;"}
+- If F is close to 1, there is no relationship between the response and the predictor(s).
+- If $H_\alpha$ is true, then we expect $F$ to be greater than 1.
+- Check [@james_introduction_2021, pages 75-77] for an in-depth explanation of this test.
+:::
+:::
+
+:::
+
+::: aside
+::: fragment
+- Note that the F-statistic applies to both simple and multiple linear regression models.
+- Check [this link](https://keydifferences.com/difference-between-t-test-and-f-test.html) if you want to understand the difference between the t-test and the the F-test.
+:::
+:::
+
+## Back to our Advertising linear models {.smaller}
+
+How well do our models explain the variability of the response?
+
+::: columns
+
+::: {.column width="50%"}
+
+- **TV** 📺
+
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(tv_model))
+cat(paste(out[17:18]), sep="\n")
+```
+
+- **Radio** 📻
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(radio_model))
+cat(paste(out[17:18]), sep="\n")
+```
+
+:::
+
+::: {.column width="50%"}
+- **Newspaper** 📰
+```{r}
+#| output-location: fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+out <- capture.output(summary(newspaper_model))
+cat(paste(out[17:18]), sep="\n")
+```
+
+:::{.fragment style="font-size:1.5rem;overflow:wrap;margin-left:5%;margin-top:15%;"}
+
+🗨️ What does it mean?
+:::
+
+:::
+
+:::
+
+# Interpreting Multiple Linear Regression 
+
+What changes when we fit a regression model using multiple predictors instead of just one predictor at a time?
+
+## A multiple linear regression to Advertising {.smaller}
+
+::: notes
+- When you run a linear model in R, you can call the `summary` function to see and check all of these statistics we've covered so far.
+- By now, you should be able to understand its full output
+:::
+
+Fitting all predictors:
+
+::: columns
+
+::: {.column width="50%"}
+
+**TV** 📺 + **Radio** 📻 + **Newspaper** 📰
+```{r}
+#| output-location: column-fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+full_model <- lm(sales ~ ., data=advertising)
+summary(full_model)
+```
+
+:::
+
+::: {.column width="50%"}
+
+**Confidence Intervals**
+```{r}
+#| output-location: column-fragment
+#| echo: true
+#| eval: true
+#| code-fold: false
+#| code-overflow: wrap
+
+confint(full_model)
+```
+
+
+:::
+
+:::
+
+## Interpreting the coefficients {.smaller}
+
+- Recall the multiple regression model: 
+
+$$
+ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon ,
+$$
+
+::: {.fragment}
+
+- We interpret $\beta_j$ as the <mark>average</mark> effect on $Y$ of a one unit increase in $X_j$, <mark>holding all other predictors fixed</mark>. In the advertising example, the model becomes
+
+$$ 
+\mathrm{sales} = \beta_0 + \beta_1 \times \mathrm{TV} + \beta_2 \times \mathrm{radio} + \beta_3 \times \mathrm{newspaper} + \epsilon .
+$$
+:::
+
+## Interpreting the coefficients {.smaller}
+
+::: {.incremental}
+- The ideal scenario is when the predictors are uncorrelated -- a <mark>balanced design</mark>:
+    - Each coefficient can be estimated and tested separately.
+    - Interpretations such as **"a unit change in $X_j$ is associated with a $\beta_j$ change in $Y$, while all the other variables stay fixed"**, are possible.
+- Correlations amongst predictors cause problems:
+    - The variance of all coefficients tends to increase, sometimes dramatically
+    - Interpretations become hazardous -- when $X_j$ changes, everything else changes.
+- <mark>Claims of causality</mark> should be avoided for observational data.
+
+:::
+
+# Interaction effects
+
+::: columns
+
+::: {.column style="width:40%; font-size:0.845em;"}
+
+➡️ Predictors are not truly independent. 
+
+🤔 How should I account for the "synergy" (interaction) between them?
+
+🖥️ I will share my screen to show you some examples.
+:::
+
+::: {.column style="width:60%;"}
+![](/figures/week02/pexels-luis-gomes-546819.jpg){width="100%"}
+:::
+:::
+
+
+# Things to think about {.smaller}
+
+- What should I do if I have categorical variables?
+    - For example: `gender`, `education level`, `marital status`, `ethnicity`?
+- What if I have too many variables? Which ones should I include or exclude?
+    - By the way, when $p \gg n$ ordinary least squares is not reliable. 
+
+::: callout-note
+- There are still many other aspects of linear regression we haven't covered. 
+- We will explore some of these questions briefly in the lab
+:::
+
+# What's Next
+
+**Your Checklist:**
+
+- :orange_book: Read [@james_introduction_2021, chapter 3]
+
+- :eyes: Browse the slides again
+
+- :memo: Take note of anything that isn't clear to you
+
+- :pager: Share your questions on `/week02` channel on Slack
+
+- :computer: Have a look at [this week's lab page](/weeks/week02/prep.qmd)
+
+------
+## References {style="word-break:break-all;"}
+
+::: {#refs .r-fit-text}
+:::
