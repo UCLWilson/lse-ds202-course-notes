@@ -32,7 +32,7 @@ jobs:
         shell: Rscript {0}
       
       - name: Install ggpubr
-        run: install.packages("devtools");devtools::install_version("MatrixModels", version="0.4.1");install.packages("ggpubr")
+        run: install.packages("devtools");devtools::install_version("MatrixModels", version="0.5.0");install.packages("ggpubr")
         shell: Rscript {0}
 
       - name: Set up Quarto
