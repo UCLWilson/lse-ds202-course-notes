@@ -133,11 +133,25 @@
     "text": "🔖 Recommended reading & other resources\nCheck out the Appendix page."
   },
   {
+    "objectID": "weeks/week02/checklist.html",
+    "href": "weeks/week02/checklist.html",
+    "title": "✅ Week 02 - Checklist",
+    "section": "",
+    "text": "Your Checklist:\nReserve some time between Weeks 02 & 03 to revisit the content of this week’s lecture:\n\n📙 Read (James et al. 2021, chap. 3)\n👀 Browse the slides again\n📝 Take note of anything that isn’t clear to you\n📟 Share your questions on /week02 channel on Slack\n💻 Have a look at this week’s lab page and learn/revisit basic R programming skills.\n\nFollowing this will help you ensure you are well prepared for the Linear Regression lab of Week 03.\n\n\n\n\n\nReferences\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/."
+  },
+  {
     "objectID": "weeks/week02/lecture.html",
     "href": "weeks/week02/lecture.html",
     "title": "👨‍🏫 Week 02 - Slides",
     "section": "",
     "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n\n\nUse this time to chat, stretch, drink some coffee or just relax for a bit by yourself.\n\n\n\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "weeks/week02/prep.html",
+    "href": "weeks/week02/prep.html",
+    "title": "📒 Week 02 - Preparing for this week’s lab",
+    "section": "",
+    "text": "References\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/."
   },
   {
     "objectID": "slides/week01_slides_part1.html#the-data-science-institute",
@@ -466,7 +480,7 @@
     "href": "slides/week01_slides_part2.html#adding-noise",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Adding noise",
-    "text": "Adding noise\nLet’s simulate the introduction of some random error:\n\n# Let's simulate some noise\ngaussian_noise = rnorm(n=nrow(df), mean=0, sd=1.5)\n\n# Call it \"observed Y\"\ndf$obsY = df$Y + gaussian_noise\nprint(df)\n\n\n\n# A tibble: 6 × 3\n      X     Y  obsY\n  <int> <int> <dbl>\n1     6     9  9.11\n2     9    12 11.8 \n3    12    15 14.3 \n4    15    18 21.1 \n5    18    21 19.8 \n6    21    24 24.1"
+    "text": "Adding noise\nLet’s simulate the introduction of some random error:\n\n# Let's simulate some noise\ngaussian_noise = rnorm(n=nrow(df), mean=0, sd=1.5)\n\n# Call it \"observed Y\"\ndf$obsY = df$Y + gaussian_noise\nprint(df)\n\n\n\n# A tibble: 6 × 3\n      X     Y  obsY\n  <int> <int> <dbl>\n1     6     9  10.6\n2     9    12  13.7\n3    12    15  17.3\n4    15    18  16.9\n5    18    21  20.1\n6    21    24  21.9"
   },
   {
     "objectID": "slides/week01_slides_part2.html#visualizing-the-data",
@@ -501,7 +515,7 @@
     "href": "slides/week01_slides_part2.html#assessing-error",
     "title": "DS202 Data Science for Social Scientists",
     "section": "Assessing error",
-    "text": "Assessing error\nHow much error was introduced by \\(\\epsilon\\) per sample?\n\ndf$error    <- df$Y - df$obsY  # Calculate the error\ndf$absError <- abs(df$error)   # Ignore the sign of error\ndf\n\n\n\n# A tibble: 6 × 5\n      X     Y  obsY  error absError\n  <int> <int> <dbl>  <dbl>    <dbl>\n1     6     9  9.11 -0.105    0.105\n2     9    12 11.8   0.221    0.221\n3    12    15 14.3   0.651    0.651\n4    15    18 21.1  -3.10     3.10 \n5    18    21 19.8   1.20     1.20 \n6    21    24 24.1  -0.107    0.107\n\n\n\nOn average, what is the error?\n\nmean(df$absError)\n\n[1] 0.8979669\n\n\n\n\nThis measure is called the Mean Absolute Error."
+    "text": "Assessing error\nHow much error was introduced by \\(\\epsilon\\) per sample?\n\ndf$error    <- df$Y - df$obsY  # Calculate the error\ndf$absError <- abs(df$error)   # Ignore the sign of error\ndf\n\n\n\n# A tibble: 6 × 5\n      X     Y  obsY  error absError\n  <int> <int> <dbl>  <dbl>    <dbl>\n1     6     9  10.6 -1.61     1.61 \n2     9    12  13.7 -1.74     1.74 \n3    12    15  17.3 -2.31     2.31 \n4    15    18  16.9  1.05     1.05 \n5    18    21  20.1  0.920    0.920\n6    21    24  21.9  2.09     2.09 \n\n\n\nOn average, what is the error?\n\nmean(df$absError)\n\n[1] 1.619615\n\n\n\n\nThis measure is called the Mean Absolute Error."
   },
   {
     "objectID": "slides/week01_slides_part2.html#measures-of-error",
@@ -662,7 +676,7 @@
     "href": "slides/week02_slides_part1.html#back-to-our-advertising-linear-models-1",
     "title": "🗓️ Week 02: Linear Regression",
     "section": "Back to our Advertising linear models",
-    "text": "Back to our Advertising linear models\nHow significant are the linear models?\n\n\n\nTV 📺\n\n\nout <- capture.output(summary(tv_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 7.032594   0.457843   15.36   <2e-16 ***\nTV          0.047537   0.002691   17.67   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nRadio 📻\n\n\nout <- capture.output(summary(radio_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  9.31164    0.56290  16.542   <2e-16 ***\nradio        0.20250    0.02041   9.921   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nNewspaper 📰\n\n\nout <- capture.output(summary(newspaper_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 12.35141    0.62142   19.88  < 2e-16 ***\nnewspaper    0.05469    0.01658    3.30  0.00115 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n🗨️ What does it mean?"
+    "text": "Back to our Advertising linear models\nHow significant are the linear models?\n\n\n\nTV 📺\n\n\nout <- capture.output(summary(tv_model))\ncat(paste(out[16:16]), sep=\"\\n\")\n\nResidual standard error: 3.259 on 198 degrees of freedom\n\n\n\nRadio 📻\n\n\nout <- capture.output(summary(radio_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  9.31164    0.56290  16.542   <2e-16 ***\nradio        0.20250    0.02041   9.921   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nNewspaper 📰\n\n\nout <- capture.output(summary(newspaper_model))\ncat(paste(out[9:15]), sep=\"\\n\")\n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 12.35141    0.62142   19.88  < 2e-16 ***\nnewspaper    0.05469    0.01658    3.30  0.00115 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n🗨️ What does it mean?"
   },
   {
     "objectID": "slides/week02_slides_part1.html#references",
@@ -670,5 +684,82 @@
     "title": "🗓️ Week 02: Linear Regression",
     "section": "References",
     "text": "References\n\n\nAltman, Douglas G, and J Martin Bland. 2005. “Standard Deviations and Standard Errors.” BMJ 331 (7521): 903. https://doi.org/10.1136/bmj.331.7521.903.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\nKarafiath, Imre. 2009. “Is There a Viable Alternative to Ordinary Least Squares Regression When Security Abnormal Returns Are the Dependent Variable?” Review of Quantitative Finance and Accounting 32 (1): 17–31. https://doi.org/10.1007/s11156-007-0079-y.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#residual-standard-errors-rse",
+    "href": "slides/week02_slides_part2.html#residual-standard-errors-rse",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Residual Standard Errors (RSE)",
+    "text": "Residual Standard Errors (RSE)\n\n\nRecall the “true model”: \\(Y = f(X) + \\epsilon\\)\nEven if we knew the true values of \\(\\beta_0\\) and \\(\\beta_1\\) — not just the estimates \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\) — our predictions of sales might still be off.\nBy how much?"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#residual-standard-errors-rse-1",
+    "href": "slides/week02_slides_part2.html#residual-standard-errors-rse-1",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Residual Standard Errors (RSE)",
+    "text": "Residual Standard Errors (RSE)\n\n\nThis can be estimated by the variance of errors: \\(\\sigma^2 = \\operatorname{Var}(\\epsilon)\\).\nAs said earlier, this quantity can be approximated, for the simple linear regression case, by the Residual Standard Errors (\\(\\mathrm{RSE}\\)) formula below:\n\n\n\n\\[\n\\sigma^2 \\approx \\mathrm{RSE} = \\sqrt{\\frac{\\mathrm{RSS}}{(n-\\mathrm{df})}}\n\\]\nwhere \\(\\mathrm{RSS} = \\sum_i^n{(y_i - \\hat{y}_i)^2}\\) represents the residual sum of squares and \\(\\mathrm{df}\\) represents the degrees of freedom in our model.\n\n\n\n\n➡️ It turns out that \\(\\mathrm{RSE}\\) is a good way to assess the goodness-of-fit of a model."
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#back-to-our-advertising-linear-models",
+    "href": "slides/week02_slides_part2.html#back-to-our-advertising-linear-models",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Back to our Advertising linear models",
+    "text": "Back to our Advertising linear models\nLet’s compare the linear models we fitted earlier:\n\n\n\n\n\n\nTV 📺\n\n\nout <- capture.output(summary(tv_model))\ncat(paste(out[16:16]), sep=\"\\n\")\n\nResidual standard error: 3.259 on 198 degrees of freedom\n\n\n\nRadio 📻\n\n\nout <- capture.output(summary(radio_model))\ncat(paste(out[16:16]), sep=\"\\n\")\n\nResidual standard error: 4.275 on 198 degrees of freedom\n\n\n\n\nNewspaper 📰\n\n\nout <- capture.output(summary(newspaper_model))\ncat(paste(out[16:16]), sep=\"\\n\")\n\nResidual standard error: 5.092 on 198 degrees of freedom\n\n\n\n🗨️ What does it mean?"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#the-r2-statistic",
+    "href": "slides/week02_slides_part2.html#the-r2-statistic",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "The \\(R^2\\) statistic",
+    "text": "The \\(R^2\\) statistic\n\nR-squared or fraction of variance explained is defined as:\n\n\\[\nR^2 = \\frac{\\mathrm{TSS - RSS}}{\\mathrm{TSS}} = 1 - \\frac{\\mathrm{RSS}}{\\mathrm{TSS}}\n\\]\nwhere TSS = \\(\\sum_{i=1}^n (y_i - \\bar{y})^2\\) is the total sum of squares. \n\n\n\n\n\n\n\nTip\n\n\nIntuitively, \\(R^2\\) measures the proportion of variability in \\(Y\\) that can be explained using \\(X\\).\n\n\\(R^2\\) close to 1 means that a large proportion of the variance in \\(Y\\) is explained by the regression.\n\\(R^2\\) close to 0 means that the regression does not explain much of the variability in \\(Y\\)."
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#sample-correlation-coefficient",
+    "href": "slides/week02_slides_part2.html#sample-correlation-coefficient",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Sample correlation coefficient",
+    "text": "Sample correlation coefficient\nBy the way, in the simple linear regression setting, it can be shown that \\(R^2 = (\\operatorname{Cor}(X, Y))^2\\), where \\(\\operatorname{Cor}(X, Y)\\) is the correlation between \\(X\\) and \\(Y\\):\n\\[\n\\operatorname{Cor}(X, Y) = \\frac{\\sum_{i=1}^n (x_i - \\bar{x}) (y_i - \\bar{y})}{\\sqrt{\\sum_{i=1}^n (x_i - \\bar{x})^2} \\sqrt{\\sum_{i=1}^n (y_i - \\bar{y})^2}}.\n\\]\n\n\n📝 Give it a go! Play around with the definition of \\(R^2\\) shown in the previous slide and verify that \\(R^2 = (\\operatorname{Cor}(X, Y))^2\\)."
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#f-statistic",
+    "href": "slides/week02_slides_part2.html#f-statistic",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "F-statistic",
+    "text": "F-statistic\nWe used t-statistic to compute p-values for the coefficients (\\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\)).Now how do I test whether the model, as a whole, makes sense?\n\n\n\n\nFor this, we perform the hypothesis test: \\[\n\\begin{align}\n&~~~~H_0:&\\beta_1 = \\beta_2 = \\ldots = \\beta_0 = 0 \\\\\n&\\text{vs} \\\\\n&~~~~H_A:& \\text{at least one} \\beta_j \\neq 0.\n\\end{align}\n\\]\n\n\n\n\nwhich is performed by computing the F-statistic: \\[\nF = \\frac{(TSS - RSS) / p}{RSS/(n - p - 1)} \\sim F_{p, n-p-1}\n\\]\n\n\n\n\n\nIf F is close to 1, there is no relationship between the response and the predictor(s).\nIf \\(H_\\alpha\\) is true, then we expect \\(F\\) to be greater than 1.\nCheck (James et al. 2021, 75–77) for an in-depth explanation of this test.\n\n\n\n\n\n\n\n\nNote that the F-statistic applies to both simple and multiple linear regression models.\nCheck this link if you want to understand the difference between the t-test and the the F-test."
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#back-to-our-advertising-linear-models-1",
+    "href": "slides/week02_slides_part2.html#back-to-our-advertising-linear-models-1",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Back to our Advertising linear models",
+    "text": "Back to our Advertising linear models\nHow well do our models explain the variability of the response?\n\n\n\nTV 📺\n\n\nout <- capture.output(summary(tv_model))\ncat(paste(out[17:18]), sep=\"\\n\")\n\nMultiple R-squared:  0.6119,    Adjusted R-squared:  0.6099 \nF-statistic: 312.1 on 1 and 198 DF,  p-value: < 2.2e-16\n\n\n\nRadio 📻\n\n\nout <- capture.output(summary(radio_model))\ncat(paste(out[17:18]), sep=\"\\n\")\n\nMultiple R-squared:  0.332, Adjusted R-squared:  0.3287 \nF-statistic: 98.42 on 1 and 198 DF,  p-value: < 2.2e-16\n\n\n\n\nNewspaper 📰\n\n\nout <- capture.output(summary(newspaper_model))\ncat(paste(out[17:18]), sep=\"\\n\")\n\nMultiple R-squared:  0.05212,   Adjusted R-squared:  0.04733 \nF-statistic: 10.89 on 1 and 198 DF,  p-value: 0.001148\n\n\n\n🗨️ What does it mean?"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#a-multiple-linear-regression-to-advertising",
+    "href": "slides/week02_slides_part2.html#a-multiple-linear-regression-to-advertising",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "A multiple linear regression to Advertising",
+    "text": "A multiple linear regression to Advertising\n\n\nWhen you run a linear model in R, you can call the summary function to see and check all of these statistics we’ve covered so far.\nBy now, you should be able to understand its full output\n\n\nFitting all predictors:\n\n\nTV 📺 + Radio 📻 + Newspaper 📰\n\nfull_model <- lm(sales ~ ., data=advertising)\nsummary(full_model)\n\n\nCall:\nlm(formula = sales ~ ., data = advertising)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-8.8277 -0.8908  0.2418  1.1893  2.8292 \n\nCoefficients:\n             Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  2.938889   0.311908   9.422   <2e-16 ***\nTV           0.045765   0.001395  32.809   <2e-16 ***\nradio        0.188530   0.008611  21.893   <2e-16 ***\nnewspaper   -0.001037   0.005871  -0.177     0.86    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.686 on 196 degrees of freedom\nMultiple R-squared:  0.8972,    Adjusted R-squared:  0.8956 \nF-statistic: 570.3 on 3 and 196 DF,  p-value: < 2.2e-16\n\n\n\nConfidence Intervals\n\nconfint(full_model)\n\n                  2.5 %     97.5 %\n(Intercept)  2.32376228 3.55401646\nTV           0.04301371 0.04851558\nradio        0.17154745 0.20551259\nnewspaper   -0.01261595 0.01054097"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#interpreting-the-coefficients",
+    "href": "slides/week02_slides_part2.html#interpreting-the-coefficients",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Interpreting the coefficients",
+    "text": "Interpreting the coefficients\n\nRecall the multiple regression model:\n\n\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\dots + \\beta_p X_p + \\epsilon ,\n\\]\n\n\nWe interpret \\(\\beta_j\\) as the average effect on \\(Y\\) of a one unit increase in \\(X_j\\), holding all other predictors fixed. In the advertising example, the model becomes\n\n\\[\n\\mathrm{sales} = \\beta_0 + \\beta_1 \\times \\mathrm{TV} + \\beta_2 \\times \\mathrm{radio} + \\beta_3 \\times \\mathrm{newspaper} + \\epsilon .\n\\]"
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#interpreting-the-coefficients-1",
+    "href": "slides/week02_slides_part2.html#interpreting-the-coefficients-1",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "Interpreting the coefficients",
+    "text": "Interpreting the coefficients\n\n\nThe ideal scenario is when the predictors are uncorrelated – a balanced design:\n\nEach coefficient can be estimated and tested separately.\nInterpretations such as “a unit change in \\(X_j\\) is associated with a \\(\\beta_j\\) change in \\(Y\\), while all the other variables stay fixed”, are possible.\n\nCorrelations amongst predictors cause problems:\n\nThe variance of all coefficients tends to increase, sometimes dramatically\nInterpretations become hazardous – when \\(X_j\\) changes, everything else changes.\n\nClaims of causality should be avoided for observational data."
+  },
+  {
+    "objectID": "slides/week02_slides_part2.html#references",
+    "href": "slides/week02_slides_part2.html#references",
+    "title": "🗓️ Week 02:Multiple Linear Regression",
+    "section": "References",
+    "text": "References\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2021. An Introduction to Statistical Learning: With Applications in R. Second edition. Springer Texts in Statistics. New York NY: Springer. https://www.statlearning.com/.\n\n\n\n\n\nDS202 - Data Science for Social Scientists 🤖 🤹"
   }
 ]

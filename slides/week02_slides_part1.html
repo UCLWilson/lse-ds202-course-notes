@@ -1277,14 +1277,9 @@ t = \frac{\hat{\beta}_1 - 0}{\mathrm{SE}(\hat{\beta}_1)},
 </ul>
 <div class="cell" data-output-location="fragment">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>out <span class="ot">&lt;-</span> <span class="fu">capture.output</span>(<span class="fu">summary</span>(tv_model))</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">cat</span>(<span class="fu">paste</span>(out[<span class="dv">9</span><span class="sc">:</span><span class="dv">15</span>]), <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">cat</span>(<span class="fu">paste</span>(out[<span class="dv">16</span><span class="sc">:</span><span class="dv">16</span>]), <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 7.032594   0.457843   15.36   &lt;2e-16 ***
-TV          0.047537   0.002691   17.67   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+<pre><code>Residual standard error: 3.259 on 198 degrees of freedom</code></pre>
 </div>
 </div>
 <ul>
